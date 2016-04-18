@@ -1,0 +1,14 @@
+.DS_Store
+downloads/*
+patched/ssdt*.dsl
+patched/dsdt.dsl
+unpatched/ssdt*.dsl
+unpatched/dsdt.dsl
+patched/dsdt.dsl
+build/*
+!build/readme.txt
+nuc5.xcodeproj/project.xcworkspace
+nuc5.xcodeproj/xcuserdata
+AppleHDAHCD_ALC283.kext
+AppleHDA_ALC283.kext
+AppleHDA_ALC283_Resources
