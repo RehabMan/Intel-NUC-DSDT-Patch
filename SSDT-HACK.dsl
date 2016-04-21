@@ -33,11 +33,6 @@ DefinitionBlock ("", "SSDT", 2, "hack", "hack", 0)
         }, Local0)
         Return (Ones != Match(Local0, MEQ, Arg0, MTR, 0, 0))
     }
-    External(_SB.PCI0.GLAN, DeviceObj)
-    Scope(_SB.PCI0.GLAN)
-    {
-        Name (XCRS, ResourceTemplate () { IRQNoFlags() { 2 } })
-    }
 }
 
 //EOF

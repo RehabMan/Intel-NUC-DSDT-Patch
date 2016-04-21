@@ -356,14 +356,14 @@
 		<key>Theme</key>
 		<string>bluemac</string>
 	</dict>
-	<key>#Graphics</key>
+	<key>Graphics</key>
 	<dict>
 		<key>ig-platform-id</key>
 		<string>0x16160002</string>
 		<key>Inject</key>
 		<dict>
 			<key>Intel</key>
-			<true/>
+			<false/>
 		</dict>
 		<key>InjectEDID</key>
 		<false/>
