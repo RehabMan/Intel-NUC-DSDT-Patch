@@ -20,6 +20,7 @@
 		ED3F518B1A2029DE0060691A /* download.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = download.sh; sourceTree = "<group>"; };
 		ED48DF001B4CCCC800BDDC62 /* SSDT-HACK.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-HACK.dsl"; sourceTree = "<group>"; };
 		ED71D7551B98D1F80006C457 /* config_install.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_install.plist; sourceTree = "<group>"; };
+		EDAA88F11CFB6A6D008BA1EE /* SSDT-ALC283.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-ALC283.dsl"; sourceTree = "<group>"; };
 		EDC7F9431B4C64FA00B49451 /* layout1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = layout1.plist; path = Resources_ALC283/layout1.plist; sourceTree = "<group>"; };
 		EDF134011B4F62DA009D8597 /* ahhcd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ahhcd.plist; path = Resources_ALC283/ahhcd.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -35,6 +36,7 @@
 				ED48DF001B4CCCC800BDDC62 /* SSDT-HACK.dsl */,
 				ED373E171C0535C1005018E4 /* SSDT-IGPU.dsl */,
 				ED373E181C0535C1005018E4 /* SSDT-USB.dsl */,
+				EDAA88F11CFB6A6D008BA1EE /* SSDT-ALC283.dsl */,
 				8467C38E1A23A9FC00FCF396 /* mount_efi.sh */,
 				ED3F518B1A2029DE0060691A /* download.sh */,
 				ED272D611CCC789300FE569D /* install_tools.sh */,
