@@ -12,6 +12,7 @@
 		8455352818E65265001ADBFD /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
 		8467C38E1A23A9FC00FCF396 /* mount_efi.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mount_efi.sh; sourceTree = "<group>"; };
 		ED0334941C0A124F004E6BDB /* Platforms.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Platforms.plist; path = Resources_ALC283/Platforms.plist; sourceTree = "<group>"; };
+		ED272D611CCC789300FE569D /* install_tools.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install_tools.sh; sourceTree = "<group>"; };
 		ED373E171C0535C1005018E4 /* SSDT-IGPU.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-IGPU.dsl"; sourceTree = "<group>"; };
 		ED373E181C0535C1005018E4 /* SSDT-USB.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-USB.dsl"; sourceTree = "<group>"; };
 		ED3AF2321CC40740004F19AC /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; usesTabs = 1; };
@@ -36,6 +37,7 @@
 				ED373E181C0535C1005018E4 /* SSDT-USB.dsl */,
 				8467C38E1A23A9FC00FCF396 /* mount_efi.sh */,
 				ED3F518B1A2029DE0060691A /* download.sh */,
+				ED272D611CCC789300FE569D /* install_tools.sh */,
 				ED3F518A1A2029DE0060691A /* install_downloads.sh */,
 				84B540381ACB34B600D8ABAE /* audio */,
 			);

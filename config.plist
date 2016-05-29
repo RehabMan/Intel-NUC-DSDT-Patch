@@ -80,13 +80,6 @@
 			<key>Generate</key>
 			<false/>
 		</dict>
-		<key>SortedOrder</key>
-		<array>
-			<string>SSDT.aml</string>
-			<string>SSDT-HACK.aml</string>
-			<string>SSDT-IGPU.aml</string>
-			<string>SSDT-USB.aml</string>
-		</array>
 	</dict>
 	<key>Boot</key>
 	<dict>

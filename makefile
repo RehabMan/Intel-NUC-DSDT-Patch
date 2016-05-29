@@ -24,7 +24,7 @@ SLE=/System/Library/Extensions
 IASLFLAGS=-ve
 IASL=iasl
 
-ALL=$(BUILDDIR)/SSDT-HACK.aml $(BUILDDIR)/SSDT-IGPU.aml $(BUILDDIR)/SSDT-USB.aml
+ALL=$(BUILDDIR)/SSDT-HACK.aml $(BUILDDIR)/SSDT-IGPU.aml $(BUILDDIR)/SSDT-USB.aml $(BUILDDIR)/SSDT-$(HDA).aml
 
 # for now only build SSDT-HACK.aml, not patched set
 .PHONY: all
@@ -39,6 +39,8 @@ $(BUILDDIR)/SSDT-IGPU.aml: ./SSDT-IGPU.dsl
 $(BUILDDIR)/SSDT-USB.aml: ./SSDT-USB.dsl
 	$(IASL) $(IASLFLAGS) -p $@ $<
 
+$(BUILDDIR)/SSDT-$(HDA).aml: ./SSDT-$(HDA).dsl
+	$(IASL) $(IASLFLAGS) -p $@ $<
 
 .PHONY: clean
 clean:
@@ -52,12 +54,11 @@ install: $(ALL)
 
 $(HDAINJECT) $(HDAHCDINJECT): $(RESOURCES)/*.plist ./patch_hda.sh
 	./patch_hda.sh $(HDA)
-	touch $@
 
 $(RESOURCES)/layout/Platforms.xml.zlib: $(RESOURCES)/layout/Platforms.plist $(SLE)/AppleHDA.kext/Contents/Resources/Platforms.xml.zlib
 	./tools/zlib inflate $(SLE)/AppleHDA.kext/Contents/Resources/Platforms.xml.zlib >/tmp/rm_Platforms.plist
-	/usr/libexec/plistbuddy -c "Delete ':PathMaps'" /tmp/rm_Platforms.plist
-	/usr/libexec/plistbuddy -c "Merge $(RESOURCES)/layout/Platforms.plist" /tmp/rm_Platforms.plist
+	/usr/libexec/PlistBuddy -c "Delete ':PathMaps'" /tmp/rm_Platforms.plist
+	/usr/libexec/PlistBuddy -c "Merge $(RESOURCES)/layout/Platforms.plist" /tmp/rm_Platforms.plist
 	./tools/zlib deflate /tmp/rm_Platforms.plist >$@
 
 $(RESOURCES)/layout/$(HDALAYOUT).xml.zlib: $(RESOURCES)/layout/$(HDALAYOUT).plist
@@ -80,8 +81,8 @@ install_hdadummy:
 install_hda:
 	sudo rm -Rf $(INSTDIR)/$(HDAINJECT)
 	sudo rm -Rf $(INSTDIR)/$(HDAHCDINJECT)
-	sudo cp -R ./$(HDAHCDINJECT) $(INSTDIR)
-	if [ "`which tag`" != "" ]; then sudo tag -a Blue $(INSTDIR)/$(HDAHCDINJECT); fi
+	#sudo cp -R ./$(HDAHCDINJECT) $(INSTDIR)
+	#if [ "`which tag`" != "" ]; then sudo tag -a Blue $(INSTDIR)/$(HDAHCDINJECT); fi
 	sudo cp $(HDAZML)/*.zml* $(SLE)/AppleHDA.kext/Contents/Resources
 	if [ "`which tag`" != "" ]; then sudo tag -a Blue $(SLE)/AppleHDA.kext/Contents/Resources/*.zml*; fi
 	make update_kernelcache

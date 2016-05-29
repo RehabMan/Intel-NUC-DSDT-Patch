@@ -54,11 +54,24 @@ DefinitionBlock ("", "SSDT", 2, "hack", "igpu", 0)
                     "hda-gfx", Buffer() { "onboard-1" },
                     "AAPL,ig-platform-id", Buffer() {  0x03, 0x00, 0x22, 0x0d },
                 },
-                // Broadwell/HD5300/HD5500/HD5600/HD6000 (future)
+                // Broadwell/HD5300/HD5500/HD5600/HD6000
                 0x161e, 0x1616, 0x1612, 0x1626, 0x162b, 0, Package()
                 {
                     "hda-gfx", Buffer() { "onboard-1" },
                     "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x16, 0x16 },
+                },
+                //REVIEW: add more Skylake IDs...
+                // Skylake/HD520
+                0x1916, 0, Package()
+                {
+                    "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x16, 0x19 },
+                    "hda-gfx", Buffer() { "onboard-1" },
+                },
+                // Skylake/HD540
+                0x1926, 0, Package()
+                {
+                    "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x16, 0x19 },
+                    "hda-gfx", Buffer() { "onboard-1" },
                 },
             })
 
