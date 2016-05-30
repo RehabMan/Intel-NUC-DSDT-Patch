@@ -1,7 +1,7 @@
 # makefile
 
 #
-# Patches/Installs/Builds DSDT patches for Intel NUC5
+# Patches/Installs/Builds DSDT patches for Intel NUC5/NUC6
 #
 # Created by RehabMan 
 #
@@ -24,27 +24,19 @@ SLE=/System/Library/Extensions
 IASLFLAGS=-ve
 IASL=iasl
 
-ALL=$(BUILDDIR)/SSDT-HACK.aml $(BUILDDIR)/SSDT-IGPU.aml $(BUILDDIR)/SSDT-USB.aml $(BUILDDIR)/SSDT-$(HDA).aml
+ALL=$(BUILDDIR)/SSDT-HACK.aml $(BUILDDIR)/SSDT-LPC.aml $(BUILDDIR)/SSDT-IGPU.aml $(BUILDDIR)/SSDT-USB.aml $(BUILDDIR)/SSDT-Disable_EHCI.aml $(BUILDDIR)/SSDT-SATA.aml $(BUILDDIR)/SSDT-$(HDA).aml
 
 # for now only build SSDT-HACK.aml, not patched set
 .PHONY: all
 all: $(ALL) $(HDAINJECT) $(HDAHCDINJECT)
 
-$(BUILDDIR)/SSDT-HACK.aml: ./SSDT-HACK.dsl
-	$(IASL) $(IASLFLAGS) -p $@ $<
-
-$(BUILDDIR)/SSDT-IGPU.aml: ./SSDT-IGPU.dsl
-	$(IASL) $(IASLFLAGS) -p $@ $<
-
-$(BUILDDIR)/SSDT-USB.aml: ./SSDT-USB.dsl
-	$(IASL) $(IASLFLAGS) -p $@ $<
-
-$(BUILDDIR)/SSDT-$(HDA).aml: ./SSDT-$(HDA).dsl
-	$(IASL) $(IASLFLAGS) -p $@ $<
+$(BUILDDIR)/%.aml : %.dsl
+	iasl $(IASLOPTS) -p $@ $<
 
 .PHONY: clean
 clean:
 	rm -f $(BUILDDIR)/*.dsl $(BUILDDIR)/*.aml
+	make clean_hda
 
 # Clover Install
 .PHONY: install
@@ -55,14 +47,9 @@ install: $(ALL)
 $(HDAINJECT) $(HDAHCDINJECT): $(RESOURCES)/*.plist ./patch_hda.sh
 	./patch_hda.sh $(HDA)
 
-$(RESOURCES)/layout/Platforms.xml.zlib: $(RESOURCES)/layout/Platforms.plist $(SLE)/AppleHDA.kext/Contents/Resources/Platforms.xml.zlib
-	./tools/zlib inflate $(SLE)/AppleHDA.kext/Contents/Resources/Platforms.xml.zlib >/tmp/rm_Platforms.plist
-	/usr/libexec/PlistBuddy -c "Delete ':PathMaps'" /tmp/rm_Platforms.plist
-	/usr/libexec/PlistBuddy -c "Merge $(RESOURCES)/layout/Platforms.plist" /tmp/rm_Platforms.plist
-	./tools/zlib deflate /tmp/rm_Platforms.plist >$@
-
-$(RESOURCES)/layout/$(HDALAYOUT).xml.zlib: $(RESOURCES)/layout/$(HDALAYOUT).plist
-	./tools/zlib deflate $< >$@
+.PHONY: clean_hda
+clean_hda:
+	rm -rf $(HDAHCDINJECT) $(HDAZML) # $(HDAINJECT)
 
 .PHONY: update_kernelcache
 update_kernelcache:
@@ -74,6 +61,7 @@ install_hdadummy:
 	sudo rm -Rf $(INSTDIR)/$(HDAINJECT)
 	sudo rm -Rf $(INSTDIR)/$(HDAHCDINJECT)
 	sudo cp -R ./$(HDAINJECT) $(INSTDIR)
+	rm -f $(SLE)/AppleHDA.kext/Contents/Resources/*.zml*
 	if [ "`which tag`" != "" ]; then sudo tag -a Blue $(INSTDIR)/$(HDAINJECT); fi
 	make update_kernelcache
 

@@ -58,6 +58,14 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>change SAT0 to SATA</string>
+					<key>Find</key>
+					<data>U0FUMA==</data>
+					<key>Replace</key>
+					<data>U0FUQQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>change _DSM to XDSM</string>
 					<key>Find</key>
 					<data>X0RTTQ==</data>
@@ -351,15 +359,11 @@
 	</dict>
 	<key>Graphics</key>
 	<dict>
-		<key>ig-platform-id</key>
-		<string>0x16160002</string>
 		<key>Inject</key>
 		<dict>
 			<key>Intel</key>
 			<false/>
 		</dict>
-		<key>InjectEDID</key>
-		<false/>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>

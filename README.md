@@ -1,14 +1,20 @@
-## Intel "NUC5" DSDT patches by RehabMan
+## Intel "NUC5"/"NUC6" DSDT patches by RehabMan
 
-This set of patches/makefile can be used to patch your Haswell Intel NUC5 ACPI.
+This set of patches/makefile can be used to patch your Haswell Intel NUC5/NUC6 ACPI.
 
-The current repository actually uses only on-the-fly patches vai config.plist and an additional SSDT, SSDT-HACK.aml.
+The current repository actually uses only on-the-fly patches via config.plist and an additional SSDTs, SSDT-HACK.aml, etc.  The files here should work for both the Broadwell NUC and Skylake NUC.
 
 Please refer to this guide thread on tonymacx86.com for a step-by-step process, feedback, and questions:
 
-TODO: insert guide URL
+http://tonymacx86.com/threads/guide-intel-broadwell-nuc5-using-clover-uefi-nuc5i5mhye-nuc5i3myhe-etc.191011/
+
 
 ### Change Log:
+
+2016-05-30
+
+- add NUC6 (Skylake) support
+
 
 2016-04-16
 

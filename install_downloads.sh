@@ -130,8 +130,6 @@ if [ "$(id -u)" != "0" ]; then
     echo "This script requires superuser access..."
 fi
 
-if [ "$1" != "toolsonly" ]; then
-
 # unzip/install tools
 check_directory ./downloads/tools/*.zip
 if [ $? -ne 0 ]; then
@@ -142,6 +140,8 @@ if [ $? -ne 0 ]; then
     done
     cd ../..
 fi
+
+if [ "$1" != "toolsonly" ]; then
 
 # unzip/install kexts
 check_directory ./downloads/kexts/*.zip

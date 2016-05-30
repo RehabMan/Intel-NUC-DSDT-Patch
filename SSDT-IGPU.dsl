@@ -64,13 +64,15 @@ DefinitionBlock ("", "SSDT", 2, "hack", "igpu", 0)
                 // Skylake/HD520
                 0x1916, 0, Package()
                 {
+                    "model", Buffer() { "Intel Iris Graphics 520" },
                     "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x16, 0x19 },
                     "hda-gfx", Buffer() { "onboard-1" },
                 },
                 // Skylake/HD540
                 0x1926, 0, Package()
                 {
-                    "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x16, 0x19 },
+                    "model", Buffer() { "Intel Iris Graphics 540" },
+                    "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x26, 0x19 },
                     "hda-gfx", Buffer() { "onboard-1" },
                 },
             })
