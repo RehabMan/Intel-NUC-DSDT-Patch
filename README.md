@@ -6,8 +6,9 @@ The current repository actually uses only on-the-fly patches via config.plist an
 
 Please refer to this guide thread on tonymacx86.com for a step-by-step process, feedback, and questions:
 
-http://tonymacx86.com/threads/guide-intel-broadwell-nuc5-using-clover-uefi-nuc5i5mhye-nuc5i3myhe-etc.191011/
+Broadwell NUC5: http://tonymacx86.com/threads/guide-intel-broadwell-nuc5-using-clover-uefi-nuc5i5mhye-nuc5i3myhe-etc.191011/
 
+Skylake NUC6: http://www.tonymacx86.com/threads/guide-intel-skylake-nuc6-using-clover-uefi-nuc6i5syk-etc.194177/
 
 ### Change Log:
 
