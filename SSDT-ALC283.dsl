@@ -4,6 +4,14 @@ DefinitionBlock ("", "SSDT", 2, "hack", "ALC283", 0)
     External(_SB.PCI0.HDEF, DeviceObj)
     Name(_SB.PCI0.HDEF.RMCF, Package()
     {
+        "CodecCommander", Package()
+        {
+            "Disable", ">y",
+        },
+        "CodecCommanderPowerHook", Package()
+        {
+            "Disable", ">y",
+        },
         "CodecCommanderProbeInit", Package()
         {
             "Version", 0x020600,
