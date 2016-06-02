@@ -24,7 +24,7 @@ SLE=/System/Library/Extensions
 IASLFLAGS=-ve
 IASL=iasl
 
-ALL=$(BUILDDIR)/SSDT-HACK.aml $(BUILDDIR)/SSDT-LPC.aml $(BUILDDIR)/SSDT-IGPU.aml $(BUILDDIR)/SSDT-USB.aml $(BUILDDIR)/SSDT-Disable_EHCI.aml $(BUILDDIR)/SSDT-SATA.aml $(BUILDDIR)/SSDT-$(HDA).aml
+ALL=$(BUILDDIR)/SSDT-Config.aml $(BUILDDIR)/SSDT-HACK.aml $(BUILDDIR)/SSDT-LPC.aml $(BUILDDIR)/SSDT-IGPU.aml $(BUILDDIR)/SSDT-USB.aml $(BUILDDIR)/SSDT-Disable_EHCI.aml $(BUILDDIR)/SSDT-XHC.aml $(BUILDDIR)/SSDT-SATA.aml $(BUILDDIR)/SSDT-$(HDA).aml $(BUILDDIR)/SSDT-HDEF.aml $(BUILDDIR)/SSDT-HDAU.aml
 
 # for now only build SSDT-HACK.aml, not patched set
 .PHONY: all
@@ -43,6 +43,7 @@ clean:
 install: $(ALL)
 	$(eval EFIDIR:=$(shell sudo ./mount_efi.sh /))
 	cp $(ALL) $(EFIDIR)/EFI/CLOVER/ACPI/patched
+	#rm $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-IGPU.aml
 
 $(HDAINJECT) $(HDAHCDINJECT): $(RESOURCES)/*.plist ./patch_hda.sh
 	./patch_hda.sh $(HDA)
