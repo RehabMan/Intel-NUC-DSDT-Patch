@@ -94,6 +94,8 @@
 	<dict>
 		<key>#FrequencyMHz</key>
 		<integer>1800</integer>
+		<key>UseARTFrequency</key>
+		<false/>
 	</dict>
 	<key>Devices</key>
 	<dict>
