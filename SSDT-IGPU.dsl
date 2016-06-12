@@ -75,6 +75,13 @@ DefinitionBlock ("", "SSDT", 2, "hack", "igpu", 0)
                     "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x26, 0x19 },
                     "hda-gfx", Buffer() { "onboard-1" },
                 },
+                // Skylake/Iris Pro HD580
+                0x193b, 0, Package()
+                {
+                    "model", Buffer() { "Intel Iris Pro Graphics 580" },
+                    "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x3b, 0x19 },
+                    "hda-gfx", Buffer() { "onboard-1" },
+                },
             })
 
             // inject properties for integrated graphics on IGPU
