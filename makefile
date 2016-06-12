@@ -47,12 +47,14 @@ clean:
 .PHONY: install
 install: $(ALL)
 	$(eval EFIDIR:=$(shell sudo ./mount_efi.sh /))
+	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-*.aml
 	cp $(ALL) $(EFIDIR)/EFI/CLOVER/ACPI/patched
 	#rm $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-IGPU.aml
 
 .PHONY: install_sc
 install_sc: $(ALL_SC)
 	$(eval EFIDIR:=$(shell sudo ./mount_efi.sh /))
+	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-*.aml
 	cp $(ALL_SC) $(EFIDIR)/EFI/CLOVER/ACPI/patched
 	#rm $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-IGPU.aml
 
