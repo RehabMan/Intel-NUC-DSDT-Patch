@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>HDAConfigDefault</key>
+	<array>
+		<dict>
+			<key>CodecID</key>
+			<integer>283902595</integer>
+			<key>ConfigData</key>
+			<data>AScc8AEnHQABJx4AAScfQAFHHPABRx0AAUceAAFHH0ABdxzwAXcdAAF3HgABdx9AAYcc8AGHHQABhx4AAYcfQAGXHGABlx0wAZceiwGXHwEBpxzwAacdAAGnHgABpx9AAbcc8AG3HQABtx4AAbcfQAHXHPAB1x0AAdceAAHXH0AB5xzwAecdAAHnHgAB5x9AAhcccAIXHUACFx4rAhcfAQGXDAICFwwC</data>
+			<key>FuncGroup</key>
+			<integer>1</integer>
+			<key>LayoutID</key>
+			<integer>1</integer>
+			<key>Comment</key>
+			<string>toledaALC</string>
+		</dict>
+		<dict>
+			<key>CodecID</key>
+			<integer>283902515</integer>
+			<key>ConfigData</key>
+			<data>AScc8AEnHQABJx4AAScfQAFHHPABRx0AAUceAAFHH0ABdxzwAXcdAAF3HgABdx9AAYcc8AGHHQABhx4AAYcfQAGXHGABlx0wAZceiwGXHwEBpxzwAacdAAGnHgABpx9AAbcc8AG3HQABtx4AAbcfQAHXHPAB1x0AAdceAAHXH0AB5xzwAecdAAHnHgAB5x9AAhcccAIXHUACFx4rAhcfAQGXDAICFwwC</data>
+			<key>FuncGroup</key>
+			<integer>1</integer>
+			<key>LayoutID</key>
+			<integer>2</integer>
+			<key>Comment</key>
+			<string>based on toledaALC/ALC283</string>
+		</dict>
+	</array>
+</dict>
+</plist>

@@ -7,7 +7,7 @@
 #
 
 BUILDDIR=./build
-HDA=ALC283
+HDA=NUCHDA
 RESOURCES=./Resources_$(HDA)
 HDAINJECT=AppleHDA_$(HDA).kext
 HDAHCDINJECT=AppleHDAHCD_$(HDA).kext
@@ -24,11 +24,16 @@ SLE=/System/Library/Extensions
 IASLFLAGS=-ve
 IASL=iasl
 
-ALL=$(BUILDDIR)/SSDT-Config.aml $(BUILDDIR)/SSDT-HACK.aml $(BUILDDIR)/SSDT-LPC.aml $(BUILDDIR)/SSDT-IGPU.aml $(BUILDDIR)/SSDT-USB.aml $(BUILDDIR)/SSDT-Disable_EHCI.aml $(BUILDDIR)/SSDT-XHC.aml $(BUILDDIR)/SSDT-SATA.aml $(BUILDDIR)/SSDT-$(HDA).aml $(BUILDDIR)/SSDT-HDEF.aml $(BUILDDIR)/SSDT-HDAU.aml
+ALL_COMMON=$(BUILDDIR)/SSDT-XOSI.aml $(BUILDDIR)/SSDT-LPC.aml $(BUILDDIR)/SSDT-IGPU.aml $(BUILDDIR)/SSDT-USB.aml $(BUILDDIR)/SSDT-Disable_EHCI.aml $(BUILDDIR)/SSDT-XHC.aml $(BUILDDIR)/SSDT-SATA.aml $(BUILDDIR)/SSDT-$(HDA).aml $(BUILDDIR)/SSDT-HDEF.aml $(BUILDDIR)/SSDT-HDAU.aml
 
-# for now only build SSDT-HACK.aml, not patched set
+ALL=$(BUILDDIR)/SSDT-Config.aml $(ALL_COMMON)
+
+ALL_SC=$(BUILDDIR)/SSDT-Config-SC.aml $(ALL_COMMON)
+
+ALL_ALL=$(BUILDDIR)/SSDT-Config.aml $(BUILDDIR)/SSDT-Config-SC.aml $(ALL_COMMON)
+
 .PHONY: all
-all: $(ALL) $(HDAINJECT) $(HDAHCDINJECT)
+all: $(ALL_ALL) $(HDAINJECT) $(HDAHCDINJECT)
 
 $(BUILDDIR)/%.aml : %.dsl
 	iasl $(IASLOPTS) -p $@ $<
@@ -43,6 +48,12 @@ clean:
 install: $(ALL)
 	$(eval EFIDIR:=$(shell sudo ./mount_efi.sh /))
 	cp $(ALL) $(EFIDIR)/EFI/CLOVER/ACPI/patched
+	#rm $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-IGPU.aml
+
+.PHONY: install_sc
+install_sc: $(ALL_SC)
+	$(eval EFIDIR:=$(shell sudo ./mount_efi.sh /))
+	cp $(ALL_SC) $(EFIDIR)/EFI/CLOVER/ACPI/patched
 	#rm $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-IGPU.aml
 
 $(HDAINJECT) $(HDAHCDINJECT): $(RESOURCES)/*.plist ./patch_hda.sh

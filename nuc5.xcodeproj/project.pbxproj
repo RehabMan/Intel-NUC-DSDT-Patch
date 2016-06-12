@@ -7,10 +7,15 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		840463DE1D0DD98C00ED8BA5 /* Platforms.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Platforms.plist; path = Resources_NUCHDA/Platforms.plist; sourceTree = "<group>"; };
+		840463DF1D0DD98C00ED8BA5 /* layout2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = layout2.plist; path = Resources_NUCHDA/layout2.plist; sourceTree = "<group>"; };
+		840463E01D0DD98C00ED8BA5 /* ahhcd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ahhcd.plist; path = Resources_NUCHDA/ahhcd.plist; sourceTree = "<group>"; };
+		840463E11D0DD98C00ED8BA5 /* layout1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = layout1.plist; path = Resources_NUCHDA/layout1.plist; sourceTree = "<group>"; };
 		8406FCD6188627B8006D8DB7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		84178DE61D0DD0D6006A3D30 /* SSDT-Config-SC.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-Config-SC.dsl"; sourceTree = "<group>"; };
+		84178DE71D0DD4AE006A3D30 /* config_nuc6_sc.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_nuc6_sc.plist; sourceTree = "<group>"; };
 		84490D5D1A14945B000E1BFB /* patch_hda.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = patch_hda.sh; sourceTree = "<group>"; };
 		8467C38E1A23A9FC00FCF396 /* mount_efi.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mount_efi.sh; sourceTree = "<group>"; };
-		ED0334941C0A124F004E6BDB /* Platforms.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Platforms.plist; path = Resources_ALC283/Platforms.plist; sourceTree = "<group>"; };
 		ED0EF6761CFBE3EA00243958 /* SSDT-Disable_EHCI.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-Disable_EHCI.dsl"; sourceTree = "<group>"; };
 		ED272D611CCC789300FE569D /* install_tools.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install_tools.sh; sourceTree = "<group>"; };
 		ED373E171C0535C1005018E4 /* SSDT-IGPU.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-IGPU.dsl"; sourceTree = "<group>"; };
@@ -25,12 +30,10 @@
 		ED54483A1CFFD75D007F89F0 /* SSDT-Config.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-Config.dsl"; sourceTree = "<group>"; };
 		ED71D7551B98D1F80006C457 /* config_install_nuc5.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_install_nuc5.plist; sourceTree = "<group>"; };
 		EDA342501CFC99B700E14DE0 /* SSDT-SATA.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-SATA.dsl"; sourceTree = "<group>"; };
-		EDAA88F11CFB6A6D008BA1EE /* SSDT-ALC283.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-ALC283.dsl"; sourceTree = "<group>"; };
-		EDC7F9431B4C64FA00B49451 /* layout1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = layout1.plist; path = Resources_ALC283/layout1.plist; sourceTree = "<group>"; };
+		EDAA88F11CFB6A6D008BA1EE /* SSDT-NUCHDA.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-NUCHDA.dsl"; sourceTree = "<group>"; };
 		EDCF685A1CFBBD03009D6CCD /* SSDT-LPC.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-LPC.dsl"; sourceTree = "<group>"; };
 		EDD762461CFC968400A2D6BA /* config_install_nuc6.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_install_nuc6.plist; sourceTree = "<group>"; };
 		EDD762471CFC973E00A2D6BA /* config_nuc6.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_nuc6.plist; sourceTree = "<group>"; };
-		EDF134011B4F62DA009D8597 /* ahhcd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ahhcd.plist; path = Resources_ALC283/ahhcd.plist; sourceTree = "<group>"; };
 		EDFE7D6F1CFBD22F00380DFC /* config_nuc5.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_nuc5.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -43,8 +46,10 @@
 				EDD762461CFC968400A2D6BA /* config_install_nuc6.plist */,
 				EDFE7D6F1CFBD22F00380DFC /* config_nuc5.plist */,
 				EDD762471CFC973E00A2D6BA /* config_nuc6.plist */,
+				84178DE71D0DD4AE006A3D30 /* config_nuc6_sc.plist */,
 				ED3AF2321CC40740004F19AC /* makefile */,
 				ED54483A1CFFD75D007F89F0 /* SSDT-Config.dsl */,
+				84178DE61D0DD0D6006A3D30 /* SSDT-Config-SC.dsl */,
 				ED48DF001B4CCCC800BDDC62 /* SSDT-HACK.dsl */,
 				EDCF685A1CFBBD03009D6CCD /* SSDT-LPC.dsl */,
 				ED373E171C0535C1005018E4 /* SSDT-IGPU.dsl */,
@@ -52,7 +57,7 @@
 				ED0EF6761CFBE3EA00243958 /* SSDT-Disable_EHCI.dsl */,
 				ED5448371CFFD70D007F89F0 /* SSDT-XHC.dsl */,
 				EDA342501CFC99B700E14DE0 /* SSDT-SATA.dsl */,
-				EDAA88F11CFB6A6D008BA1EE /* SSDT-ALC283.dsl */,
+				EDAA88F11CFB6A6D008BA1EE /* SSDT-NUCHDA.dsl */,
 				ED5448361CFFD70D007F89F0 /* SSDT-HDEF.dsl */,
 				ED5448391CFFD743007F89F0 /* SSDT-HDAU.dsl */,
 				8467C38E1A23A9FC00FCF396 /* mount_efi.sh */,
@@ -67,9 +72,10 @@
 			isa = PBXGroup;
 			children = (
 				84490D5D1A14945B000E1BFB /* patch_hda.sh */,
-				EDF134011B4F62DA009D8597 /* ahhcd.plist */,
-				ED0334941C0A124F004E6BDB /* Platforms.plist */,
-				EDC7F9431B4C64FA00B49451 /* layout1.plist */,
+				840463E01D0DD98C00ED8BA5 /* ahhcd.plist */,
+				840463E11D0DD98C00ED8BA5 /* layout1.plist */,
+				840463DF1D0DD98C00ED8BA5 /* layout2.plist */,
+				840463DE1D0DD98C00ED8BA5 /* Platforms.plist */,
 			);
 			name = audio;
 			sourceTree = "<group>";

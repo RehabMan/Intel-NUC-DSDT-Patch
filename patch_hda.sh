@@ -84,8 +84,9 @@ fi
 function createAppleHDAResources_HDC()
 {
     rm -rf AppleHDA_$1_Resources && mkdir AppleHDA_$1_Resources
-    layouts=$(basename `ls Resources_$1/layout*.plist`)
+    layouts=`ls Resources_$1/layout*.plist`
     for layout in $layouts; do
+        layout=`basename $layout`
         cp Resources_$1/$layout AppleHDA_$1_Resources/${layout/.plist/.zml}
     done
     if [[ $MINOR_VER -gt 7 ]]; then
@@ -163,6 +164,6 @@ if [[ "$1" == "" ]]; then
     exit
 fi
 
-createAppleHDAInjector "$1"
-createAppleHDAInjector_HCD "$1"
+#createAppleHDAInjector "$1"
+#createAppleHDAInjector_HCD "$1"
 createAppleHDAResources_HDC "$1"

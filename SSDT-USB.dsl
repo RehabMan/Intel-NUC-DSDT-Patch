@@ -148,13 +148,13 @@ DefinitionBlock ("", "SSDT", 2, "hack", "usb", 0)
                         "UsbConnector", 3,
                         "port", Buffer() { 0x04, 0, 0, 0 },
                     },
-                    //HS05/HS06 not used
-                    "HS07", Package() // bluetooth
+                    //HS05/HS06/HS07/HS08 not used
+                    "HS09", Package() // bluetooth
                     {
                         "UsbConnector", 255,
-                        "port", Buffer() { 0x07, 0, 0, 0 },
+                        "port", Buffer() { 0x09, 0, 0, 0 },
                     },
-                    //HS08/HS09/HS10/HS11/HS12/HS13/HS14 not used
+                    //HS10/HS11/HS12/HS13/HS14 not used
                     //USR1/USR2 (0x0f/0x10) not used
                     "SS01", Package() // SS USB3 front right
                     {

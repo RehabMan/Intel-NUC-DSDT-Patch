@@ -188,7 +188,7 @@ fi
 # install kexts in the repo itself
 
 # patching AppleHDA
-HDA=ALC283
+HDA=NUCHDA
 $SUDO rm -Rf $KEXTDEST/AppleHDA_$HDA.kext
 $SUDO rm -Rf $KEXTDEST/AppleHDAHCD_$HDA.kext
 $SUDO rm -f $SLE/AppleHDA.kext/Contents/Resources/*.zml*

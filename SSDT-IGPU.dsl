@@ -60,7 +60,6 @@ DefinitionBlock ("", "SSDT", 2, "hack", "igpu", 0)
                     "hda-gfx", Buffer() { "onboard-1" },
                     "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x16, 0x16 },
                 },
-                //REVIEW: add more Skylake IDs...
                 // Skylake/HD520
                 0x1916, 0, Package()
                 {

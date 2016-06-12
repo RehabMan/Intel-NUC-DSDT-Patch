@@ -49,17 +49,23 @@ DefinitionBlock("", "SSDT", 2, "hack", "D-EHCI", 0)
             Name(_HID, "RMD20000")
             Method(_INI)
             {
-                // disable EHCI#1
-                // put EHCI#1 in D3hot (sleep mode)
-                ^^EH01.PSTE = 3
-                // disable EHCI#1 PCI space
-                ^^LPCB.FDE1 = 1
+                If (CondRefOf(\_SB.PCI0.EH01))
+                {
+                    // disable EHCI#1
+                    // put EHCI#1 in D3hot (sleep mode)
+                    ^^EH01.PSTE = 3
+                    // disable EHCI#1 PCI space
+                    ^^LPCB.FDE1 = 1
+                }
 
-                // disable EHCI#2
-                // put EHCI#2 in D3hot (sleep mode)
-                ^^EH02.PSTE = 3
-                // disable EHCI#2 PCI space
-                ^^LPCB.FDE2 = 1
+                If (CondRefOf(\_SB.PCI0.EH02))
+                {
+                    // disable EHCI#2
+                    // put EHCI#2 in D3hot (sleep mode)
+                    ^^EH02.PSTE = 3
+                    // disable EHCI#2 PCI space
+                    ^^LPCB.FDE2 = 1
+                }
             }
         }
     }

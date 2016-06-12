@@ -9,6 +9,6 @@ build/*
 !build/readme.txt
 nuc5.xcodeproj/project.xcworkspace
 nuc5.xcodeproj/xcuserdata
-AppleHDAHCD_ALC283.kext
-AppleHDA_ALC283.kext
-AppleHDA_ALC283_Resources
+AppleHDAHCD_NUCHDA.kext
+AppleHDA_NUCHDA.kext
+AppleHDA_NUCHDA_Resources
