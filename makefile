@@ -12,6 +12,7 @@ RESOURCES=./Resources_$(HDA)
 HDAINJECT=AppleHDA_$(HDA).kext
 HDAHCDINJECT=AppleHDAHCD_$(HDA).kext
 HDAZML=AppleHDA_$(HDA)_Resources
+HDAZML_ALL=$(HDAZML)/Platforms.zml.zlib $(HDAZML)/layout1.zml.zlib $(HDAZML)/layout2.zml.zlib
 
 VERSION_ERA=$(shell ./print_version.sh)
 ifeq "$(VERSION_ERA)" "10.10-"
@@ -33,7 +34,7 @@ ALL_SC=$(BUILDDIR)/SSDT-Config-SC.aml $(ALL_COMMON)
 ALL_ALL=$(BUILDDIR)/SSDT-Config.aml $(BUILDDIR)/SSDT-Config-SC.aml $(ALL_COMMON)
 
 .PHONY: all
-all: $(ALL_ALL) $(HDAINJECT) $(HDAHCDINJECT)
+all: $(ALL_ALL) $(HDAZML_ALL) #$(HDAINJECT) $(HDAHCDINJECT)
 
 $(BUILDDIR)/%.aml : %.dsl
 	iasl $(IASLOPTS) -p $@ $<
@@ -58,7 +59,8 @@ install_sc: $(ALL_SC)
 	cp $(ALL_SC) $(EFIDIR)/EFI/CLOVER/ACPI/patched
 	#rm $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-IGPU.aml
 
-$(HDAINJECT) $(HDAHCDINJECT): $(RESOURCES)/*.plist ./patch_hda.sh
+#$(HDAINJECT) $(HDAHCDINJECT): $(RESOURCES)/*.plist ./patch_hda.sh
+$(HDAZML_ALL): $(RESOURCES)/*.plist ./patch_hda.sh
 	./patch_hda.sh $(HDA)
 
 .PHONY: clean_hda
