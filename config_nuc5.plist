@@ -171,6 +171,8 @@
 	</dict>
 	<key>Graphics</key>
 	<dict>
+		<key>ig-platform-id</key>
+		<string>0x19160000</string>
 		<key>Inject</key>
 		<dict>
 			<key>Intel</key>
