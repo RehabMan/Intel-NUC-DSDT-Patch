@@ -227,7 +227,19 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>AppleHDA ALC262 to ALC283</string>
+				<string>AppleHDA ALC261 to 0</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>YQLsEA==</data>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>AAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>AppleHDA ALC262 to ALC233</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
