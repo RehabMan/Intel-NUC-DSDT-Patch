@@ -78,7 +78,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "igpu", 0)
                 0x193b, 0, Package()
                 {
                     "model", Buffer() { "Intel Iris Pro Graphics 580" },
-                    "AAPL,ig-platform-id", Buffer() { 0x05, 0x00, 0x3b, 0x19 },
+                    "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x16, 0x19 },
                     "hda-gfx", Buffer() { "onboard-1" },
                 },
             })
