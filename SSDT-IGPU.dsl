@@ -74,29 +74,14 @@ DefinitionBlock ("", "SSDT", 2, "hack", "igpu", 0)
                     "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x26, 0x19 },
                     "hda-gfx", Buffer() { "onboard-1" },
                 },
-                #if 0
                 // Skylake/Iris Pro HD580
                 0x193b, 0, Package()
                 {
                     "model", Buffer() { "Intel Iris Pro Graphics 580" },
-                    "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x16, 0x19 },
-                    "hda-gfx", Buffer() { "onboard-1" },
-                },
-                #else
-                // Skylake/Iris Pro HD580
-                0x193b, 0, Package()
-                {
-                    "AAPL,HasPanel", Buffer() { 1, 0, 0, 0 },
                     "AAPL,ig-platform-id", Buffer() { 0x05, 0x00, 0x3b, 0x19 },
-                    "AAPL00,DualLink", Buffer() { 1 },
-                    "built-in", Buffer() { 0 },
-                    "class-code", Buffer() { 0, 0, 3, 0 },
-                    "device_type", Buffer() { "display" },
-                    "model", Buffer() { "Intel Iris Graphics P580" },
-                    "subsystem-vendor-id", Buffer() { 0x6b, 0x10, 0, 0 },
+                    //REVIEW: enabling hda-gfx causes black screen, probably due to non-working audio
                     //"hda-gfx", Buffer() { "onboard-1" },
                 },
-                #endif
             })
 
             // inject properties for integrated graphics on IGPU
