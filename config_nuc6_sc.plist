@@ -237,7 +237,7 @@
 				<key>Comment</key>
 				<string>AppleHDA ALC261 to 0</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>YQLsEA==</data>
 				<key>Name</key>
@@ -249,9 +249,69 @@
 				<key>Comment</key>
 				<string>AppleHDA ALC262 to ALC233</string>
 				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>YgLsEA==</data>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>MwLsEA==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>AppleHDA ALC261 to 0</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>YQLsEA==</data>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>AAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>AppleHDA ALC262 to 0</string>
+				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
 				<data>YgLsEA==</data>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>AAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>AppleHDA ALC885 to 0</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>hQjsEA==</data>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>AAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>AppleHDA 0x11d41983 to 0</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>gxnUEQ==</data>
+				<key>Name</key>
+				<string>AppleHDA</string>
+				<key>Replace</key>
+				<data>AAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>AppleHDA 0x11d41983 to 0x10ec0233</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>hBnUEQ==</data>
 				<key>Name</key>
 				<string>AppleHDA</string>
 				<key>Replace</key>
