@@ -261,15 +261,27 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>HDMI-audio, port 0105, 0x19260000</string>
+				<string>HDMI-audio, port 0105, 0x19260004 0x193b0005</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
 				<string>AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Find</key>
-				<data>AQUJAAAEAACHAQAA</data>
+				<data>AQUJAAAEAADHAQAA</data>
 				<key>Replace</key>
-				<data>AQUJAAAIAACHAQAA</data>
+				<data>AQUJAAAIAADHAQAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>DP-video, change port 0204 to port 0306, 0x19260004 0x193b0005</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Name</key>
+				<string>AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>AgQKAAAEAADHAQAA</data>
+				<key>Replace</key>
+				<data>AwYKAAAEAADHAQAA</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
