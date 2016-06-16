@@ -63,6 +63,14 @@
 				<true/>
 				<key>FixShutdown_0004</key>
 				<true/>
+				<key>FIX_TMR_40000</key>
+				<false/>
+				<key>FIX_RTC_20000</key>
+				<false/>
+				<key>FixIPIC_0040</key>
+				<false/>
+				<key>FixHPET_0010</key>
+				<false/>
 			</dict>
 		</dict>
 		<key>SSDT</key>
