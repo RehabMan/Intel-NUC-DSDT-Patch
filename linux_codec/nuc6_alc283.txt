@@ -24,7 +24,7 @@ Node 0x02 [Audio Output] wcaps 0x41d: Stereo Amp-Out
   Device: name="ALC283 Analog", type="Audio", device=0
   Amp-Out caps: ofs=0x57, nsteps=0x57, stepsize=0x02, mute=0
   Amp-Out vals:  [0x3c 0x3c]
-  Converter: stream=9, channel=0
+  Converter: stream=1, channel=0
   PCM:
     rates [0x560]: 44100 48000 96000 192000
     bits [0xe]: 16 20 24
@@ -40,7 +40,7 @@ Node 0x03 [Audio Output] wcaps 0x41d: Stereo Amp-Out
     bits [0xe]: 16 20 24
     formats [0x1]: PCM
   Power states:  D0 D1 D2 D3 EPSS
-  Power: setting=D0, actual=D0
+  Power: setting=D3, actual=D3
 Node 0x04 [Vendor Defined Widget] wcaps 0xf00000: Mono
 Node 0x05 [Vendor Defined Widget] wcaps 0xf00000: Mono
 Node 0x06 [Audio Output] wcaps 0x611: Stereo Digital
@@ -53,7 +53,7 @@ Node 0x06 [Audio Output] wcaps 0x611: Stereo Digital
     bits [0xe]: 16 20 24
     formats [0x1]: PCM
   Power states:  D0 D1 D2 D3 EPSS
-  Power: setting=D0, actual=D0
+  Power: setting=D3, actual=D3
 Node 0x07 [Vendor Defined Widget] wcaps 0xf00000: Mono
 Node 0x08 [Audio Input] wcaps 0x10051b: Stereo Amp-In
   Control: name="Capture Volume", index=0, device=0
@@ -63,7 +63,7 @@ Node 0x08 [Audio Input] wcaps 0x10051b: Stereo Amp-In
   Device: name="ALC283 Analog", type="Audio", device=0
   Amp-In caps: ofs=0x17, nsteps=0x3f, stepsize=0x02, mute=1
   Amp-In vals:  [0x27 0x27]
-  Converter: stream=7, channel=0
+  Converter: stream=1, channel=0
   SDI-Select: 0
   PCM:
     rates [0x560]: 44100 48000 96000 192000
@@ -83,7 +83,7 @@ Node 0x09 [Audio Input] wcaps 0x10051b: Stereo Amp-In
     bits [0xe]: 16 20 24
     formats [0x1]: PCM
   Power states:  D0 D1 D2 D3 EPSS
-  Power: setting=D0, actual=D0
+  Power: setting=D3, actual=D3
   Connection: 1
      0x22
 Node 0x0a [Vendor Defined Widget] wcaps 0xf00000: Mono
@@ -127,7 +127,7 @@ Node 0x11 [Audio Input] wcaps 0x10051b: Stereo Amp-In
     bits [0xe]: 16 20 24
     formats [0x1]: PCM
   Power states:  D0 D1 D2 D3 EPSS
-  Power: setting=D0, actual=D0
+  Power: setting=D3, actual=D3
   Connection: 1
      0x12
 Node 0x12 [Pin Complex] wcaps 0x40040b: Stereo Amp-In
@@ -139,7 +139,7 @@ Node 0x12 [Pin Complex] wcaps 0x40040b: Stereo Amp-In
     DefAssociation = 0x0, Sequence = 0x0
   Pin-ctls: 0x00:
   Power states:  D0 D1 D2 D3 EPSS
-  Power: setting=D0, actual=D0
+  Power: setting=D3, actual=D3
 Node 0x13 [Vendor Defined Widget] wcaps 0xf00000: Mono
 Node 0x14 [Pin Complex] wcaps 0x40058d: Stereo Amp-Out
   Amp-Out caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
@@ -153,7 +153,7 @@ Node 0x14 [Pin Complex] wcaps 0x40058d: Stereo Amp-Out
   Pin-ctls: 0x00:
   Unsolicited: tag=00, enabled=0
   Power states:  D0 D1 D2 D3 EPSS
-  Power: setting=D0, actual=D0
+  Power: setting=D3, actual=D3
   Connection: 1
      0x0c
 Node 0x15 [Vendor Defined Widget] wcaps 0xf00000: Mono
@@ -168,7 +168,7 @@ Node 0x17 [Pin Complex] wcaps 0x40050c: Mono Amp-Out
     Misc = NO_PRESENCE
   Pin-ctls: 0x00:
   Power states:  D0 D1 D2 D3 EPSS
-  Power: setting=D0, actual=D0
+  Power: setting=D3, actual=D3
   Connection: 1
      0x0f
 Node 0x18 [Pin Complex] wcaps 0x40048b: Stereo Amp-In
@@ -183,11 +183,10 @@ Node 0x18 [Pin Complex] wcaps 0x40048b: Stereo Amp-In
   Pin-ctls: 0x20: IN VREF_HIZ
   Unsolicited: tag=00, enabled=0
   Power states:  D0 D1 D2 D3 EPSS
-  Power: setting=D0, actual=D0
+  Power: setting=D3, actual=D3
 Node 0x19 [Pin Complex] wcaps 0x40048b: Stereo Amp-In
   Control: name="Mic Boost Volume", index=0, device=0
     ControlAmp: chs=3, dir=In, idx=0, ofs=0
-  Control: name="Mic Jack", index=0, device=0
   Amp-In caps: ofs=0x00, nsteps=0x03, stepsize=0x2f, mute=0
   Amp-In vals:  [0x00 0x00]
   Pincap 0x00003724: IN Detect
@@ -196,9 +195,9 @@ Node 0x19 [Pin Complex] wcaps 0x40048b: Stereo Amp-In
     Conn = 1/8, Color = Black
     DefAssociation = 0x2, Sequence = 0x0
   Pin-ctls: 0x24: IN VREF_80
-  Unsolicited: tag=01, enabled=1
+  Unsolicited: tag=02, enabled=1
   Power states:  D0 D1 D2 D3 EPSS
-  Power: setting=D0, actual=D0
+  Power: setting=D3, actual=D3
 Node 0x1a [Pin Complex] wcaps 0x40048b: Stereo Amp-In
   Amp-In caps: ofs=0x00, nsteps=0x03, stepsize=0x2f, mute=0
   Amp-In vals:  [0x00 0x00]
@@ -211,7 +210,7 @@ Node 0x1a [Pin Complex] wcaps 0x40048b: Stereo Amp-In
   Pin-ctls: 0x20: IN VREF_HIZ
   Unsolicited: tag=00, enabled=0
   Power states:  D0 D1 D2 D3 EPSS
-  Power: setting=D0, actual=D0
+  Power: setting=D3, actual=D3
 Node 0x1b [Pin Complex] wcaps 0x40058f: Stereo Amp-In Amp-Out
   Amp-In caps: ofs=0x00, nsteps=0x03, stepsize=0x2f, mute=0
   Amp-In vals:  [0x00 0x00]
@@ -227,7 +226,7 @@ Node 0x1b [Pin Complex] wcaps 0x40058f: Stereo Amp-In Amp-Out
   Pin-ctls: 0x20: IN VREF_HIZ
   Unsolicited: tag=00, enabled=0
   Power states:  D0 D1 D2 D3 EPSS
-  Power: setting=D0, actual=D0
+  Power: setting=D3, actual=D3
   Connection: 2
      0x0c* 0x0d
 Node 0x1c [Vendor Defined Widget] wcaps 0xf00000: Mono
@@ -238,7 +237,7 @@ Node 0x1d [Pin Complex] wcaps 0x400400: Mono
     DefAssociation = 0x0, Sequence = 0x1
   Pin-ctls: 0x20: IN
   Power states:  D0 D1 D2 D3 EPSS
-  Power: setting=D0, actual=D0
+  Power: setting=D3, actual=D3
 Node 0x1e [Pin Complex] wcaps 0x400781: Stereo Digital
   Pincap 0x00000014: OUT Detect
   Pin Default 0x411111f0: [N/A] Speaker at Ext Rear
@@ -248,7 +247,7 @@ Node 0x1e [Pin Complex] wcaps 0x400781: Stereo Digital
   Pin-ctls: 0x40: OUT
   Unsolicited: tag=00, enabled=0
   Power states:  D0 D1 D2 D3 EPSS
-  Power: setting=D0, actual=D0
+  Power: setting=D3, actual=D3
   Connection: 1
      0x06
 Node 0x1f [Vendor Defined Widget] wcaps 0xf00000: Mono
@@ -257,7 +256,6 @@ Node 0x20 [Vendor Defined Widget] wcaps 0xf00040: Mono
 Node 0x21 [Pin Complex] wcaps 0x40058d: Stereo Amp-Out
   Control: name="Master Playback Switch", index=0, device=0
     ControlAmp: chs=3, dir=Out, idx=0, ofs=0
-  Control: name="Headphone Jack", index=0, device=0
   Amp-Out caps: ofs=0x00, nsteps=0x00, stepsize=0x00, mute=1
   Amp-Out vals:  [0x00 0x00]
   Pincap 0x0001001c: OUT HP EAPD Detect
@@ -266,9 +264,9 @@ Node 0x21 [Pin Complex] wcaps 0x40058d: Stereo Amp-Out
     Conn = 1/8, Color = Black
     DefAssociation = 0x1, Sequence = 0x0
   Pin-ctls: 0xc0: OUT HP
-  Unsolicited: tag=02, enabled=1
+  Unsolicited: tag=01, enabled=1
   Power states:  D0 D1 D2 D3 EPSS
-  Power: setting=D0, actual=D0
+  Power: setting=D3, actual=D3
   Connection: 2
      0x0c* 0x0d
 Node 0x22 [Audio Mixer] wcaps 0x20010b: Stereo Amp-In

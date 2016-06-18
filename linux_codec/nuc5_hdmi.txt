@@ -16,7 +16,7 @@ State of AFG node 0x01:
   Power: setting=D0, actual=D0, Clock-stop-OK
 GPIO: io=0, o=0, i=0, unsolicited=0, wake=0
 Node 0x02 [Audio Output] wcaps 0x6611: 8-Channels Digital
-  Converter: stream=1, channel=0
+  Converter: stream=0, channel=0
   Digital: Enabled KAE
   Digital category: 0x0
   IEC Coding Type: 0x0
@@ -36,7 +36,7 @@ Node 0x03 [Audio Output] wcaps 0x6611: 8-Channels Digital
     bits [0x1e]: 16 20 24 32
     formats [0x5]: PCM AC3
   Power states:  D0 D3 EPSS
-  Power: setting=D3, actual=D3
+  Power: setting=D0, actual=D0
 Node 0x04 [Audio Output] wcaps 0x6611: 8-Channels Digital
   Converter: stream=0, channel=0
   Digital: Enabled KAE
@@ -47,9 +47,8 @@ Node 0x04 [Audio Output] wcaps 0x6611: 8-Channels Digital
     bits [0x1e]: 16 20 24 32
     formats [0x5]: PCM AC3
   Power states:  D0 D3 EPSS
-  Power: setting=D3, actual=D3
+  Power: setting=D0, actual=D0
 Node 0x05 [Pin Complex] wcaps 0x40778d: 8-Channels Digital Amp-Out CP
-  Control: name="HDMI/DP,pcm=3 Jack", index=0, device=0
   Control: name="IEC958 Playback Con Mask", index=0, device=0
   Control: name="IEC958 Playback Pro Mask", index=0, device=0
   Control: name="IEC958 Playback Default", index=0, device=0
@@ -69,7 +68,6 @@ Node 0x05 [Pin Complex] wcaps 0x40778d: 8-Channels Digital Amp-Out CP
   Connection: 3
      0x02* 0x03 0x04
 Node 0x06 [Pin Complex] wcaps 0x40778d: 8-Channels Digital Amp-Out CP
-  Control: name="HDMI/DP,pcm=7 Jack", index=0, device=0
   Control: name="IEC958 Playback Con Mask", index=1, device=0
   Control: name="IEC958 Playback Pro Mask", index=1, device=0
   Control: name="IEC958 Playback Default", index=1, device=0
@@ -90,7 +88,6 @@ Node 0x06 [Pin Complex] wcaps 0x40778d: 8-Channels Digital Amp-Out CP
   In-driver Connection: 3
      0x02 0x03 0x04
 Node 0x07 [Pin Complex] wcaps 0x40778d: 8-Channels Digital Amp-Out CP
-  Control: name="HDMI/DP,pcm=8 Jack", index=0, device=0
   Control: name="IEC958 Playback Con Mask", index=2, device=0
   Control: name="IEC958 Playback Pro Mask", index=2, device=0
   Control: name="IEC958 Playback Default", index=2, device=0
