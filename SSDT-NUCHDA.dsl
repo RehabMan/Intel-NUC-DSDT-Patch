@@ -18,7 +18,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "NUCHDA", 0)
                     {
                         // 0x19 SET_PIN_WIDGET_CONTROL 0x25
                         "Command", Buffer() { 0x01, 0x97, 0x07, 0x25 },
-                        "On Init", ">n",
+                        "On Init", ">y",
                         "On Sleep", ">n",
                         "On Wake", ">y",
                     },
@@ -40,7 +40,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "NUCHDA", 0)
                     {
                         // 0x19 SET_PIN_WIDGET_CONTROL 0x25
                         "Command", Buffer() { 0x01, 0x97, 0x07, 0x25 },
-                        "On Init", ">n",
+                        "On Init", ">y",
                         "On Sleep", ">n",
                         "On Wake", ">y",
                     },
