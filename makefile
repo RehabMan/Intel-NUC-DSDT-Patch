@@ -59,7 +59,7 @@ install_sc: $(ALL_SC)
 	cp $(ALL_SC) $(EFIDIR)/EFI/CLOVER/ACPI/patched
 	#rm $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-IGPU.aml
 
-#$(HDAINJECT) $(HDAHCDINJECT): $(RESOURCES)/*.plist ./patch_hda.sh
+#$(HDAINJECT) $(HDAHCDINJECT) $(HDAZML_ALL): $(RESOURCES)/*.plist ./patch_hda.sh
 $(HDAZML_ALL): $(RESOURCES)/*.plist ./patch_hda.sh
 	./patch_hda.sh $(HDA)
 
@@ -79,6 +79,16 @@ install_hdadummy:
 	sudo cp -R ./$(HDAINJECT) $(INSTDIR)
 	rm -f $(SLE)/AppleHDA.kext/Contents/Resources/*.zml*
 	if [ "`which tag`" != "" ]; then sudo tag -a Blue $(INSTDIR)/$(HDAINJECT); fi
+	make update_kernelcache
+
+.PHONY: install_hdahcd
+install_hdahcd:
+	sudo rm -Rf $(INSTDIR)/$(HDAINJECT)
+	sudo rm -Rf $(INSTDIR)/$(HDAHCDINJECT)
+	sudo cp -R ./$(HDAHCDINJECT) $(INSTDIR)
+	if [ "`which tag`" != "" ]; then sudo tag -a Blue $(INSTDIR)/$(HDAHCDINJECT); fi
+	sudo cp $(HDAZML)/*.zml* $(SLE)/AppleHDA.kext/Contents/Resources
+	if [ "`which tag`" != "" ]; then sudo tag -a Blue $(SLE)/AppleHDA.kext/Contents/Resources/*.zml*; fi
 	make update_kernelcache
 
 .PHONY: install_hda
