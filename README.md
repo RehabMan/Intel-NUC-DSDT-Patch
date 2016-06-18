@@ -12,6 +12,11 @@ Skylake NUC6: http://www.tonymacx86.com/threads/guide-intel-skylake-nuc6-using-c
 
 ### Change Log:
 
+2016-06-18
+
+- fixes some issues with ALC283 (lost/poor quality audio after period of LineIn idle, same after sleep/wake)
+
+
 2016-06-12
 
 - add preliminary NUC6 (Skylake) Skull Canyon support

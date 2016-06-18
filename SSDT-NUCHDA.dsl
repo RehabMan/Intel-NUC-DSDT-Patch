@@ -6,16 +6,67 @@ DefinitionBlock ("", "SSDT", 2, "hack", "NUCHDA", 0)
     {
         "CodecCommander", Package()
         {
-            "Disable", ">y",
+            "Version", 0x020600,
+            // ALC283 for NUC6/NUC5
+            "10ec_0283", Package()
+            {
+                //"Disable", ">n",
+                "Custom Commands", Package()
+                {
+                    Package(){},
+                    Package()
+                    {
+                        // 0x19 SET_PIN_WIDGET_CONTROL 0x25
+                        "Command", Buffer() { 0x01, 0x97, 0x07, 0x25 },
+                        "On Init", ">n",
+                        "On Sleep", ">n",
+                        "On Wake", ">y",
+                    },
+                },
+                "Perform Reset", ">n",
+                "Send Delay", 10,
+                "Sleep Nodes", ">n",
+                "Update Nodes", ">n",
+            },
+            // ALC233 for NUC6 Skull Canyon
+            "10ec_0233", Package()
+            {
+                "Disable", ">y", //REVIEW: disabled for now for ALC233
+                #if 0
+                "Custom Commands", Package()
+                {
+                    Package(){},
+                    Package()
+                    {
+                        // 0x19 SET_PIN_WIDGET_CONTROL 0x25
+                        "Command", Buffer() { 0x01, 0x97, 0x07, 0x25 },
+                        "On Init", ">n",
+                        "On Sleep", ">n",
+                        "On Wake", ">y",
+                    },
+                },
+                "Perform Reset", ">n",
+                "Send Delay", 10,
+                "Sleep Nodes", ">n",
+                "Update Nodes", ">n",
+                #endif
+            },
         },
+        #if 1 //REVIEW: may eventually need CodecCommander residency for Skull Canyon (disabled for now)
         "CodecCommanderPowerHook", Package()
         {
-            "Disable", ">y",
+            "Version", 0x020600,
+            // ALC233 for NUC6 Skull Canyon
+            "10ec_0233", Package()
+            {
+                "Disable", ">y",
+            },
         },
+        #endif
         "CodecCommanderProbeInit", Package()
         {
             "Version", 0x020600,
-            // ALC283 for NUC6
+            // ALC283 for NUC6/NUC5
             "10ec_0283", Package()
             {
                 "PinConfigDefault", Package()
