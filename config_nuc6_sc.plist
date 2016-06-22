@@ -235,7 +235,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>AppleHDA ALC261 to 0</string>
+				<string>set1, AppleHDA ALC261 to 0</string>
 				<key>Disabled</key>
 				<true/>
 				<key>Find</key>
@@ -247,7 +247,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>AppleHDA ALC262 to ALC233</string>
+				<string>set1, AppleHDA ALC262 to ALC233</string>
 				<key>Disabled</key>
 				<true/>
 				<key>Find</key>
@@ -259,7 +259,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>AppleHDA ALC261 to 0</string>
+				<string>set2, AppleHDA ALC261 to 0</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
@@ -271,7 +271,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>AppleHDA ALC262 to 0</string>
+				<string>set2, AppleHDA ALC262 to 0</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
@@ -283,7 +283,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>AppleHDA ALC885 to 0</string>
+				<string>set2, AppleHDA ALC885 to 0</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
@@ -295,7 +295,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>AppleHDA 0x11d41983 to 0</string>
+				<string>set2, AppleHDA 0x11d41983 to 0</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
@@ -307,7 +307,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>AppleHDA 0x11d41983 to 0x10ec0233</string>
+				<string>set2, AppleHDA 0x11d41983 to 0x10ec0233</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
