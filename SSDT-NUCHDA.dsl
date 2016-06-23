@@ -87,7 +87,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "NUCHDA", 0)
                     Package(){},
                     Package()
                     {
-                        "LayoutID", 2,
+                        //"LayoutID", 2,
                         "PinConfigs", Package()
                         {
                             Package(){},
@@ -97,7 +97,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "NUCHDA", 0)
                             0x18, 0x400000f0,
                             0x19, 0x01813020,
                             0x1a, 0x400000f0,
-                            0x1b, 0x400000f0,
+                            0x1b, 0x01214030,
                             0x1d, 0x400000f0,
                             0x1e, 0x400000f0,
                             0x21, 0x01214010,
