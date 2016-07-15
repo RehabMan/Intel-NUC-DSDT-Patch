@@ -128,12 +128,12 @@ DefinitionBlock ("", "SSDT", 2, "hack", "usb", 0)
                 //"port-count", Buffer() { 26, 0, 0, 0 },
                 "ports", Package()
                 {
-                    "HS01", Package() // HS USB3 front right
+                    "HS01", Package() // HS USB3 front left
                     {
                         "UsbConnector", 3,
                         "port", Buffer() { 0x01, 0, 0, 0 },
                     },
-                    "HS02", Package() // HS USB3 front left
+                    "HS02", Package() // HS USB3 front right
                     {
                         "UsbConnector", 3,
                         "port", Buffer() { 0x02, 0, 0, 0 },
@@ -156,12 +156,12 @@ DefinitionBlock ("", "SSDT", 2, "hack", "usb", 0)
                     },
                     //HS10/HS11/HS12/HS13/HS14 not used
                     //USR1/USR2 (0x0f/0x10) not used
-                    "SS01", Package() // SS USB3 front right
+                    "SS01", Package() // SS USB3 front left
                     {
                         "UsbConnector", 3,
                         "port", Buffer() { 0x11, 0, 0, 0 },
                     },
-                    "SS02", Package() // SS USB3 front left
+                    "SS02", Package() // SS USB3 front right
                     {
                         "UsbConnector", 3,
                         "port", Buffer() { 0x12, 0, 0, 0 },

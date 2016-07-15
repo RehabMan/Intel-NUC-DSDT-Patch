@@ -6,7 +6,7 @@
 	<dict>
 		<key>SortedOrder-Comment</key>
 		<string>This is the original order supported by Clover prior to build v3062.  You can trim it as necessary.</string>
-		<key>SortedOrder</key>
+		<key>#SortedOrder</key>
 		<array>
 			<string>SSDT.aml</string>
 			<string>SSDT-0.aml</string>
@@ -53,22 +53,6 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change EHC1 to EH01</string>
-					<key>Find</key>
-					<data>RUhDMQ==</data>
-					<key>Replace</key>
-					<data>RUgwMQ==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change EHC2 to EH02</string>
-					<key>Find</key>
-					<data>RUhDMg==</data>
-					<key>Replace</key>
-					<data>RUgwMg==</data>
-				</dict>
-				<dict>
-					<key>Comment</key>
 					<string>change HDAS to HDEF</string>
 					<key>Find</key>
 					<data>SERBUw==</data>
@@ -85,11 +69,19 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change MEI to IMEI</string>
+					<string>change SAT0 to SATA</string>
 					<key>Find</key>
-					<data>TUVJXw==</data>
+					<data>U0FUMA==</data>
 					<key>Replace</key>
-					<data>SU1FSQ==</data>
+					<data>U0FUQQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change _DSM to XDSM</string>
+					<key>Find</key>
+					<data>X0RTTQ==</data>
+					<key>Replace</key>
+					<data>WERTTQ==</data>
 				</dict>
 			</array>
 		</dict>
@@ -236,7 +228,7 @@
 	<key>Graphics</key>
 	<dict>
 		<key>ig-platform-id</key>
-		<string>0x19160000</string>
+		<string>0x193b0005</string>
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
@@ -262,9 +254,22 @@
 		<key>ForceKextsToLoad</key>
 		<array>
 			<string>\System\Library\Extensions\IONetworkingFamily.kext</string>
+			<string>\System\Library\Extensions\AppleIntelSKLGraphicsFramebuffer.kext</string>
 		</array>
 		<key>KextsToPatch</key>
 		<array>
+			<dict>
+				<key>Comment</key>
+				<string>DP-video, change port 0204 to port 0306, 0x19260004 0x193b0005</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Name</key>
+				<string>AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>AgQKAAAEAADHAQAA</data>
+				<key>Replace</key>
+				<data>AwYKAAAEAADHAQAA</data>
+			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.11.4 ( (based on Austere.J patch)</string>
