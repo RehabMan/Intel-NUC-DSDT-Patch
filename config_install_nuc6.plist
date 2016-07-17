@@ -313,7 +313,7 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>ProductName</key>
-		<string>iMac17,1</string>
+		<string>iMac14,2</string>
 		<key>Trust</key>
 		<true/>
 	</dict>
