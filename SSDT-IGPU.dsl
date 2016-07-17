@@ -79,8 +79,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "igpu", 0)
                 {
                     "model", Buffer() { "Intel Iris Pro Graphics 580" },
                     "AAPL,ig-platform-id", Buffer() { 0x05, 0x00, 0x3b, 0x19 },
-                    //REVIEW: enabling hda-gfx causes black screen, probably due to non-working audio
-                    //"hda-gfx", Buffer() { "onboard-1" },
+                    "hda-gfx", Buffer() { "onboard-1" },
                 },
             })
 

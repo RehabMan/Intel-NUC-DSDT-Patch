@@ -72,12 +72,22 @@ update_kernelcache:
 	sudo touch $(SLE)
 	sudo kextcache -update-volume /
 
+.PHONY: install_hdapatched
+install_hdapatched:
+	sudo rm -Rf $(INSTDIR)/$(HDAINJECT)
+	sudo rm -Rf $(INSTDIR)/$(HDAHCDINJECT)
+	sudo rm -f $(SLE)/AppleHDA.kext/Contents/Resources/*.zml*
+	sudo rm -Rf $(SLE)/AppleHDA.kext
+	sudo cp -R AppleHDA.kext $(SLE)
+	if [ "`which tag`" != "" ]; then sudo tag -a Red $(SLE)/AppleHDA.kext; fi
+	make update_kernelcache
+
 .PHONY: install_hdadummy
 install_hdadummy:
 	sudo rm -Rf $(INSTDIR)/$(HDAINJECT)
 	sudo rm -Rf $(INSTDIR)/$(HDAHCDINJECT)
 	sudo cp -R ./$(HDAINJECT) $(INSTDIR)
-	rm -f $(SLE)/AppleHDA.kext/Contents/Resources/*.zml*
+	sudo rm -f $(SLE)/AppleHDA.kext/Contents/Resources/*.zml*
 	if [ "`which tag`" != "" ]; then sudo tag -a Blue $(INSTDIR)/$(HDAINJECT); fi
 	make update_kernelcache
 

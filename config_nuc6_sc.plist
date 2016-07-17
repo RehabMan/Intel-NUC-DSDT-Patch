@@ -61,16 +61,6 @@
 			<dict>
 				<key>NewWay_80000000</key>
 				<true/>
-				<key>FixShutdown_0004</key>
-				<true/>
-				<key>FIX_TMR_40000</key>
-				<false/>
-				<key>FIX_RTC_20000</key>
-				<false/>
-				<key>FixIPIC_0040</key>
-				<false/>
-				<key>FixHPET_0010</key>
-				<false/>
 			</dict>
 		</dict>
 		<key>SSDT</key>
@@ -237,19 +227,19 @@
 				<key>Comment</key>
 				<string>set1, AppleHDA ALC261 to 0</string>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>YQLsEA==</data>
 				<key>Name</key>
 				<string>AppleHDA</string>
 				<key>Replace</key>
-				<data>AAAA</data>
+				<data>AAAAAA==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>set1, AppleHDA ALC262 to ALC233</string>
 				<key>Disabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>YgLsEA==</data>
 				<key>Name</key>
@@ -261,55 +251,55 @@
 				<key>Comment</key>
 				<string>set2, AppleHDA ALC261 to 0</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>YQLsEA==</data>
 				<key>Name</key>
 				<string>AppleHDA</string>
 				<key>Replace</key>
-				<data>AAAA</data>
+				<data>AAAAAA==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>set2, AppleHDA ALC262 to 0</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>YgLsEA==</data>
 				<key>Name</key>
 				<string>AppleHDA</string>
 				<key>Replace</key>
-				<data>AAAA</data>
+				<data>AAAAAA==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>set2, AppleHDA ALC885 to 0</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>hQjsEA==</data>
 				<key>Name</key>
 				<string>AppleHDA</string>
 				<key>Replace</key>
-				<data>AAAA</data>
+				<data>AAAAAA==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>set2, AppleHDA 0x11d41983 to 0</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>gxnUEQ==</data>
 				<key>Name</key>
 				<string>AppleHDA</string>
 				<key>Replace</key>
-				<data>AAAA</data>
+				<data>AAAAAA==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>set2, AppleHDA 0x11d41983 to 0x10ec0233</string>
+				<string>set2, AppleHDA 0x11d41984 to 0x10ec0233</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>hBnUEQ==</data>
 				<key>Name</key>
