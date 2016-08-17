@@ -66,6 +66,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "igpu", 0)
                     "model", Buffer() { "Intel Iris Graphics 520" },
                     "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x16, 0x19 },
                     "hda-gfx", Buffer() { "onboard-1" },
+                    "RM,device-id", Buffer() { 0x16, 0x19, 0x00, 0x00 },
                 },
                 // Skylake/HD540
                 0x1926, 0, Package()
@@ -73,6 +74,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "igpu", 0)
                     "model", Buffer() { "Intel Iris Graphics 540" },
                     "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x26, 0x19 },
                     "hda-gfx", Buffer() { "onboard-1" },
+                    "RM,device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
                 },
                 // Skylake/Iris Pro HD580
                 0x193b, 0, Package()
@@ -80,6 +82,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "igpu", 0)
                     "model", Buffer() { "Intel Iris Pro Graphics 580" },
                     "AAPL,ig-platform-id", Buffer() { 0x05, 0x00, 0x3b, 0x19 },
                     "hda-gfx", Buffer() { "onboard-1" },
+                    "RM,device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
                 },
             })
 
