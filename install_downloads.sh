@@ -25,7 +25,7 @@ fi
 function tag_file
 {
     if [[ $MINOR_VER -ge 9 ]]; then
-        $SUDO $TAGCMD "$@"
+        $SUDO "$TAGCMD" "$@"
     fi
 }
 
