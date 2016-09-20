@@ -172,6 +172,8 @@
 			<dict>
 				<key>Comment</key>
 				<string>change 15 port limit to 20 in XHCI kext (9-series)</string>
+				<key>MatchOS</key>
+				<string>10.11.x</string>
 				<key>Disabled</key>
 				<true/>
 				<key>Find</key>
@@ -180,6 +182,20 @@
 				<string>AppleUSBXHCIPCI</string>
 				<key>Replace</key>
 				<data>g72M/v//FQ==</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>change 15 port limit to 20 in XHCI kext (9-series)</string>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Find</key>
+				<data>g710////EA==</data>
+				<key>Name</key>
+				<string>AppleUSBXHCIPCI</string>
+				<key>Replace</key>
+				<data>g710////FQ==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -194,6 +210,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>10.10.2+ 5Ghz US FCC, the-darkvoid</string>
+				<key>MatchOS</key>
+				<string>10.10.x,10.11.x,10.12.x</string>
+				<key>Disabled</key>
+				<false/>
 				<key>Find</key>
 				<data>QYP8/3QsSA==</data>
 				<key>Name</key>
@@ -203,7 +223,23 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>AirPortBrcm4360 - fcvo, 10.12.x (credit the-darkvoid)</string>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>gflSqgAAdSk=</data>
+				<key>Name</key>
+				<string>AirPortBrcm4360</string>
+				<key>Replace</key>
+				<data>gflSqgAAZpA=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>10.11.dp BT4LE-Handoff-Hotspot, credit RehabMan based on Dokterdok patch</string>
+				<key>MatchOS</key>
+				<string>10.11.x,10.12.x</string>
 				<key>Find</key>
 				<data>SIX/dEdIiwc=</data>
 				<key>Name</key>
@@ -225,21 +261,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>set1, AppleHDA ALC261 to 0</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>YQLsEA==</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>AAAAAA==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>set1, AppleHDA ALC262 to ALC233</string>
-				<key>Disabled</key>
-				<false/>
+				<string>AppleHDA ALC262 to ALC233</string>
 				<key>Find</key>
 				<data>YgLsEA==</data>
 				<key>Name</key>
@@ -249,63 +271,13 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>set2, AppleHDA ALC261 to 0</string>
-				<key>Disabled</key>
-				<true/>
+				<string>AppleHDA ALC261 to 0</string>
 				<key>Find</key>
 				<data>YQLsEA==</data>
 				<key>Name</key>
 				<string>AppleHDA</string>
 				<key>Replace</key>
 				<data>AAAAAA==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>set2, AppleHDA ALC262 to 0</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>YgLsEA==</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>AAAAAA==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>set2, AppleHDA ALC885 to 0</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>hQjsEA==</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>AAAAAA==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>set2, AppleHDA 0x11d41983 to 0</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>gxnUEQ==</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>AAAAAA==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>set2, AppleHDA 0x11d41984 to 0x10ec0233</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>hBnUEQ==</data>
-				<key>Name</key>
-				<string>AppleHDA</string>
-				<key>Replace</key>
-				<data>MwLsEA==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -344,12 +316,26 @@
 			<dict>
 				<key>Comment</key>
 				<string>Boot graphics glitch, 10.10.x/10.11.x</string>
+				<key>MatchOS</key>
+				<string>10.10.x,10.11.x</string>
 				<key>Find</key>
 				<data>AQAAdRc=</data>
 				<key>Name</key>
 				<string>IOGraphicsFamily</string>
 				<key>Replace</key>
 				<data>AQAAdBc=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>Boot graphics glitch, 10.12.dp1 (credit denskop)</string>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
+				<key>Find</key>
+				<data>AQAAdSU=</data>
+				<key>Name</key>
+				<string>IOGraphicsFamily</string>
+				<key>Replace</key>
+				<data>AQAA6yU=</data>
 			</dict>
 		</array>
 	</dict>
