@@ -297,7 +297,9 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>HDMI-audio, port 0105, 0x19260000</string>
+				<string>HDMI-audio, port 0105, 0x19260000 (10.11.x 10.12.x) 0x19260002 (10.11.x only)</string>
+				<key>MatchOS</key>
+				<string>10.11.x,10.12.x</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
@@ -306,6 +308,20 @@
 				<data>AQUJAAAEAACHAQAA</data>
 				<key>Replace</key>
 				<data>AQUJAAAIAACHAQAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio, port 0105, 0x19260002</string>
+				<key>MatchOS</key>
+				<string>10.12.x</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Name</key>
+				<string>AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>AQUJAAAEAADHAQAA</data>
+				<key>Replace</key>
+				<data>AQUJAAAIAADHAQAA</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
