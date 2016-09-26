@@ -9,7 +9,7 @@ TAG=tag_file
 TAGCMD=`pwd`/tools/tag
 SLE=/System/Library/Extensions
 LE=/Library/Extensions
-EXCEPTIONS="Sensors|FakePCIID_AR9280_as_AR946x|FakePCIID_BCM57XX_as_BCM57765|FakePCIID_Intel_GbX|FakePCIID_XHCIMux|BrcmPatchRAM|BrcmBluetoothInjector|BrcmFirmwareData|USBInjectAll"
+EXCEPTIONS="Sensors|FakePCIID|BrcmPatchRAM|BrcmBluetoothInjector|BrcmFirmwareData|USBInjectAll"
 
 # extract minor version (eg. 10.9 vs. 10.10 vs. 10.11)
 MINOR_VER=$([[ "$(sw_vers -productVersion)" =~ [0-9]+\.([0-9]+) ]] && echo ${BASH_REMATCH[1]})
@@ -181,6 +181,10 @@ if [ $? -ne 0 ]; then
     if [[ -e $KEXTDEST/FakePCIID_Intel_HD_Graphics.kext ]]; then
         # remove old FakePCIID_HD4600_HD4400.kext
         $SUDO rm -Rf $SLE/FakePCIID_HD4600_HD4400.kext $KEXTDEST/FakePCIID_HD4600_HD4400.kext
+    fi
+    # the guide used FakePCIID_Intel_HD_Graphics.kext for a Safari bug, but is now fixed in Safari 10
+    if [[ -e $KEXTDEST/FakePCIID_Intel_HD_Graphics.kext ]]; then
+        $SUDO rm -Rf $KEXTDEST/FakePCIID_Intel_HD_Graphics.kext
     fi
     cd ../..
 fi
