@@ -304,6 +304,8 @@
 			<dict>
 				<key>Comment</key>
 				<string>DP-video, change port 0204 to port 0306, 0x19260004 0x193b0005</string>
+				<key>MatchOS</key>
+				<string>10.11.x</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
