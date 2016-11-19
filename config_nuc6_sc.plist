@@ -90,8 +90,8 @@
 	</dict>
 	<key>CPU</key>
 	<dict>
-		<key>#FrequencyMHz</key>
-		<integer>1800</integer>
+		<key>FrequencyMHz</key>
+		<integer>2600</integer>
 		<key>UseARTFrequency</key>
 		<false/>
 	</dict>
