@@ -199,16 +199,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>show NVMeGeneric drive as Internal</string>
-				<key>Find</key>
-				<data>SW50ZXJuYWwvRXh0ZXJuYWwA</data>
-				<key>Name</key>
-				<string>NVMeGeneric</string>
-				<key>Replace</key>
-				<data>SW50ZXJuYWwARXh0ZXJuYWwA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>10.10.2+ 5Ghz US FCC, the-darkvoid</string>
 				<key>MatchOS</key>
 				<string>10.10.x,10.11.x,10.12.x</string>
