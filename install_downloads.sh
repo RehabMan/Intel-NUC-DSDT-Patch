@@ -151,7 +151,9 @@ if [ $? -ne 0 ]; then
     for kext in *.zip; do
         install $kext "$EXCEPTIONS"
     done
-    cd RehabMan-FakePCIID*/Release && install_kext FakePCIID.kext && install_kext FakePCIID_Broadcom_WiFi.kext && cd ../..
+    cd RehabMan-FakePCIID*/Release
+    install_kext FakePCIID.kext && install_kext FakePCIID_Broadcom_WiFi.kext && install_kext FakePCIID_Intel_HDMI_Audio.kext
+    cd ../..
     if [[ $MINOR_VER -ge 11 ]]; then
         # 10.11 needs BrcmPatchRAM2.kext
         cd RehabMan-BrcmPatchRAM*/Release && install_kext BrcmPatchRAM2.kext && cd ../..
