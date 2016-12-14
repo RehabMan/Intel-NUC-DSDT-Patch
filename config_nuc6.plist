@@ -290,8 +290,6 @@
 			<dict>
 				<key>Comment</key>
 				<string>HDMI-audio, port 0105, 0x19260002 (10.12.0 only)</string>
-				<key>MatchOS</key>
-				<string>10.12.0</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
@@ -303,9 +301,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>HDMI-audio, port 0105, 0x19260002 (10.12.1 only, maybe later versions)</string>
-				<key>MatchOS</key>
-				<string>10.12.1</string>
+				<string>HDMI-audio, port 0105, 0x19260002 (10.12.1,10.12.2, maybe later versions)</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
