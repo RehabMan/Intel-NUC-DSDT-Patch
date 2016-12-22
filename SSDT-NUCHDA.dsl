@@ -87,7 +87,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "NUCHDA", 0)
                     Package(){},
                     Package()
                     {
-                        //"LayoutID", 2,
+                        "LayoutID", 2,
                         "PinConfigs", Package()
                         {
                             Package(){},

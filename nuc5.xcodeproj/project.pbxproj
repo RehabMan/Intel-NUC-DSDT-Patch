@@ -17,12 +17,6 @@
 		84490D5D1A14945B000E1BFB /* patch_hda.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = patch_hda.sh; sourceTree = "<group>"; };
 		8467C38E1A23A9FC00FCF396 /* mount_efi.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mount_efi.sh; sourceTree = "<group>"; };
 		ED0EF6761CFBE3EA00243958 /* SSDT-Disable_EHCI.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-Disable_EHCI.dsl"; sourceTree = "<group>"; };
-		ED142CB61D1C40D1009999EE /* layout9.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = layout9.plist; path = Resources_NUCHDA/layout9.plist; sourceTree = "<group>"; };
-		ED142CB71D1C40D1009999EE /* layout7.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = layout7.plist; path = Resources_NUCHDA/layout7.plist; sourceTree = "<group>"; };
-		ED142CB81D1C40D1009999EE /* layout6.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = layout6.plist; path = Resources_NUCHDA/layout6.plist; sourceTree = "<group>"; };
-		ED142CB91D1C40D1009999EE /* layout5.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = layout5.plist; path = Resources_NUCHDA/layout5.plist; sourceTree = "<group>"; };
-		ED142CBA1D1C40D1009999EE /* layout4.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = layout4.plist; path = Resources_NUCHDA/layout4.plist; sourceTree = "<group>"; };
-		ED142CBB1D1C40D1009999EE /* layout3.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = layout3.plist; path = Resources_NUCHDA/layout3.plist; sourceTree = "<group>"; };
 		ED272D611CCC789300FE569D /* install_tools.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install_tools.sh; sourceTree = "<group>"; };
 		ED373E171C0535C1005018E4 /* SSDT-IGPU.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-IGPU.dsl"; sourceTree = "<group>"; };
 		ED373E181C0535C1005018E4 /* SSDT-USB.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-USB.dsl"; sourceTree = "<group>"; };
@@ -83,12 +77,6 @@
 				840463E01D0DD98C00ED8BA5 /* ahhcd.plist */,
 				840463E11D0DD98C00ED8BA5 /* layout1.plist */,
 				840463DF1D0DD98C00ED8BA5 /* layout2.plist */,
-				ED142CBB1D1C40D1009999EE /* layout3.plist */,
-				ED142CBA1D1C40D1009999EE /* layout4.plist */,
-				ED142CB91D1C40D1009999EE /* layout5.plist */,
-				ED142CB81D1C40D1009999EE /* layout6.plist */,
-				ED142CB71D1C40D1009999EE /* layout7.plist */,
-				ED142CB61D1C40D1009999EE /* layout9.plist */,
 				840463DE1D0DD98C00ED8BA5 /* Platforms.plist */,
 			);
 			name = audio;
