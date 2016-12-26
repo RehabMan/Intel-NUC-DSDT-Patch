@@ -23,8 +23,9 @@ function createAppleHDAInjector()
     rm -R AppleHDA_$1.kext/Contents/MacOS/AppleHDA
     rm AppleHDA_$1.kext/Contents/version.plist
     ln -s /System/Library/Extensions/AppleHDA.kext/Contents/MacOS/AppleHDA AppleHDA_$1.kext/Contents/MacOS/AppleHDA
-    layouts=$(basename `ls Resources_$1/layout*.plist`)
+    layouts=`ls Resources_$1/layout*.plist`
     for layout in $layouts; do
+        layout=`basename $layout`
         cp Resources_$1/$layout AppleHDA_$1.kext/Contents/Resources/${layout/.plist/.xml}
     done
     if [[ $MINOR_VER -gt 7 ]]; then
@@ -85,8 +86,9 @@ fi
 function createAppleHDAResources_HDC()
 {
     rm -rf AppleHDA_$1_Resources && mkdir AppleHDA_$1_Resources
-    layouts=$(basename `ls Resources_$1/layout*.plist`)
+    layouts=`ls Resources_$1/layout*.plist`
     for layout in $layouts; do
+        layout=`basename $layout`
         cp Resources_$1/$layout AppleHDA_$1_Resources/${layout/.plist/.zml}
     done
     if [[ $MINOR_VER -gt 7 ]]; then
@@ -191,8 +193,9 @@ function createPatchedAppleHDA()
         fi
     done
 
-    layouts=$(basename `ls Resources_$1/layout*.plist`)
+    layouts=`ls Resources_$1/layout*.plist`
     for layout in $layouts; do
+        layout=`basename $layout`
         cp Resources_$1/$layout AppleHDA.kext/Contents/Resources/${layout/.plist/.xml}
     done
     if [[ $MINOR_VER -gt 7 ]]; then
