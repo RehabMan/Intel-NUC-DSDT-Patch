@@ -36,8 +36,13 @@ DefinitionBlock ("", "SSDT", 2, "hack", "usb", 0)
                         "UsbConnector", 3,
                         "port", Buffer() { 0x04, 0, 0, 0 },
                     },
-                    //HS05/HS06/HS07 not used
-                    "HS08", Package() // bluetooth
+                    //HS05/HS06 not used
+                    "HS07", Package() // bluetooth (soldered BT/Wifi such as NUC5i7RYH)
+                    {
+                        "UsbConnector", 255,
+                        "port", Buffer() { 0x07, 0, 0, 0 },
+                    },
+                    "HS08", Package() // bluetooth (M.2 BT/WiFi such as NUC5i5MYHE)
                     {
                         "UsbConnector", 255,
                         "port", Buffer() { 0x08, 0, 0, 0 },
