@@ -4,6 +4,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "HDEF", 0)
 {
     External(_SB.PCI0.HDEF, DeviceObj)
     External(RMCF.AUDL, IntObj)
+    External(RMCF.FAKH, IntObj)
 
     // Note: If your ACPI set (DSDT+SSDTs) does not define HDEF (or AZAL)
     // add this Device definition (by uncommenting it)
@@ -22,11 +23,15 @@ DefinitionBlock("", "SSDT", 2, "hack", "HDEF", 0)
         Local0 = Package()
         {
             "layout-id", Buffer(4) { },
+            "RM,disable_FakePCIID", Ones,
             "hda-gfx", Buffer() { "onboard-1" },
             "PinConfigurations", Buffer() { },
         }
+        // set layout-id value based on \RMCF.AUDL
         CreateDWordField(DerefOf(Local0[1]), 0, AUDL)
         AUDL = \RMCF.AUDL
+        // set RM,disableFakePCIID value based on \RMCF.FAKH
+        Local0[3] = 1-\RMCF.FAKH
         Return(Local0)
     }
 }
