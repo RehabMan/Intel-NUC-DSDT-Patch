@@ -265,6 +265,30 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>AppleHDA anti-pop patch #1 (credit AppleALC)</string>
+				<key>MatchOS</key>
+				<string>10.11.x,10.12.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.AppleHDA</string>
+				<key>Find</key>
+				<data>QcYGAEiLu2g=</data>
+				<key>Replace</key>
+				<data>QcYGAUiLu2g=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>AppleHDA anti-pop patch #2 (credit AppleALC)</string>
+				<key>MatchOS</key>
+				<string>10.11.x,10.12.x</string>
+				<key>Name</key>
+				<string>com.apple.driver.AppleHDA</string>
+				<key>Find</key>
+				<data>QcaGQwEAAAA=</data>
+				<key>Replace</key>
+				<data>QcaGQwEAAAE=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Enable TRIM for SSD</string>
 				<key>Find</key>
 				<data>AEFQUExFIFNTRAA=</data>
