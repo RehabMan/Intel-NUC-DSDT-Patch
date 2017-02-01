@@ -24,6 +24,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "NUCHDA", 0)
                     },
                 },
                 "Perform Reset", ">n",
+                "Perform Reset on External Wake", ">n",
                 "Send Delay", 10,
                 "Sleep Nodes", ">n",
                 "Update Nodes", ">n",
