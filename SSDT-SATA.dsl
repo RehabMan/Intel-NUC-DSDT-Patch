@@ -18,7 +18,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "SATA", 0)
             Package()
             {
                 "device-id", Buffer() { 0x29, 0x28, 0, 0 },
-                "compatbile", Buffer() { "pci8086,2829" },
+                "compatible", Buffer() { "pci8086,2829" },
             },
             // Skylake 8086:a103 not supported currently, remap to supported 8086:a102
             // same with Skylake 8086:9d03
