@@ -1,6 +1,6 @@
-// configuration data for other SSDTs in this pack (NUC6)
+// configuration data for other SSDTs in this pack (NUC7)
 
-DefinitionBlock("", "SSDT", 2, "hack", "RMCF", 0)
+DefinitionBlock("", "SSDT", 2, "hack", "RM-NUC7", 0)
 {
     Device(RMCF)
     {
@@ -18,5 +18,14 @@ DefinitionBlock("", "SSDT", 2, "hack", "RMCF", 0)
         // 1: Allow spoofing of HDEF for FakePCIID_Intel_HDMI_Audio.kext
         Name(FAKH, 1)
     }
+
+    #include "SSDT-PluginType1.dsl"
+    #include "SSDT-XOSI.dsl"
+    #include "SSDT-IGPU.dsl"
+    #include "SSDT-USB.dsl"
+    #include "SSDT-XHC.dsl"
+    #include "SSDT-SATA.dsl"
+    #include "SSDT-NUCHDA.dsl"
+    #include "SSDT-HDEF.dsl"
 }
 //EOF

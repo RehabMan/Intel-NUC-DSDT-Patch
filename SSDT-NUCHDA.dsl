@@ -1,6 +1,6 @@
 // generated from: ../codec.git/gen_ahhcd.sh NUCHDA
-DefinitionBlock ("", "SSDT", 2, "hack", "NUCHDA", 0)
-{
+//DefinitionBlock ("", "SSDT", 2, "hack", "NUCHDA", 0)
+//{
     External(_SB.PCI0.HDEF, DeviceObj)
     Name(_SB.PCI0.HDEF.RMCF, Package()
     {
@@ -109,5 +109,5 @@ DefinitionBlock ("", "SSDT", 2, "hack", "NUCHDA", 0)
             },
         },
     })
-}
+//}
 //EOF

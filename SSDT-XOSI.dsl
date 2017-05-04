@@ -5,8 +5,8 @@
 // Becuase of the minimal patches required, we can do most of the work in
 // config.plist and small SSDTs such as this one.
 
-DefinitionBlock ("", "SSDT", 2, "hack", "hack", 0)
-{
+//DefinitionBlock ("", "SSDT", 2, "hack", "hack", 0)
+//{
     // All _OSI calls in DSDT are routed to XOSI...
     // XOSI simulates "Windows 2009" (which is Windows 7)
     // Note: According to ACPI spec, _OSI("Windows") must also return true
@@ -33,6 +33,6 @@ DefinitionBlock ("", "SSDT", 2, "hack", "hack", 0)
         }, Local0)
         Return (Ones != Match(Local0, MEQ, Arg0, MTR, 0, 0))
     }
-}
+//}
 
 //EOF

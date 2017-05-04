@@ -12,7 +12,6 @@
 		840463E01D0DD98C00ED8BA5 /* ahhcd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ahhcd.plist; path = Resources_NUCHDA/ahhcd.plist; sourceTree = "<group>"; };
 		840463E11D0DD98C00ED8BA5 /* layout1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = layout1.plist; path = Resources_NUCHDA/layout1.plist; sourceTree = "<group>"; };
 		8406FCD6188627B8006D8DB7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
-		84178DE61D0DD0D6006A3D30 /* SSDT-Config-SC.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-Config-SC.dsl"; sourceTree = "<group>"; };
 		84178DE71D0DD4AE006A3D30 /* config_nuc6_sc.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_nuc6_sc.plist; sourceTree = "<group>"; };
 		84490D5D1A14945B000E1BFB /* patch_hda.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = patch_hda.sh; sourceTree = "<group>"; };
 		8467C38E1A23A9FC00FCF396 /* mount_efi.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mount_efi.sh; sourceTree = "<group>"; };
@@ -28,8 +27,12 @@
 		ED5448361CFFD70D007F89F0 /* SSDT-HDEF.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-HDEF.dsl"; sourceTree = "<group>"; };
 		ED5448371CFFD70D007F89F0 /* SSDT-XHC.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-XHC.dsl"; sourceTree = "<group>"; };
 		ED5448391CFFD743007F89F0 /* SSDT-HDAU.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-HDAU.dsl"; sourceTree = "<group>"; };
-		ED54483A1CFFD75D007F89F0 /* SSDT-Config.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-Config.dsl"; sourceTree = "<group>"; };
 		ED71D7551B98D1F80006C457 /* config_install_nuc5.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_install_nuc5.plist; sourceTree = "<group>"; };
+		ED7BC9771EBADEE5007AF0D8 /* SSDT-HACK-NUC5.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-HACK-NUC5.dsl"; sourceTree = "<group>"; };
+		ED7BC9781EBADF2E007AF0D8 /* SSDT-HACK-NUC6-SC.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-HACK-NUC6-SC.dsl"; sourceTree = "<group>"; };
+		ED7BC9791EBADF2E007AF0D8 /* SSDT-HACK-NUC7.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-HACK-NUC7.dsl"; sourceTree = "<group>"; };
+		ED7BC97A1EBADF2E007AF0D8 /* SSDT-HACK-NUC6.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-HACK-NUC6.dsl"; sourceTree = "<group>"; };
+		ED7BC97B1EBAE05E007AF0D8 /* SSDT-PluginType1.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-PluginType1.dsl"; sourceTree = "<group>"; };
 		ED9653F31E9FCDB300E38E76 /* config_nuc7.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_nuc7.plist; sourceTree = "<group>"; };
 		ED9653F41E9FCDB300E38E76 /* config_install_nuc7.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_install_nuc7.plist; sourceTree = "<group>"; };
 		EDA342501CFC99B700E14DE0 /* SSDT-SATA.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-SATA.dsl"; sourceTree = "<group>"; };
@@ -54,18 +57,21 @@
 				ED9653F41E9FCDB300E38E76 /* config_install_nuc7.plist */,
 				ED9653F31E9FCDB300E38E76 /* config_nuc7.plist */,
 				ED3AF2321CC40740004F19AC /* makefile */,
-				ED54483A1CFFD75D007F89F0 /* SSDT-Config.dsl */,
-				84178DE61D0DD0D6006A3D30 /* SSDT-Config-SC.dsl */,
+				ED7BC9771EBADEE5007AF0D8 /* SSDT-HACK-NUC5.dsl */,
+				ED7BC97A1EBADF2E007AF0D8 /* SSDT-HACK-NUC6.dsl */,
+				ED7BC9781EBADF2E007AF0D8 /* SSDT-HACK-NUC6-SC.dsl */,
+				ED7BC9791EBADF2E007AF0D8 /* SSDT-HACK-NUC7.dsl */,
+				ED7BC97B1EBAE05E007AF0D8 /* SSDT-PluginType1.dsl */,
 				ED48DF001B4CCCC800BDDC62 /* SSDT-XOSI.dsl */,
-				EDCF685A1CFBBD03009D6CCD /* SSDT-LPC.dsl */,
 				ED373E171C0535C1005018E4 /* SSDT-IGPU.dsl */,
 				ED373E181C0535C1005018E4 /* SSDT-USB.dsl */,
-				ED0EF6761CFBE3EA00243958 /* SSDT-Disable_EHCI.dsl */,
 				ED5448371CFFD70D007F89F0 /* SSDT-XHC.dsl */,
 				EDA342501CFC99B700E14DE0 /* SSDT-SATA.dsl */,
 				EDAA88F11CFB6A6D008BA1EE /* SSDT-NUCHDA.dsl */,
 				ED5448361CFFD70D007F89F0 /* SSDT-HDEF.dsl */,
 				ED5448391CFFD743007F89F0 /* SSDT-HDAU.dsl */,
+				EDCF685A1CFBBD03009D6CCD /* SSDT-LPC.dsl */,
+				ED0EF6761CFBE3EA00243958 /* SSDT-Disable_EHCI.dsl */,
 				8467C38E1A23A9FC00FCF396 /* mount_efi.sh */,
 				ED3F518B1A2029DE0060691A /* download.sh */,
 				ED272D611CCC789300FE569D /* install_tools.sh */,

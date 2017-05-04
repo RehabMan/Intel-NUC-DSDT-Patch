@@ -1,7 +1,7 @@
 // Automatic injection of HDEF properties
 
-DefinitionBlock("", "SSDT", 2, "hack", "HDEF", 0)
-{
+//DefinitionBlock("", "SSDT", 2, "hack", "HDEF", 0)
+//{
     External(_SB.PCI0.HDEF, DeviceObj)
     External(RMCF.AUDL, IntObj)
     External(RMCF.FAKH, IntObj)
@@ -34,5 +34,5 @@ DefinitionBlock("", "SSDT", 2, "hack", "HDEF", 0)
         Local0[3] = 1-\RMCF.FAKH
         Return(Local0)
     }
-}
+//}
 //EOF

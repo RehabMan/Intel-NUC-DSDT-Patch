@@ -22,19 +22,15 @@ else
 endif
 SLE=/System/Library/Extensions
 
-IASLFLAGS=-ve
+IASLOPTS=-vw 2095 -vw 2008
 IASL=iasl
 
-ALL_COMMON=$(BUILDDIR)/SSDT-XOSI.aml $(BUILDDIR)/SSDT-LPC.aml $(BUILDDIR)/SSDT-IGPU.aml $(BUILDDIR)/SSDT-USB.aml $(BUILDDIR)/SSDT-Disable_EHCI.aml $(BUILDDIR)/SSDT-XHC.aml $(BUILDDIR)/SSDT-SATA.aml $(BUILDDIR)/SSDT-$(HDA).aml $(BUILDDIR)/SSDT-HDEF.aml $(BUILDDIR)/SSDT-HDAU.aml
-
-ALL=$(BUILDDIR)/SSDT-Config.aml $(ALL_COMMON)
-
-ALL_SC=$(BUILDDIR)/SSDT-Config-SC.aml $(ALL_COMMON)
-
-ALL_ALL=$(BUILDDIR)/SSDT-Config.aml $(BUILDDIR)/SSDT-Config-SC.aml $(ALL_COMMON)
+ALL=$(BUILDDIR)/SSDT-HACK-NUC5.aml
+ALL:=$(ALL) $(BUILDDIR)/SSDT-HACK-NUC6.aml $(BUILDDIR)/SSDT-HACK-NUC6-SC.aml
+ALL:=$(ALL) $(BUILDDIR)/SSDT-HACK-NUC7.aml
 
 .PHONY: all
-all: $(ALL_ALL) $(HDAZML_ALL) #$(HDAINJECT) $(HDAHCDINJECT)
+all: $(ALL) $(HDAZML_ALL) #$(HDAINJECT) $(HDAHCDINJECT)
 
 $(BUILDDIR)/%.aml : %.dsl
 	iasl $(IASLOPTS) -p $@ $<
@@ -45,19 +41,33 @@ clean:
 	make clean_hda
 
 # Clover Install
-.PHONY: install
-install: $(ALL)
+.PHONY: install_nuc5
+install_nuc5: $(ALL)
 	$(eval EFIDIR:=$(shell sudo ./mount_efi.sh /))
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-*.aml
-	cp $(ALL) $(EFIDIR)/EFI/CLOVER/ACPI/patched
-	#rm $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-IGPU.aml
+	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT.aml
+	cp $(BUILDDIR)/SSDT-HACK-NUC5.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
 
-.PHONY: install_sc
-install_sc: $(ALL_SC)
+.PHONY: install_nuc6
+install_nuc6: $(ALL)
 	$(eval EFIDIR:=$(shell sudo ./mount_efi.sh /))
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-*.aml
-	cp $(ALL_SC) $(EFIDIR)/EFI/CLOVER/ACPI/patched
-	#rm $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-IGPU.aml
+	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT.aml
+	cp $(BUILDDIR)/SSDT-HACK-NUC6.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
+
+.PHONY: install_nuc6sc
+install_nuc6sc: $(ALL)
+	$(eval EFIDIR:=$(shell sudo ./mount_efi.sh /))
+	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-*.aml
+	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT.aml
+	cp $(BUILDDIR)/SSDT-HACK-NUC6-SC.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
+
+.PHONY: install_nuc7
+install_nuc7: $(ALL)
+	$(eval EFIDIR:=$(shell sudo ./mount_efi.sh /))
+	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-*.aml
+	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT.aml
+	cp $(BUILDDIR)/SSDT-HACK-NUC7.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
 
 #$(HDAINJECT) $(HDAHCDINJECT) $(HDAZML_ALL): $(RESOURCES)/*.plist ./patch_hda.sh
 $(HDAZML_ALL): $(RESOURCES)/*.plist ./patch_hda.sh

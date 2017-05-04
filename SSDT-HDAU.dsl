@@ -2,8 +2,8 @@
 
 // Note: Only for Haswell and Broadwell
 
-DefinitionBlock("", "SSDT", 2, "hack", "HDAU", 0)
-{
+//DefinitionBlock("", "SSDT", 2, "hack", "HDAU", 0)
+//{
     External(_SB.PCI0.HDAU, DeviceObj)
     External(RMCF.AUDL, IntObj)
 
@@ -24,5 +24,5 @@ DefinitionBlock("", "SSDT", 2, "hack", "HDAU", 0)
             Return(Local0)
         }
     }
-}
+//}
 //EOF

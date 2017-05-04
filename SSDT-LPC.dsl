@@ -1,7 +1,7 @@
 // To fix unsupported 8-series LPC devices
 
-DefinitionBlock("", "SSDT", 2, "hack", "LPC", 0)
-{
+//DefinitionBlock("", "SSDT", 2, "hack", "LPC", 0)
+//{
     External(_SB.PCI0.LPCB, DeviceObj)
 
     Scope(_SB.PCI0.LPCB)
@@ -45,5 +45,5 @@ DefinitionBlock("", "SSDT", 2, "hack", "LPC", 0)
             Return (Package() { })
         }
     }
-}
+//}
 //EOF
