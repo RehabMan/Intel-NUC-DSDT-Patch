@@ -137,7 +137,7 @@
                 // Kaby Lake/HD640
                 0x5926, 0, Package()
                 {
-                    "model", Buffer() { "Intel HD Graphics 640" },
+                    "model", Buffer() { "Intel Iris Plus Graphics 640" },
                     "device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
                     "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x26, 0x19 },
                     "hda-gfx", Buffer() { "onboard-1" },
@@ -147,7 +147,7 @@
                 // Kaby Lake/HD650
                 0x5927, 0, Package()
                 {
-                    "model", Buffer() { "Intel HD Graphics 650" },
+                    "model", Buffer() { "Intel Iris Plus Graphics 650" },
                     //REVIEW: using 0x1926 because 0x1927 is not supported on 10.11.x
                     "device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
                     //REVIEW: could use 0x19270000 or 0x19270004 (macOS only)
