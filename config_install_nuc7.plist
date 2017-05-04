@@ -184,6 +184,13 @@
 			<key>Inject</key>
 			<integer>0</integer>
 		</dict>
+		<key>FakeID</key>
+		<dict>
+			<key>#Kaby Lake-Comment</key>
+			<string>Kaby Lake HD620 graphics supportable by using Skylake device-id</string>
+			<key>IntelGFX</key>
+			<string>0x19168086</string>
+		</dict>
 		<key>USB</key>
 		<dict>
 			<key>FixOwnership</key>
@@ -255,6 +262,10 @@
 		<true/>
 		<key>AppleRTC</key>
 		<true/>
+		<key>#Kaby Lake-Comment</key>
+		<string>Kaby Lake CPU supportable by using CPUID from Skylake</string>
+		<key>FakeCPUID</key>
+		<string>0x0506e3</string>
 		<key>KernelLapic</key>
 		<true/>
 		<key>KernelPm</key>

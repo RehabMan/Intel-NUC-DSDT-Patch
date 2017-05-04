@@ -104,6 +104,11 @@
 			<key>Inject</key>
 			<integer>0</integer>
 		</dict>
+		<key>FakeID</key>
+		<dict>
+			<key>IntelGFX</key>
+			<string>0x19168086</string>
+		</dict>
 		<key>USB</key>
 		<dict>
 			<key>AddClockID</key>
@@ -169,6 +174,8 @@
 	<dict>
 		<key>AppleRTC</key>
 		<true/>
+		<key>FakeCPUID</key>
+		<string>0x0506e3</string>
 		<key>KextsToPatch</key>
 		<array>
 			<dict>
@@ -299,6 +306,30 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>0x19260002 two DP, #1 of 2</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>AQMDAwAAkAM=</data>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>AQMCAgAAkAM=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>0x19260002 two DP, #2 of 2</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>AAAIAAIAAACYBAAAAQUJAAAEAADHAwAAAgQKAAAEAADHAwAA/wAAAAEAAAAgAAAA</data>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>AQUJAAAEAADHAwAAAgQKAAAEAADHAwAA/wAAAAEAAAAgAAAA/wAAAAEAAAAgAAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>HDMI-audio, port 0105, 0x19260000 (10.11.x 10.12.x) 0x19260002 (10.11.x only)</string>
 				<key>MatchOS</key>
 				<string>10.11.x</string>
@@ -358,6 +389,21 @@
 				<string>com.apple.iokit.IOGraphicsFamily</string>
 				<key>Replace</key>
 				<data>AQAA6yU=</data>
+			</dict>
+		</array>
+		<key>KernelToPatch</key>
+		<array>
+			<dict>
+				<key>Comment</key>
+				<string>MSR 0xE2 _xcpm_idle instant reboot(c) Pike R. Alpha</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>ILniAAAADzA=</data>
+				<key>MatchOS</key>
+				<string>10.12</string>
+				<key>Replace</key>
+				<data>ILniAAAAkJA=</data>
 			</dict>
 		</array>
 	</dict>

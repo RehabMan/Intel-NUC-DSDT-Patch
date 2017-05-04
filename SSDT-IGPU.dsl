@@ -55,7 +55,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "igpu", 0)
                     "AAPL,ig-platform-id", Buffer() {  0x03, 0x00, 0x22, 0x0d },
                 },
                 // Broadwell/HD5300/HD5500/HD5600/HD6000
-                0x161e, 0x1616, 0x1612, 0x1626, 0x162b, 0, Package()
+                0x161e, 0x1616, 0x1612, 0x1622, 0x1626, 0x162a, 0x162b, 0, Package()
                 {
                     "hda-gfx", Buffer() { "onboard-1" },
                     "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x16, 0x16 },
@@ -67,6 +67,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "igpu", 0)
                     "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x16, 0x19 },
                     "hda-gfx", Buffer() { "onboard-1" },
                     "RM,device-id", Buffer() { 0x1b, 0x19, 0x00, 0x00 },
+                    "AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
                 },
                 // Skylake/HD520
                 0x1916, 0, Package()
@@ -75,6 +76,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "igpu", 0)
                     "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x16, 0x19 },
                     "hda-gfx", Buffer() { "onboard-1" },
                     "RM,device-id", Buffer() { 0x16, 0x19, 0x00, 0x00 },
+                    "AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
                 },
                 // Skylake/HD530
                 0x1912, 0, Package()
@@ -83,11 +85,22 @@ DefinitionBlock ("", "SSDT", 2, "hack", "igpu", 0)
                     "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x16, 0x19 },
                     "hda-gfx", Buffer() { "onboard-1" },
                     "RM,device-id", Buffer() { 0x12, 0x19, 0x00, 0x00 },
+                    "AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
                 },
                 // Skylake/HD540
                 0x1926, 0, Package()
                 {
                     "model", Buffer() { "Intel Iris Graphics 540" },
+                    "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x26, 0x19 },
+                    "hda-gfx", Buffer() { "onboard-1" },
+                    "RM,device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
+                },
+                // Skylake/HD550
+                0x1927, 0, Package()
+                {
+                    "model", Buffer() { "Intel Iris Graphics 550" },
+                    //REVIEW: using 0x1926 because 0x1927 is not supported on 10.11.x
+                    "device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
                     "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x26, 0x19 },
                     "hda-gfx", Buffer() { "onboard-1" },
                     "RM,device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
@@ -98,7 +111,51 @@ DefinitionBlock ("", "SSDT", 2, "hack", "igpu", 0)
                     "model", Buffer() { "Intel Iris Pro Graphics 580" },
                     "AAPL,ig-platform-id", Buffer() { 0x05, 0x00, 0x3b, 0x19 },
                     "hda-gfx", Buffer() { "onboard-1" },
+                    "RM,device-id", Buffer() { 0x3b, 0x19, 0x00, 0x00 },
+                    //"AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
+                },
+                // Kaby Lake/HD620
+                0x5916, 0, Package()
+                {
+                    "model", Buffer() { "Intel HD Graphics 620" },
+                    "device-id", Buffer() { 0x16, 0x19, 0x00, 0x00 },
+                    "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x16, 0x19 },
+                    "hda-gfx", Buffer() { "onboard-1" },
+                    "RM,device-id", Buffer() { 0x16, 0x19, 0x00, 0x00 },
+                    "AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
+                },
+                // Kaby Lake/HD630
+                0x5912, 0x591b, 0, Package()
+                {
+                    "model", Buffer() { "Intel HD Graphics 630" },
+                    "device-id", Buffer() { 0x12, 0x19, 0x00, 0x00 },
+                    "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x16, 0x19 },
+                    "hda-gfx", Buffer() { "onboard-1" },
+                    "RM,device-id", Buffer() { 0x12, 0x19, 0x00, 0x00 },
+                    "AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
+                },
+                // Kaby Lake/HD640
+                0x5926, 0, Package()
+                {
+                    "model", Buffer() { "Intel HD Graphics 640" },
+                    "device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
+                    "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x26, 0x19 },
+                    "hda-gfx", Buffer() { "onboard-1" },
                     "RM,device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
+                    //"AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
+                },
+                // Kaby Lake/HD650
+                0x5927, 0, Package()
+                {
+                    "model", Buffer() { "Intel HD Graphics 650" },
+                    //REVIEW: using 0x1926 because 0x1927 is not supported on 10.11.x
+                    "device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
+                    //REVIEW: could use 0x19270000 or 0x19270004 (macOS only)
+                    "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x26, 0x19 },
+                    "hda-gfx", Buffer() { "onboard-1" },
+                    //REVIEW: using 0x1926 because 0x1927 is not supported on 10.11.x
+                    "RM,device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
+                    //"AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
                 },
             })
 

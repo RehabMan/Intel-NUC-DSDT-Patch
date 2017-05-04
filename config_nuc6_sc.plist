@@ -6,6 +6,11 @@
 	<dict>
 		<key>DSDT</key>
 		<dict>
+			<key>Fixes</key>
+			<dict>
+				<key>NewWay_80000000</key>
+				<true/>
+			</dict>
 			<key>Patches</key>
 			<array>
 				<dict>
@@ -57,11 +62,6 @@
 					<data>WERTTQ==</data>
 				</dict>
 			</array>
-			<key>Fixes</key>
-			<dict>
-				<key>NewWay_80000000</key>
-				<true/>
-			</dict>
 		</dict>
 		<key>SSDT</key>
 		<dict>
@@ -74,7 +74,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>kext-dev-mode=1 nv_disable=1 dart=0</string>
+		<string>kext-dev-mode=1 nv_disable=1 dart=0 slide=0</string>
 		<key>Legacy</key>
 		<string>LegacyBiosDefault</string>
 		<key>Log</key>
@@ -151,12 +151,12 @@
 			<true/>
 		</dict>
 		<key>Theme</key>
-		<string>bluemac</string>
+		<string>BGM</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
 		<key>ig-platform-id</key>
-		<string>0x19160000</string>
+		<string>0x193b0005</string>
 		<key>Inject</key>
 		<dict>
 			<key>Intel</key>
@@ -166,6 +166,8 @@
 	<key>KernelAndKextPatches</key>
 	<dict>
 		<key>AppleRTC</key>
+		<true/>
+		<key>KernelPm</key>
 		<true/>
 		<key>KextsToPatch</key>
 		<array>
@@ -274,10 +276,10 @@
 				<string>AppleHDA anti-pop patch #1 (credit AppleALC)</string>
 				<key>MatchOS</key>
 				<string>10.11.x,10.12.x</string>
-				<key>Name</key>
-				<string>com.apple.driver.AppleHDA</string>
 				<key>Find</key>
 				<data>QcYGAEiLu2g=</data>
+				<key>Name</key>
+				<string>com.apple.driver.AppleHDA</string>
 				<key>Replace</key>
 				<data>QcYGAUiLu2g=</data>
 			</dict>
@@ -286,10 +288,10 @@
 				<string>AppleHDA anti-pop patch #2 (credit AppleALC)</string>
 				<key>MatchOS</key>
 				<string>10.11.x,10.12.x</string>
-				<key>Name</key>
-				<string>com.apple.driver.AppleHDA</string>
 				<key>Find</key>
 				<data>QcaGQwEAAAA=</data>
+				<key>Name</key>
+				<string>com.apple.driver.AppleHDA</string>
 				<key>Replace</key>
 				<data>QcaGQwEAAAE=</data>
 			</dict>
@@ -305,13 +307,37 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>0x193b0005 three DP, #1 of 2</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>AQMEBAAAIAI=</data>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>AQMDAwAAIAI=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>0x193b0005 three DP, #2 of 2</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>AAAIAAIAAACYAAAAAQUJAAAEAADHAQAAAgQKAAAEAADHAQAAAwYKAAAEAADHAQAA</data>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>AQUJAAAEAADHAQAAAgQKAAAEAADHAQAAAwYKAAAEAADHAQAAAAAIAAIAAACYAAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>HDMI-audio, port 0105, 0x19260004 0x193b0005</string>
 				<key>Disabled</key>
 				<false/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>AQUJAAAEAADHAQAA</data>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Replace</key>
 				<data>AQUJAAAIAADHAQAA</data>
 			</dict>
@@ -354,13 +380,28 @@
 				<data>AQAA6yU=</data>
 			</dict>
 		</array>
+		<key>KernelToPatch</key>
+		<array>
+			<dict>
+				<key>Comment</key>
+				<string>MSR 0xE2 _xcpm_idle instant reboot(c) Pike R. Alpha</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>ILniAAAADzA=</data>
+				<key>MatchOS</key>
+				<string>10.12</string>
+				<key>Replace</key>
+				<data>ILniAAAAkJA=</data>
+			</dict>
+		</array>
 	</dict>
 	<key>RtVariables</key>
 	<dict>
-		<key>CsrActiveConfig</key>
-		<string>0x67</string>
 		<key>BooterConfig</key>
 		<string>0x28</string>
+		<key>CsrActiveConfig</key>
+		<string>0x67</string>
 	</dict>
 	<key>SMBIOS</key>
 	<dict>

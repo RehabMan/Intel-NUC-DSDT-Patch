@@ -30,6 +30,8 @@
 		ED5448391CFFD743007F89F0 /* SSDT-HDAU.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-HDAU.dsl"; sourceTree = "<group>"; };
 		ED54483A1CFFD75D007F89F0 /* SSDT-Config.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-Config.dsl"; sourceTree = "<group>"; };
 		ED71D7551B98D1F80006C457 /* config_install_nuc5.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_install_nuc5.plist; sourceTree = "<group>"; };
+		ED9653F31E9FCDB300E38E76 /* config_nuc7.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_nuc7.plist; sourceTree = "<group>"; };
+		ED9653F41E9FCDB300E38E76 /* config_install_nuc7.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_install_nuc7.plist; sourceTree = "<group>"; };
 		EDA342501CFC99B700E14DE0 /* SSDT-SATA.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-SATA.dsl"; sourceTree = "<group>"; };
 		EDAA88F11CFB6A6D008BA1EE /* SSDT-NUCHDA.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-NUCHDA.dsl"; sourceTree = "<group>"; };
 		EDCF685A1CFBBD03009D6CCD /* SSDT-LPC.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-LPC.dsl"; sourceTree = "<group>"; };
@@ -44,11 +46,13 @@
 			children = (
 				8406FCD6188627B8006D8DB7 /* README.md */,
 				ED71D7551B98D1F80006C457 /* config_install_nuc5.plist */,
-				EDD762461CFC968400A2D6BA /* config_install_nuc6.plist */,
-				ED45001C1D39413E003BD18C /* config_install_nuc6_sc.plist */,
 				EDFE7D6F1CFBD22F00380DFC /* config_nuc5.plist */,
+				EDD762461CFC968400A2D6BA /* config_install_nuc6.plist */,
 				EDD762471CFC973E00A2D6BA /* config_nuc6.plist */,
+				ED45001C1D39413E003BD18C /* config_install_nuc6_sc.plist */,
 				84178DE71D0DD4AE006A3D30 /* config_nuc6_sc.plist */,
+				ED9653F41E9FCDB300E38E76 /* config_install_nuc7.plist */,
+				ED9653F31E9FCDB300E38E76 /* config_nuc7.plist */,
 				ED3AF2321CC40740004F19AC /* makefile */,
 				ED54483A1CFFD75D007F89F0 /* SSDT-Config.dsl */,
 				84178DE61D0DD0D6006A3D30 /* SSDT-Config-SC.dsl */,

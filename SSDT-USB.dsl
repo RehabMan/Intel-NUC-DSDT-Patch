@@ -70,7 +70,7 @@ DefinitionBlock ("", "SSDT", 2, "hack", "usb", 0)
                     },
                 },
             },
-            // XHC overrides (8086:9d2f, NUC6)
+            // XHC overrides (8086:9d2f, NUC6/NUC7)
             "8086_9d2f", Package()
             {
                 //"port-count", Buffer() { 18, 0, 0, 0 },
