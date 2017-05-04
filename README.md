@@ -1,8 +1,8 @@
-## Intel "NUC5"/"NUC6" DSDT patches by RehabMan
+## Intel "NUC5"/"NUC6"/"NUC7" DSDT patches by RehabMan
 
-This set of patches/makefile can be used to patch your Haswell Intel NUC5/NUC6 ACPI.
+This set of patches/makefile can be used to patch your Intel NUC5/NUC6/NUC7 ACPI.
 
-The current repository actually uses only on-the-fly patches via config.plist and an additional SSDTs, SSDT-XOSI.aml, etc.  The files here should work for both the Broadwell NUC and Skylake NUC.
+The current repository actually uses only on-the-fly patches via config.plist and an additional SSDTs, SSDT-XOSI.aml, etc.  The files here should work for all the Broadwell NUC, Skylake NUC, and Kaby Lake NUC.
 
 Please refer to this guide thread on tonymacx86.com for a step-by-step process, feedback, and questions:
 
@@ -10,7 +10,19 @@ Broadwell NUC5: http://tonymacx86.com/threads/guide-intel-broadwell-nuc5-using-c
 
 Skylake NUC6: http://www.tonymacx86.com/threads/guide-intel-skylake-nuc6-using-clover-uefi-nuc6i5syk-etc.194177/
 
+Kaby Lake NUC7: http://www.tonymacx86.com/threads/guide-intel-kaby-lake-nuc7-using-clover-uefi-nuc7i7bnh-nuc7i5bnk-nuc7i3bnh-etc.221123/
+
+
 ### Change Log:
+
+2017-05-04
+
+- add Kaby Lake NUC7 support
+
+- switch to XCPM only CPU PM (just SSDT-PluginType1 content instead of full ssdtPRgen.sh SSDT)
+
+- consolidate separate SSDTs into single SSDT-HACK file
+
 
 2016-06-18
 
