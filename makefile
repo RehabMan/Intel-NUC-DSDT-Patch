@@ -35,6 +35,14 @@ all: $(ALL) $(HDAZML_ALL) #$(HDAINJECT) $(HDAHCDINJECT)
 $(BUILDDIR)/%.aml : %.dsl
 	iasl $(IASLOPTS) -p $@ $<
 
+$(BUILDDIR)/SSDT-NUC5.aml: SSDT-PluginType1.dsl SSDT-XOSI.dsl SSDT-IGPU.dsl SSDT-USB.dsl SSDT-XHC.dsl SSDT-SATA.dsl SSDT-NUCHDA.dsl SSDT-HDEF.dsl SSDT-HDAU.dsl SSDT-LPC.dsl SSDT-Disable_EHCI.dsl
+
+$(BUILDDIR)/SSDT-NUC6.aml: SSDT-PluginType1.dsl SSDT-XOSI.dsl SSDT-IGPU.dsl SSDT-USB.dsl SSDT-XHC.dsl SSDT-SATA.dsl SSDT-NUCHDA.dsl SSDT-HDEF.dsl
+
+$(BUILDDIR)/SSDT-NUC6-SC.aml: SSDT-PluginType1.dsl SSDT-XOSI.dsl SSDT-IGPU.dsl SSDT-USB.dsl SSDT-XHC.dsl SSDT-SATA.dsl SSDT-NUCHDA.dsl SSDT-HDEF.dsl
+
+$(BUILDDIR)/SSDT-NUC8.aml: SSDT-PluginType1.dsl SSDT-XOSI.dsl SSDT-IGPU.dsl SSDT-USB.dsl SSDT-XHC.dsl SSDT-SATA.dsl SSDT-NUCHDA.dsl SSDT-HDEF.dsl
+
 .PHONY: clean
 clean:
 	rm -f $(BUILDDIR)/*.dsl $(BUILDDIR)/*.aml
