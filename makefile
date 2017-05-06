@@ -25,9 +25,9 @@ SLE=/System/Library/Extensions
 IASLOPTS=-vw 2095 -vw 2008
 IASL=iasl
 
-ALL=$(BUILDDIR)/SSDT-HACK-NUC5.aml
-ALL:=$(ALL) $(BUILDDIR)/SSDT-HACK-NUC6.aml $(BUILDDIR)/SSDT-HACK-NUC6-SC.aml
-ALL:=$(ALL) $(BUILDDIR)/SSDT-HACK-NUC7.aml
+ALL=$(BUILDDIR)/SSDT-NUC5.aml
+ALL:=$(ALL) $(BUILDDIR)/SSDT-NUC6.aml $(BUILDDIR)/SSDT-NUC6-SC.aml
+ALL:=$(ALL) $(BUILDDIR)/SSDT-NUC7.aml
 
 .PHONY: all
 all: $(ALL) $(HDAZML_ALL) #$(HDAINJECT) $(HDAHCDINJECT)
@@ -46,28 +46,28 @@ install_nuc5: $(ALL)
 	$(eval EFIDIR:=$(shell sudo ./mount_efi.sh /))
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-*.aml
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT.aml
-	cp $(BUILDDIR)/SSDT-HACK-NUC5.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
+	cp $(BUILDDIR)/SSDT-NUC5.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
 
 .PHONY: install_nuc6
 install_nuc6: $(ALL)
 	$(eval EFIDIR:=$(shell sudo ./mount_efi.sh /))
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-*.aml
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT.aml
-	cp $(BUILDDIR)/SSDT-HACK-NUC6.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
+	cp $(BUILDDIR)/SSDT-NUC6.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
 
 .PHONY: install_nuc6sc
 install_nuc6sc: $(ALL)
 	$(eval EFIDIR:=$(shell sudo ./mount_efi.sh /))
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-*.aml
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT.aml
-	cp $(BUILDDIR)/SSDT-HACK-NUC6-SC.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
+	cp $(BUILDDIR)/SSDT-NUC6-SC.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
 
 .PHONY: install_nuc7
 install_nuc7: $(ALL)
 	$(eval EFIDIR:=$(shell sudo ./mount_efi.sh /))
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-*.aml
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT.aml
-	cp $(BUILDDIR)/SSDT-HACK-NUC7.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
+	cp $(BUILDDIR)/SSDT-NUC7.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
 
 #$(HDAINJECT) $(HDAHCDINJECT) $(HDAZML_ALL): $(RESOURCES)/*.plist ./patch_hda.sh
 $(HDAZML_ALL): $(RESOURCES)/*.plist ./patch_hda.sh

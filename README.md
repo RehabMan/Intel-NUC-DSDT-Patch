@@ -21,7 +21,7 @@ Kaby Lake NUC7: http://www.tonymacx86.com/threads/guide-intel-kaby-lake-nuc7-usi
 
 - switch to XCPM only CPU PM (just SSDT-PluginType1 content instead of full ssdtPRgen.sh SSDT)
 
-- consolidate separate SSDTs into single SSDT-HACK file
+- consolidate separate SSDTs into single model specific SSDT (SSDT-NUC*.aml) file
 
 
 2016-06-18
