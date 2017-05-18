@@ -1,7 +1,31 @@
-// USB configuration for NUC5
+// USB configuration for NUC5/NUC6/NUC7
 
 //DefinitionBlock ("", "SSDT", 2, "hack", "usb", 0)
 //{
+
+//
+// USB Power Propertes for Sierra
+//
+// Note: Only used when using an SMBIOS without power properties
+//  in IOUSBHostFamily Info.plist
+//
+    Device(_SB.USBX)
+    {
+        Name(_ADR, 0)
+        Method (_DSM, 4)
+        {
+            If (!Arg2) { Return (Buffer() { 0x03 } ) }
+            Return (Package()
+            {
+                // from iMac17,1
+                "kUSBSleepPortCurrentLimit", 2100,
+                "kUSBSleepPowerSupply", 5100,
+                "kUSBWakePortCurrentLimit", 2100,
+                "kUSBWakePowerSupply", 5100,
+            })
+        }
+    }
+
 //
 // Override for USBInjectAll.kext
 //

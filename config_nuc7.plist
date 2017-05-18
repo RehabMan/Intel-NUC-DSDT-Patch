@@ -18,6 +18,14 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
+					<string>change H_EC to EC</string>
+					<key>Find</key>
+					<data>SF9FQw==</data>
+					<key>Replace</key>
+					<data>RUNfXw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
 					<string>change GFX0 to IGPU</string>
 					<key>Find</key>
 					<data>R0ZYMA==</data>

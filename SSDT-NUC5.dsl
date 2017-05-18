@@ -30,5 +30,6 @@ DefinitionBlock("", "SSDT", 2, "hack", "RM-NUC5", 0)
     #include "SSDT-HDAU.dsl"
     #include "SSDT-LPC.dsl"
     #include "SSDT-Disable_EHCI.dsl"
+    #include "SSDT-EC.dsl"
 }
 //EOF
