@@ -67,6 +67,14 @@
 					<key>Replace</key>
 					<data>RUgwMg==</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change _DSM to XDSM</string>
+					<key>Find</key>
+					<data>X0RTTQ==</data>
+					<key>Replace</key>
+					<data>WERTTQ==</data>
+				</dict>
 			</array>
 		</dict>
 		<key>DropTables</key>
