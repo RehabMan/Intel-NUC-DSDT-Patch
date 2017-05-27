@@ -61,15 +61,15 @@
                     //HS08/HS09/HS10 not used
                     //USR1/USR2 (11/12) not used
                     //SS01 not used
-                    "SS02", Package() // SS USB3 on stick
+                    "SS02", Package() // SS internal hub on power block
                     {
-                        "UsbConnector", 3,
+                        "UsbConnector", 255,
                         "port", Buffer() { 14, 0, 0, 0 },
                     },
                     //SS03 not used
-                    "SS04", Package() // SS internal hub on power block
+                    "SS04", Package() // SS USB3 on stick
                     {
-                        "UsbConnector", 255,
+                        "UsbConnector", 3,
                         "port", Buffer() { 16, 0, 0, 0 },
                     },
                     //SS05/SS06 not used

@@ -33,6 +33,18 @@ DefinitionBlock("", "SSDT", 2, "hack", "RM-STCK6", 0)
         }
     }
 
+    // The Stick has no GLAN nor XDCI, yet these objects return "present" for _STA
+    // Each also has a _PRW. This causes "instant wake"
+    // To avoid it, _PRW could be patched, but that is difficult with hotpatch because
+    // of other _PRW methods that are not affected.
+    // So, instead patch/replace _STA, which is probably a better fix anyway
+
+    // GLAN is easy as DSDT does not define GLAN._STA
+    Name(_SB.PCI0.GLAN._STA, 0)
+    // XDCI is a little trickier, as it depends on XDCI._STA being renamed to XSTA
+    // (the rename is done in config.plist)
+    Name(_SB.PCI0.XDCI._STA, 0)
+
     #include "SSDT-PluginType1.dsl"
     #include "SSDT-XOSI.dsl"
     #include "SSDT-IGPU.dsl"

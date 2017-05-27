@@ -56,13 +56,21 @@
 					<key>Replace</key>
 					<data>WlBUUwE=</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>rename XDCI._STA to XSTA</string>
+					<key>Find</key>
+					<data>X1MwVwCkCgMUGl9TVEE=</data>
+					<key>Replace</key>
+					<data>X1MwVwCkCgMUGlhTVEE=</data>
+				</dict>
 			</array>
 			<key>Fixes</key>
 			<dict>
 				<key>NewWay_80000000</key>
 				<true/>
 				<key>FixShutdown_0004</key>
-				<true/>
+				<false/>
 			</dict>
 		</dict>
 		<key>SSDT</key>
