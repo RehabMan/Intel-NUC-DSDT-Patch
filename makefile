@@ -28,6 +28,7 @@ IASL=iasl
 ALL=$(BUILDDIR)/SSDT-NUC5.aml
 ALL:=$(ALL) $(BUILDDIR)/SSDT-NUC6.aml $(BUILDDIR)/SSDT-NUC6-SC.aml
 ALL:=$(ALL) $(BUILDDIR)/SSDT-NUC7.aml
+ALL:=$(ALL) $(BUILDDIR)/SSDT-STCK6.aml
 
 .PHONY: all
 all: $(ALL) $(HDAZML_ALL) #$(HDAINJECT) $(HDAHCDINJECT)
@@ -42,6 +43,8 @@ $(BUILDDIR)/SSDT-NUC6.aml: SSDT-PluginType1.dsl SSDT-XOSI.dsl SSDT-IGPU.dsl SSDT
 $(BUILDDIR)/SSDT-NUC6-SC.aml: SSDT-PluginType1.dsl SSDT-XOSI.dsl SSDT-IGPU.dsl SSDT-USB.dsl SSDT-XHC.dsl SSDT-SATA.dsl SSDT-NUCHDA.dsl SSDT-HDEF.dsl SSDT-EC.dsl
 
 $(BUILDDIR)/SSDT-NUC7.aml: SSDT-PluginType1.dsl SSDT-XOSI.dsl SSDT-IGPU.dsl SSDT-USB.dsl SSDT-XHC.dsl SSDT-SATA.dsl SSDT-NUCHDA.dsl SSDT-HDEF.dsl
+
+$(BUILDDIR)/SSDT-STCK6.aml: SSDT-PluginType1.dsl SSDT-XOSI.dsl SSDT-IGPU.dsl SSDT-USB-STCK.dsl SSDT-XHC.dsl SSDT-HDEF.dsl SSDT-EC.dsl SSDT-RMNE.dsl
 
 .PHONY: clean
 clean:
@@ -76,6 +79,13 @@ install_nuc7: $(ALL)
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-*.aml
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT.aml
 	cp $(BUILDDIR)/SSDT-NUC7.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
+
+.PHONY: install_stick6
+install_stick6: $(ALL)
+	$(eval EFIDIR:=$(shell sudo ./mount_efi.sh /))
+	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-*.aml
+	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT.aml
+	cp $(BUILDDIR)/SSDT-STCK6.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
 
 #$(HDAINJECT) $(HDAHCDINJECT) $(HDAZML_ALL): $(RESOURCES)/*.plist ./patch_hda.sh
 $(HDAZML_ALL): $(RESOURCES)/*.plist ./patch_hda.sh

@@ -15,6 +15,11 @@ Kaby Lake NUC7: http://www.tonymacx86.com/threads/guide-intel-kaby-lake-nuc7-usi
 
 ### Change Log:
 
+2017-05-26
+
+- add Intel Compute Stick support (testing specifically on STCK2mv64CC)
+
+
 2017-05-04
 
 - add Kaby Lake NUC7 support
