@@ -75,6 +75,8 @@
 				<dict>
 					<key>Comment</key>
 					<string>change Method(_PTS,1,N) to ZPTS</string>
+					<key>Disabled</key>
+					<true/>
 					<key>Find</key>
 					<data>X1BUUwE=</data>
 					<key>Replace</key>
@@ -86,7 +88,7 @@
 				<key>NewWay_80000000</key>
 				<true/>
 				<key>FixShutdown_0004</key>
-				<false/>
+				<true/>
 			</dict>
 		</dict>
 		<key>SSDT</key>
