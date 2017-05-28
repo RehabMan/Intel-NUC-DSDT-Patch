@@ -28,5 +28,6 @@ DefinitionBlock("", "SSDT", 2, "hack", "RM-NUC6", 0)
     #include "SSDT-NUCHDA.dsl"
     #include "SSDT-HDEF.dsl"
     #include "SSDT-EC.dsl"
+    #include "SSDT-PTS.dsl"
 }
 //EOF

@@ -56,13 +56,21 @@
 					<key>Replace</key>
 					<data>WERTTQ==</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change Method(_PTS,1,N) to ZPTS</string>
+					<key>Find</key>
+					<data>X1BUUwE=</data>
+					<key>Replace</key>
+					<data>WlBUUwE=</data>
+				</dict>
 			</array>
 			<key>Fixes</key>
 			<dict>
 				<key>NewWay_80000000</key>
 				<true/>
 				<key>FixShutdown_0004</key>
-				<true/>
+				<false/>
 			</dict>
 		</dict>
 		<key>SSDT</key>

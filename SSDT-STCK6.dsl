@@ -19,20 +19,6 @@ DefinitionBlock("", "SSDT", 2, "hack", "RM-STCK6", 0)
         Name(FAKH, 1)
     }
 
-    // In DSDT, native _PTS is renamed ZPTS
-    // As a result, calls to these methods land here.
-    External(ZPTS, MethodObj)
-    External(_SB.PCI0.XHC.PMEE, FieldUnitObj)
-    Method(_PTS, 1)
-    {
-        ZPTS(Arg0)
-        If (5 == Arg0)
-        {
-            // avoid "auto restart" after shutdown
-            \_SB.PCI0.XHC.PMEE = 0
-        }
-    }
-
     // The Stick has no GLAN nor XDCI, yet these objects return "present" for _STA
     // Each also has a _PRW. This causes "instant wake"
     // To avoid it, _PRW could be patched, but that is difficult with hotpatch because
@@ -52,6 +38,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "RM-STCK6", 0)
     #include "SSDT-XHC.dsl"
     #include "SSDT-HDEF.dsl"
     #include "SSDT-EC.dsl"
+    #include "SSDT-PTS.dsl"
     #include "SSDT-RMNE.dsl"
 }
 //EOF

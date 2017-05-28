@@ -34,5 +34,4 @@
         Return (Ones != Match(Local0, MEQ, Arg0, MTR, 0, 0))
     }
 //}
-
 //EOF
