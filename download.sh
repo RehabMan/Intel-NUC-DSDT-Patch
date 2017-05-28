@@ -27,6 +27,8 @@ download os-x-fake-pci-id RehabMan-FakePCIID
 download os-x-brcmpatchram RehabMan-BrcmPatchRAM
 download os-x-usb-inject-all RehabMan-USBInjectAll
 download os-x-null-ethernet RehabMan-NullEthernet
+download lilu RehabMan-Lilu
+download intelgraphicsfixup RehabMan-IntelGraphicsFixup
 #download os-x-acpi-debug RehabMan-Debug
 cd ..
 
