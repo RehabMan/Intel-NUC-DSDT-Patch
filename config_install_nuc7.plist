@@ -4,11 +4,6 @@
 <dict>
 	<key>ACPI</key>
 	<dict>
-		<key>SortedOrder</key>
-		<array>
-			<string>SSDT-PluginType1.aml</string>
-			<string>SSDT_NVMe-Pcc.aml</string>
-		</array>
 		<key>DSDT</key>
 		<dict>
 			<key>Fixes</key>
@@ -157,10 +152,8 @@
 		</dict>
 		<key>FakeID</key>
 		<dict>
-			<key>#Kaby Lake-Comment</key>
-			<string>Kaby Lake HD620 graphics supportable by using Skylake device-id</string>
 			<key>IntelGFX</key>
-			<string>0x19168086</string>
+			<string>0x59128086</string>
 		</dict>
 		<key>USB</key>
 		<dict>
@@ -214,7 +207,7 @@
 	<key>Graphics</key>
 	<dict>
 		<key>ig-platform-id</key>
-		<string>0x19160000</string>
+		<string>0x59120000</string>
 		<key>Inject</key>
 		<dict>
 			<key>ATI</key>
@@ -235,7 +228,7 @@
 		<true/>
 		<key>#Kaby Lake-Comment</key>
 		<string>Kaby Lake CPU supportable by using CPUID from Skylake</string>
-		<key>FakeCPUID</key>
+		<key>#FakeCPUID</key>
 		<string>0x0506e3</string>
 		<key>KernelLapic</key>
 		<true/>
@@ -246,44 +239,7 @@
 			<string>\System\Library\Extensions\IONetworkingFamily.kext</string>
 		</array>
 		<key>KextsToPatch</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>Disable minStolenSize less or equal fStolenMemorySize assertion, 10.11.4 ( (based on Austere.J patch)</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>AppleIntelSKLGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>QTnEdio=</data>
-				<key>Replace</key>
-				<data>QTnE6yo=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Enable TRIM for SSD</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>IOAHCIBlockStorage</string>
-				<key>Find</key>
-				<data>AEFQUExFIFNTRAA=</data>
-				<key>Replace</key>
-				<data>AAAAAAAAAAAAAAA=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Boot graphics glitch, 10.10.x/10.11.x (credit lisai9093, cecekpawon)</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>IOGraphicsFamily</string>
-				<key>Find</key>
-				<data>AQAAdRc=</data>
-				<key>Replace</key>
-				<data>AQAA6xc=</data>
-			</dict>
-		</array>
+		<array/>
 	</dict>
 	<key>RtVariables</key>
 	<dict>

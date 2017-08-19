@@ -1,5 +1,8 @@
 // IGPU injection
 
+// SPOOF_KBL_AS_SKL can be set to 1 to spoof KBL graphics as SKL for versions prior to macOS 10.12.6
+#define SPOOF_KBL_AS_SKL 0
+
 //DefinitionBlock ("", "SSDT", 2, "hack", "igpu", 0)
 //{
     External(_SB.PCI0, DeviceObj)
@@ -119,28 +122,43 @@
                 {
                     "model", Buffer() { "Intel Iris Pro Graphics 580" },
                     "AAPL,ig-platform-id", Buffer() { 0x05, 0x00, 0x3b, 0x19 },
+                    //REVIEW: spoof HD540 for full screen QuickTime issue
+                    //"AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x26, 0x19 },
                     "hda-gfx", Buffer() { "onboard-1" },
-                    "RM,device-id", Buffer() { 0x3b, 0x19, 0x00, 0x00 },
+                    //"RM,device-id", Buffer() { 0x3b, 0x19, 0x00, 0x00 },
                     //"AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
+                    //REVIEW: spoof HD540 for full screen QuickTime issue
+                    "RM,device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
                 },
+#if SPOOF_KBL_AS_SKL
                 // Kaby Lake/HD620
                 0x5916, 0, Package()
                 {
                     "model", Buffer() { "Intel HD Graphics 620" },
                     "device-id", Buffer() { 0x16, 0x19, 0x00, 0x00 },
-                    "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x16, 0x19 },
+                    "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x16, 0x19 },
                     "hda-gfx", Buffer() { "onboard-1" },
                     "RM,device-id", Buffer() { 0x16, 0x19, 0x00, 0x00 },
                     "AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
                 },
                 // Kaby Lake/HD630
-                0x5912, 0x591b, 0, Package()
+                0x5912, 0, Package()
                 {
                     "model", Buffer() { "Intel HD Graphics 630" },
                     "device-id", Buffer() { 0x12, 0x19, 0x00, 0x00 },
-                    "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x16, 0x19 },
+                    "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x12, 0x19 },
                     "hda-gfx", Buffer() { "onboard-1" },
                     "RM,device-id", Buffer() { 0x12, 0x19, 0x00, 0x00 },
+                    "AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
+                },
+                // Kaby Lake/HD630
+                0x591b, 0, Package()
+                {
+                    "model", Buffer() { "Intel HD Graphics 630" },
+                    "device-id", Buffer() { 0x1b, 0x19, 0x00, 0x00 },
+                    "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x1b, 0x19 },
+                    "hda-gfx", Buffer() { "onboard-1" },
+                    "RM,device-id", Buffer() { 0x1b, 0x19, 0x00, 0x00 },
                     "AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
                 },
                 // Kaby Lake/HD640
@@ -166,6 +184,43 @@
                     "RM,device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
                     //"AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
                 },
+#else //SPOOF_KBL_AS_SKL
+                // Kaby Lake/HD620
+                0x5916, 0, Package()
+                {
+                    "model", Buffer() { "Intel HD Graphics 620" },
+                    "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x16, 0x59 },
+                    "hda-gfx", Buffer() { "onboard-1" },
+                },
+                // Kaby Lake/HD630
+                0x5912, 0, Package()
+                {
+                    "model", Buffer() { "Intel HD Graphics 630" },
+                    "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x12, 0x59 },
+                    "hda-gfx", Buffer() { "onboard-1" },
+                },
+                // Kaby Lake/HD630
+                0x591b, 0, Package()
+                {
+                    "model", Buffer() { "Intel HD Graphics 630" },
+                    "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x1b, 0x59 },
+                    "hda-gfx", Buffer() { "onboard-1" },
+                },
+                // Kaby Lake/HD640
+                0x5926, 0, Package()
+                {
+                    "model", Buffer() { "Intel Iris Plus Graphics 640" },
+                    "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x26, 0x59 },
+                    "hda-gfx", Buffer() { "onboard-1" },
+                },
+                // Kaby Lake/HD650
+                0x5927, 0, Package()
+                {
+                    "model", Buffer() { "Intel Iris Plus Graphics 650" },
+                    "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x27, 0x59 },
+                    "hda-gfx", Buffer() { "onboard-1" },
+                },
+#endif //!SPOOF_KBL_AS_SKL
             })
 
             // inject properties for integrated graphics on IGPU

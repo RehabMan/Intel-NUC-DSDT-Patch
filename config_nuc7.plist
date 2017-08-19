@@ -190,10 +190,75 @@
 	<dict>
 		<key>AppleRTC</key>
 		<true/>
-		<key>FakeCPUID</key>
+		<key>#FakeCPUID-SKL-spoof</key>
 		<string>0x0506e3</string>
 		<key>KernelPm</key>
 		<true/>
+		<key>#KextsToPatch-SKL-spoof</key>
+		<array>
+			<dict>
+				<key>Comment</key>
+				<string>0x19260002 two DP, #1 of 2</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>AQMDAwAAkAM=</data>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>AQMCAgAAkAM=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>0x19260002 two DP, #2 of 2</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>AAAIAAIAAACYBAAAAQUJAAAEAADHAwAAAgQKAAAEAADHAwAA/wAAAAEAAAAgAAAA</data>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>AQUJAAAEAADHAwAAAgQKAAAEAADHAwAA/wAAAAEAAAAgAAAA/wAAAAEAAAAgAAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio, port 0105, 0x19260000 (10.11.x 10.12.x) 0x19260002 (10.11.x only)</string>
+				<key>MatchOS</key>
+				<string>10.11.x</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>AQUJAAAEAACHAQAA</data>
+				<key>Replace</key>
+				<data>AQUJAAAIAACHAQAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio, port 0105, 0x19260002 (10.12.0 only)</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>AQUJAAAEAADHAQAA</data>
+				<key>Replace</key>
+				<data>AQUJAAAIAADHAQAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio, port 0105, 0x19260002 (10.12.1,10.12.2, maybe later versions)</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>AQUJAAAEAADHAwAA</data>
+				<key>Replace</key>
+				<data>AQUJAAAIAADHAwAA</data>
+			</dict>
+		</array>
 		<key>KextsToPatch</key>
 		<array>
 			<dict>
@@ -324,65 +389,39 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>0x19260002 two DP, #1 of 2</string>
+				<string>0x59260000 0x59270000 2xDP, #1 of 2</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
-				<data>AQMDAwAAkAM=</data>
+				<data>AAMDAwAAYAI=</data>
 				<key>Name</key>
-				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+				<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
 				<key>Replace</key>
-				<data>AQMCAgAAkAM=</data>
+				<data>AAMCAgAAYAI=</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>0x19260002 two DP, #2 of 2</string>
+				<string>0x59260000 0x59270000 2xDP, #2 of 2</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
-				<data>AAAIAAIAAACYBAAAAQUJAAAEAADHAwAAAgQKAAAEAADHAwAA/wAAAAEAAAAgAAAA</data>
+				<data>AAAIAAIAAACYAAAAAQUJAAAEAACHAQAAAgQKAAAEAACHAQAA</data>
 				<key>Name</key>
-				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+				<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
 				<key>Replace</key>
-				<data>AQUJAAAEAADHAwAAAgQKAAAEAADHAwAA/wAAAAEAAAAgAAAA/wAAAAEAAAAgAAAA</data>
+				<data>AQUJAAAEAACHAQAAAgQKAAAEAACHAQAA/wAAAAEAAAAgAAAA</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>HDMI-audio, port 0105, 0x19260000 (10.11.x 10.12.x) 0x19260002 (10.11.x only)</string>
-				<key>MatchOS</key>
-				<string>10.11.x</string>
+				<string>HDMI-audio, port 0105, 0x59260000 0x59270000</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Name</key>
-				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+				<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
 				<key>Find</key>
 				<data>AQUJAAAEAACHAQAA</data>
 				<key>Replace</key>
 				<data>AQUJAAAIAACHAQAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0105, 0x19260002 (10.12.0 only)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>AQUJAAAEAADHAQAA</data>
-				<key>Replace</key>
-				<data>AQUJAAAIAADHAQAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0105, 0x19260002 (10.12.1,10.12.2, maybe later versions)</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>AQUJAAAEAADHAwAA</data>
-				<key>Replace</key>
-				<data>AQUJAAAIAADHAwAA</data>
 			</dict>
 			<dict>
 				<key>Comment</key>

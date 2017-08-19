@@ -307,7 +307,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>0x193b0005 three DP, #1 of 2</string>
+				<string>0x193b0005 3xDP, #1 of 2</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
@@ -319,7 +319,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>0x193b0005 three DP, #2 of 2</string>
+				<string>0x193b0005 3xDP 0105/0204/0306, #2 of 2</string>
 				<key>Disabled</key>
 				<false/>
 				<key>Find</key>
@@ -328,6 +328,42 @@
 				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
 				<key>Replace</key>
 				<data>AQUJAAAEAADHAQAAAgQKAAAEAADHAQAAAwYKAAAEAADHAQAAAAAIAAIAAACYAAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>0x19260002 3xDP 0105/0204/0306</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>AAAIAAIAAACYBAAAAQUJAAAEAADHAwAAAgQKAAAEAADHAwAA/wAAAAEAAAAgAAAA</data>
+				<key>Replace</key>
+				<data>AQUJAAAEAADHAwAAAgQKAAAEAADHAwAAAwYKAAAEAADHAwAAAAAIAAIAAACYBAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>0x19260004 3xDP 0105/0204/0306</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>AAAIAAIAAACYBAAAAQUJAAAEAADHAQAAAgQKAAAEAADHAQAA/wAAAAEAAAAgAAAA</data>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>AQUJAAAEAADHAQAAAgQKAAAEAADHAQAAAwYKAAAEAADHAQAAAAAIAAIAAACYBAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio, port 0105, 0x19260002</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Find</key>
+				<data>AQUJAAAEAADHAwAA</data>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
+				<key>Replace</key>
+				<data>AQUJAAAIAADHAwAA</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
