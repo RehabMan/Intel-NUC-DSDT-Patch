@@ -111,6 +111,11 @@
 				<string>ApIst</string>
 			</dict>
 		</array>
+		<key>SortedOrder</key>
+		<array>
+			<string>SSDT-PluginType1.aml</string>
+			<string>SSDT_NVMe-Pcc.aml</string>
+		</array>
 		<key>SSDT</key>
 		<dict>
 			<key>DropOem</key>
