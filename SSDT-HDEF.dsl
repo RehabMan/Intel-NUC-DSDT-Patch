@@ -5,6 +5,7 @@
     External(_SB.PCI0.HDEF, DeviceObj)
     //External(RMCF.AUDL, IntObj)
     //External(RMCF.FAKH, IntObj)
+    External(\RMDA, IntObj)
 
     // Note: If your ACPI set (DSDT+SSDTs) does not define HDEF (or AZAL)
     // add this Device definition (by uncommenting it)
@@ -23,15 +24,17 @@
         Local0 = Package()
         {
             "layout-id", Buffer(4) { },
-            "RM,disable_FakePCIID", Ones,
             "hda-gfx", Buffer() { "onboard-1" },
+            "RM,disable_FakePCIID", Ones,
             "PinConfigurations", Buffer() { },
         }
         // set layout-id value based on \RMCF.AUDL
         CreateDWordField(DerefOf(Local0[1]), 0, AUDL)
         AUDL = \RMCF.AUDL
+        // disable "hda-gfx"  injection if \RMDA not present
+        If (!CondRefOf(\RMDA)) { Local0[2] = "#hda-gfx" }
         // set RM,disableFakePCIID value based on \RMCF.FAKH
-        Local0[3] = 1-\RMCF.FAKH
+        Local0[5] = 1-\RMCF.FAKH
         Return(Local0)
     }
 //}

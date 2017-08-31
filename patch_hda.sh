@@ -114,7 +114,7 @@ function createAppleHDAInjector_HCD()
     echo -n "Creating AppleHDAHCD_$1.kext..."
     rm -Rf AppleHDAHCD_$1.kext
     mkdir -p AppleHDAHCD_$1.kext/Contents
-    cp $unpatched/AppleHDA.kext/Contents/Plugins/AppleHDAHardwareConfigDriver.kext/Contents/Info.plist AppleHDAHCD_$1.kext/Contents/Info.plist
+    cp $unpatched/AppleHDA.kext/Contents/PlugIns/AppleHDAHardwareConfigDriver.kext/Contents/Info.plist AppleHDAHCD_$1.kext/Contents/Info.plist
 
     # fix versions (must be larger than native)
     plist=AppleHDAHCD_$1.kext/Contents/Info.plist
