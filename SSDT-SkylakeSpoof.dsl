@@ -3,7 +3,7 @@
 // The purpose of this file is to allow KabyLake systems to spoof Skylake graphics.
 // Just include the built version of this file in ACPI/patched.
 
-DefinitionBlock("", "SSDT", 2, "hack", "SKL-Spoof", 0)
+DefinitionBlock("", "SSDT", 2, "hack", "RM-RMGO", 0)
 {
     Name(RMGO, Package()
     {

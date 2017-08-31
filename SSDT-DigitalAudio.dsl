@@ -7,7 +7,7 @@
 // Because "hda-gfx" needs to be disabled in some update scenarios, this mechanism
 // provides an easy way to disable it by simply dropping this SSDT from the Clover menu.
 
-DefinitionBlock("", "SSDT", 2, "hack", "DAudio", 0)
+DefinitionBlock("", "SSDT", 2, "hack", "RM-RMDA", 0)
 {
     Name(RMDA, 1)
 }
