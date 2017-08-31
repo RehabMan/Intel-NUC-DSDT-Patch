@@ -190,7 +190,9 @@
 	<dict>
 		<key>AppleRTC</key>
 		<true/>
-		<key>#FakeCPUID-SKL-spoof</key>
+		<key>#Kaby Lake-Comment</key>
+		<string>Kaby Lake CPU supportable by using CPUID from Skylake</string>
+		<key>#FakeCPUID</key>
 		<string>0x0506e3</string>
 		<key>KernelPm</key>
 		<true/>
