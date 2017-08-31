@@ -95,6 +95,15 @@ install_nuc7: $(ALL)
 	cp $(BUILDDIR)/SSDT-NUC7.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
 	cp $(BUILDDIR)/SSDT-DigitalAudio.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
 
+.PHONY: install_nuc7spoof
+install_nuc7spoof: $(ALL)
+	$(eval EFIDIR:=$(shell sudo ./mount_efi.sh /))
+	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-*.aml
+	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT.aml
+	cp $(BUILDDIR)/SSDT-NUC7.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
+	cp $(BUILDDIR)/SSDT-DigitalAudio.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
+	cp $(BUILDDIR)/SSDT-SkylakeSpoof.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
+
 .PHONY: install_stick6
 install_stick6: $(ALL)
 	$(eval EFIDIR:=$(shell sudo ./mount_efi.sh /))
