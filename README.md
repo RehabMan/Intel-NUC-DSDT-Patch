@@ -15,6 +15,16 @@ Kaby Lake NUC7: http://www.tonymacx86.com/threads/guide-intel-kaby-lake-nuc7-usi
 
 ### Change Log:
 
+2017-08-31
+
+- Allow Skylake spoofing to work with NUC7 (4k@60 reported not working wiht native KBL graphics kexts, and Skylake spoof needed for 10.11.x)
+
+
+2017-08-19
+
+- Use Kaby Lake native support in 10.12.6
+
+
 2017-05-26
 
 - add Intel Compute Stick support (testing specifically on STCK2mv64CC)
