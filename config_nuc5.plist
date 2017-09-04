@@ -182,7 +182,7 @@
 	<key>Graphics</key>
 	<dict>
 		<key>ig-platform-id</key>
-		<string>0x19160000</string>
+		<string>0x16160002</string>
 		<key>Inject</key>
 		<dict>
 			<key>Intel</key>
@@ -380,21 +380,6 @@
 				<data>AgQJAAAEAAAHBQAA</data>
 				<key>Replace</key>
 				<data>AgQJAAAIAACCAAAA</data>
-			</dict>
-		</array>
-		<key>KernelToPatch</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>MSR 0xE2 _xcpm_idle instant reboot(c) Pike R. Alpha</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Find</key>
-				<data>ILniAAAADzA=</data>
-				<key>MatchOS</key>
-				<string>10.12.x,10.11.x</string>
-				<key>Replace</key>
-				<data>ILniAAAAkJA=</data>
 			</dict>
 		</array>
 	</dict>
