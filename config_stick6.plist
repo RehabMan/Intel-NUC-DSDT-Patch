@@ -183,34 +183,6 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>change 15 port limit to 20 in XHCI kext (9-series)</string>
-				<key>MatchOS</key>
-				<string>10.11.x</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>g72M/v//EA==</data>
-				<key>Name</key>
-				<string>com.apple.driver.usb.AppleUSBXHCIPCI</string>
-				<key>Replace</key>
-				<data>g72M/v//FQ==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>change 15 port limit to 20 in XHCI kext (9-series)</string>
-				<key>MatchOS</key>
-				<string>10.12.x</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>g710////EA==</data>
-				<key>Name</key>
-				<string>com.apple.driver.usb.AppleUSBXHCIPCI</string>
-				<key>Replace</key>
-				<data>g710////FQ==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>HDMI-audio, port 0105, 0x191e0000 (10.11.x 10.12.x)</string>
 				<key>MatchOS</key>
 				<string>10.11.x,10.12.x</string>
@@ -223,30 +195,6 @@
 				<key>Replace</key>
 				<data>AQUJAAAIAACHAQAA</data>
 			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Boot graphics glitch, 10.10.x/10.11.x</string>
-				<key>MatchOS</key>
-				<string>10.10.x,10.11.x</string>
-				<key>Find</key>
-				<data>AQAAdRc=</data>
-				<key>Name</key>
-				<string>com.apple.iokit.IOGraphicsFamily</string>
-				<key>Replace</key>
-				<data>AQAAdBc=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Boot graphics glitch, 10.12.dp1 (credit denskop)</string>
-				<key>MatchOS</key>
-				<string>10.12.x</string>
-				<key>Find</key>
-				<data>AQAAdSU=</data>
-				<key>Name</key>
-				<string>com.apple.iokit.IOGraphicsFamily</string>
-				<key>Replace</key>
-				<data>AQAA6yU=</data>
-			</dict>
 		</array>
 		<key>KernelToPatch</key>
 		<array>
@@ -257,8 +205,6 @@
 				<false/>
 				<key>Find</key>
 				<data>ILniAAAADzA=</data>
-				<key>MatchOS</key>
-				<string>10.12.x,10.11.x</string>
 				<key>Replace</key>
 				<data>ILniAAAAkJA=</data>
 			</dict>

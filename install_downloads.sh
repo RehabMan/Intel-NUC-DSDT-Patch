@@ -185,10 +185,6 @@ if [ $? -ne 0 ]; then
         # remove old FakePCIID_HD4600_HD4400.kext
         $SUDO rm -Rf $SLE/FakePCIID_HD4600_HD4400.kext $KEXTDEST/FakePCIID_HD4600_HD4400.kext
     fi
-    # the guide used FakePCIID_Intel_HD_Graphics.kext for a Safari bug, but is now fixed in Safari 10
-#    if [[ -e $KEXTDEST/FakePCIID_Intel_HD_Graphics.kext ]]; then
-#        $SUDO rm -Rf $KEXTDEST/FakePCIID_Intel_HD_Graphics.kext
-#    fi
     cd ../..
 fi
 

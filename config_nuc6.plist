@@ -181,43 +181,15 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>change 15 port limit to 20 in XHCI kext (9-series)</string>
-				<key>MatchOS</key>
-				<string>10.11.x</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>g72M/v//EA==</data>
-				<key>Name</key>
-				<string>com.apple.driver.usb.AppleUSBXHCIPCI</string>
-				<key>Replace</key>
-				<data>g72M/v//FQ==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>change 15 port limit to 20 in XHCI kext (9-series)</string>
-				<key>MatchOS</key>
-				<string>10.12.x</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Find</key>
-				<data>g710////EA==</data>
-				<key>Name</key>
-				<string>com.apple.driver.usb.AppleUSBXHCIPCI</string>
-				<key>Replace</key>
-				<data>g710////FQ==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>10.10.2+ 5Ghz US FCC, the-darkvoid</string>
 				<key>MatchOS</key>
 				<string>10.10.x,10.11.x</string>
 				<key>Disabled</key>
 				<false/>
-				<key>Find</key>
-				<data>QYP8/3QsSA==</data>
 				<key>Name</key>
 				<string>com.apple.driver.AirPort.Brcm4360</string>
+				<key>Find</key>
+				<data>QYP8/3QsSA==</data>
 				<key>Replace</key>
 				<data>ZscGVVPrKw==</data>
 			</dict>
@@ -228,10 +200,10 @@
 				<string>10.12.x</string>
 				<key>Disabled</key>
 				<false/>
-				<key>Find</key>
-				<data>gflSqgAAdSk=</data>
 				<key>Name</key>
 				<string>com.apple.driver.AirPort.Brcm4360</string>
+				<key>Find</key>
+				<data>gflSqgAAdSk=</data>
 				<key>Replace</key>
 				<data>gflSqgAAZpA=</data>
 			</dict>
@@ -240,10 +212,10 @@
 				<string>10.11.dp BT4LE-Handoff-Hotspot, credit RehabMan based on Dokterdok patch</string>
 				<key>MatchOS</key>
 				<string>10.11.x,10.12.x</string>
-				<key>Find</key>
-				<data>SIX/dEdIiwc=</data>
 				<key>Name</key>
 				<string>com.apple.iokit.IOBluetoothFamily</string>
+				<key>Find</key>
+				<data>SIX/dEdIiwc=</data>
 				<key>Replace</key>
 				<data>Qb4PAAAA60Q=</data>
 			</dict>
@@ -252,10 +224,10 @@
 				<string>AppleHDA .xml.zlib to .zml.zlib</string>
 				<key>Disabled</key>
 				<false/>
-				<key>Find</key>
-				<data>LnhtbC56bA==</data>
 				<key>Name</key>
 				<string>com.apple.driver.AppleHDA</string>
+				<key>Find</key>
+				<data>LnhtbC56bA==</data>
 				<key>Replace</key>
 				<data>LnptbC56bA==</data>
 			</dict>
@@ -264,18 +236,16 @@
 				<string>AppleHDA ALC262 to ALC283</string>
 				<key>Disabled</key>
 				<false/>
-				<key>Find</key>
-				<data>YgLsEA==</data>
 				<key>Name</key>
 				<string>com.apple.driver.AppleHDA</string>
+				<key>Find</key>
+				<data>YgLsEA==</data>
 				<key>Replace</key>
 				<data>gwLsEA==</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
 				<string>AppleHDA anti-pop patch #1 (credit AppleALC)</string>
-				<key>MatchOS</key>
-				<string>10.11.x,10.12.x</string>
 				<key>Name</key>
 				<string>com.apple.driver.AppleHDA</string>
 				<key>Find</key>
@@ -286,8 +256,6 @@
 			<dict>
 				<key>Comment</key>
 				<string>AppleHDA anti-pop patch #2 (credit AppleALC)</string>
-				<key>MatchOS</key>
-				<string>10.11.x,10.12.x</string>
 				<key>Name</key>
 				<string>com.apple.driver.AppleHDA</string>
 				<key>Find</key>
@@ -298,10 +266,10 @@
 			<dict>
 				<key>Comment</key>
 				<string>Enable TRIM for SSD</string>
-				<key>Find</key>
-				<data>AEFQUExFIFNTRAA=</data>
 				<key>Name</key>
 				<string>com.apple.iokit.IOAHCIBlockStorage</string>
+				<key>Find</key>
+				<data>AEFQUExFIFNTRAA=</data>
 				<key>Replace</key>
 				<data>AAAAAAAAAAAAAAA=</data>
 			</dict>
@@ -343,30 +311,6 @@
 				<key>Replace</key>
 				<data>AQUJAAAIAADHAwAA</data>
 			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Boot graphics glitch, 10.10.x/10.11.x</string>
-				<key>MatchOS</key>
-				<string>10.10.x,10.11.x</string>
-				<key>Find</key>
-				<data>AQAAdRc=</data>
-				<key>Name</key>
-				<string>com.apple.iokit.IOGraphicsFamily</string>
-				<key>Replace</key>
-				<data>AQAAdBc=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Boot graphics glitch, 10.12.dp1 (credit denskop)</string>
-				<key>MatchOS</key>
-				<string>10.12.x</string>
-				<key>Find</key>
-				<data>AQAAdSU=</data>
-				<key>Name</key>
-				<string>com.apple.iokit.IOGraphicsFamily</string>
-				<key>Replace</key>
-				<data>AQAA6yU=</data>
-			</dict>
 		</array>
 		<key>KernelToPatch</key>
 		<array>
@@ -377,8 +321,6 @@
 				<false/>
 				<key>Find</key>
 				<data>ILniAAAADzA=</data>
-				<key>MatchOS</key>
-				<string>10.12.x,10.11.x</string>
 				<key>Replace</key>
 				<data>ILniAAAAkJA=</data>
 			</dict>
