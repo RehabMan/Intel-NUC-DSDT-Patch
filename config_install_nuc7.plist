@@ -122,10 +122,8 @@
 			<false/>
 			<key>Generate</key>
 			<dict>
-				<key>CStates</key>
-				<false/>
-				<key>PStates</key>
-				<false/>
+				<key>PluginType</key>
+				<true/>
 			</dict>
 			<key>PluginType</key>
 			<integer>1</integer>
