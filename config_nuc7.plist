@@ -73,18 +73,9 @@
 					<data>WlBUUwE=</data>
 				</dict>
 			</array>
-			<key>Fixes</key>
-			<dict>
-				<key>NewWay_80000000</key>
-				<true/>
-				<key>FixShutdown_0004</key>
-				<false/>
-			</dict>
 		</dict>
 		<key>SSDT</key>
 		<dict>
-			<key>DropOem</key>
-			<false/>
 			<key>Generate</key>
 			<false/>
 		</dict>
@@ -93,10 +84,6 @@
 	<dict>
 		<key>Arguments</key>
 		<string>kext-dev-mode=1 nv_disable=1 dart=0 slide=0 -disablegfxfirmware</string>
-		<key>Legacy</key>
-		<string>LegacyBiosDefault</string>
-		<key>Log</key>
-		<false/>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
