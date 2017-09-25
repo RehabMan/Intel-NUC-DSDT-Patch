@@ -28,7 +28,6 @@ if [[ "$(echo $(LC_ALL=C diskutil list | grep -i 'Logical Volume' | awk '{print 
     LC_ALL=C diskutil cs info $DiskDevice > /dev/null 2>&1
     if [[ $? -eq 0 ]] ; then
         # logical volumes does not have an EFI partition (or not suitable for us?)
-        echo "$DiskDevice is a logical volume"
         # find the partition uuid
         UUID=$(LC_ALL=C diskutil info "${DiskDevice}" 2>/dev/null | sed -n 's/.*artition UUID: *//p')
         # with the partition uuid we can find the real disk in in diskutil list output
@@ -45,7 +44,6 @@ fi
 if [[ "$(echo $(LC_ALL=C diskutil list "$DiskDevice" | grep -i 'APFS Container Scheme' | awk '{print tolower($0)}'))" == *"apfs container scheme"* ]]; then
     # ok, this disk is an APFS partition, extract physical store device
     realDisk=$(LC_ALL=C diskutil list "$DiskDevice" 2>/dev/null | sed -n 's/.*Physical Store *//p')
-    echo Target volume "$1" on "$DiskDevice" is APFS on physical store "$realDisk"
     DiskDevice=$(LC_ALL=C diskutil info "$realDisk" 2>/dev/null | sed -n 's/.*Part [oO]f Whole: *//p')
 fi
 
