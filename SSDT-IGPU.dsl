@@ -117,13 +117,14 @@
                 // Skylake/Iris Pro HD580
                 0x193b, 0, Package()
                 {
-                    "AAPL,ig-platform-id", Buffer() { 0x05, 0x00, 0x3b, 0x19 },
-                    //REVIEW: spoof HD540 for full screen QuickTime issue
-                    //"AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x26, 0x19 },
+                    //"AAPL,ig-platform-id", Buffer() { 0x05, 0x00, 0x3b, 0x19 },
+                    //REVIEW: spoof HD540 for GarageBand right click issue
+                    "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x26, 0x19 },
                     "hda-gfx", Buffer() { "onboard-1" },
                     "model", Buffer() { "Intel Iris Pro Graphics 580" },
                     //"RM,device-id", Buffer() { 0x3b, 0x19, 0x00, 0x00 },
                     //"AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
+                    //"RM,device-id", Buffer() { 0x3b, 0x19, 0x00, 0x00 },
                     //REVIEW: spoof HD540 for full screen QuickTime issue
                     "RM,device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
                 },
