@@ -4,6 +4,10 @@
 <dict>
 	<key>ACPI</key>
 	<dict>
+		<key>DisabledAML</key>
+		<array>
+			<string>SSDT-DisableDA.aml</string>
+		</array>
 		<key>DSDT</key>
 		<dict>
 			<key>Patches</key>

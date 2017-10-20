@@ -187,8 +187,8 @@
                 {
                     // start search for zero-terminator (prefix to injection package)
                     Local0 = DerefOf(Local1[Match(Local1, MEQ, 0, MTR, 0, Local0+1)+1])
-                    // disable "hda-gfx"  injection if \RMDA not present
-                    If (!CondRefOf(\RMDA)) { Local0[2] = "#hda-gfx" }
+                    // disable "hda-gfx" injection if \RMDA is present
+                    If (CondRefOf(\RMDA)) { Local0[2] = "#hda-gfx" }
                     Return (Local0)
                 }
                 // should never happen, but inject nothing in this case

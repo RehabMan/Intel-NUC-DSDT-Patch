@@ -47,7 +47,7 @@
 		EDA342501CFC99B700E14DE0 /* SSDT-SATA.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-SATA.dsl"; sourceTree = "<group>"; };
 		EDAA88F11CFB6A6D008BA1EE /* SSDT-NUCHDA.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-NUCHDA.dsl"; sourceTree = "<group>"; };
 		EDAAB2161ECB551A00077D9B /* SSDT-EC.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-EC.dsl"; sourceTree = "<group>"; };
-		EDB6A7311F58666600780158 /* SSDT-DigitalAudio.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-DigitalAudio.dsl"; sourceTree = "<group>"; };
+		EDB6A7311F58666600780158 /* SSDT-DisableDA.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-DisableDA.dsl"; sourceTree = "<group>"; };
 		EDCF685A1CFBBD03009D6CCD /* SSDT-LPC.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-LPC.dsl"; sourceTree = "<group>"; };
 		EDD762461CFC968400A2D6BA /* config_install_nuc6.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_install_nuc6.plist; sourceTree = "<group>"; };
 		EDD762471CFC973E00A2D6BA /* config_nuc6.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_nuc6.plist; sourceTree = "<group>"; };
@@ -86,7 +86,7 @@
 				EDAA88F11CFB6A6D008BA1EE /* SSDT-NUCHDA.dsl */,
 				ED5448361CFFD70D007F89F0 /* SSDT-HDEF.dsl */,
 				ED5448391CFFD743007F89F0 /* SSDT-HDAU.dsl */,
-				EDB6A7311F58666600780158 /* SSDT-DigitalAudio.dsl */,
+				EDB6A7311F58666600780158 /* SSDT-DisableDA.dsl */,
 				EDCF685A1CFBBD03009D6CCD /* SSDT-LPC.dsl */,
 				ED0EF6761CFBE3EA00243958 /* SSDT-Disable_EHCI.dsl */,
 				EDAAB2161ECB551A00077D9B /* SSDT-EC.dsl */,

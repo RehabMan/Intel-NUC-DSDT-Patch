@@ -4,13 +4,14 @@ function download()
 {
     echo "downloading $2:"
     curl --location --silent --output /tmp/org.rehabman.download.txt https://bitbucket.org/RehabMan/$1/downloads/
-    scrape=`grep -o -m 1 "/RehabMan/$1/downloads/$2.*\.zip" /tmp/org.rehabman.download.txt|perl -ne 'print $1 if /(.*)\"/'`
-    url=https://bitbucket.org$scrape
+    local scrape=`grep -o -m 1 "/RehabMan/$1/downloads/$2.*\.zip" /tmp/org.rehabman.download.txt|perl -ne 'print $1 if /(.*)\"/'`
+    local url=https://bitbucket.org$scrape
     echo $url
+    local curl_options="--retry 5 --progress-bar"
     if [ "$3" == "" ]; then
-        curl --remote-name --progress-bar --location "$url"
+        curl $curl_options --remote-name --location "$url"
     else
-        curl --output "$3" --progress-bar --location "$url"
+        curl $curl_options --output "$3" --location "$url"
     fi
     echo
 }

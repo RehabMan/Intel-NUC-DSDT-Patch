@@ -31,8 +31,8 @@
         // set layout-id value based on \RMCF.AUDL
         CreateDWordField(DerefOf(Local0[1]), 0, AUDL)
         AUDL = \RMCF.AUDL
-        // disable "hda-gfx"  injection if \RMDA not present
-        If (!CondRefOf(\RMDA)) { Local0[2] = "#hda-gfx" }
+        // disable "hda-gfx" injection if \RMDA is present
+        If (CondRefOf(\RMDA)) { Local0[2] = "#hda-gfx" }
         // set RM,disableFakePCIID value based on \RMCF.FAKH
         Local0[5] = 1-\RMCF.FAKH
         Return(Local0)

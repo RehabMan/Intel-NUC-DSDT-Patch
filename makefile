@@ -30,7 +30,7 @@ ALL:=$(ALL) $(BUILDDIR)/SSDT-NUC6.aml $(BUILDDIR)/SSDT-NUC6-SC.aml
 ALL:=$(ALL) $(BUILDDIR)/SSDT-NUC7.aml
 ALL:=$(ALL) $(BUILDDIR)/SSDT-STCK6.aml
 ALL:=$(ALL) $(BUILDDIR)/SSDT_NVMe-RP09.aml $(BUILDDIR)/SSDT_NVMe-RP13.aml
-ALL:=$(ALL) $(BUILDDIR)/SSDT-DigitalAudio.aml $(BUILDDIR)/SSDT-SkylakeSpoof.aml
+ALL:=$(ALL) $(BUILDDIR)/SSDT-DisableDA.aml $(BUILDDIR)/SSDT-SkylakeSpoof.aml
 
 .PHONY: all
 all: $(ALL) $(HDAZML_ALL) #$(HDAINJECT) $(HDAHCDINJECT)
@@ -52,7 +52,7 @@ $(BUILDDIR)/SSDT_NVMe-RP09.aml: SSDT_NVMe-RP09.dsl
 
 $(BUILDDIR)/SSDT_NVMe-RP13.aml: SSDT_NVMe-RP13.dsl
 
-$(BUILDDIR)/SSDT-DigitalAudio.aml: SSDT-DigitalAudio.dsl
+$(BUILDDIR)/SSDT-DisableDA.aml: SSDT-DisableDA.dsl
 
 $(BUILDDIR)/SSDT-SkylakeSpoof.aml: SSDT-SkylakeSpoof.dsl
 
@@ -69,7 +69,7 @@ install_nuc5: $(ALL)
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-*.aml
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT.aml
 	cp $(BUILDDIR)/SSDT-NUC5.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
-	cp $(BUILDDIR)/SSDT-DigitalAudio.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
+	cp $(BUILDDIR)/SSDT-DisableDA.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
 
 .PHONY: install_nuc6
 install_nuc6: $(ALL)
@@ -77,7 +77,7 @@ install_nuc6: $(ALL)
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-*.aml
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT.aml
 	cp $(BUILDDIR)/SSDT-NUC6.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
-	cp $(BUILDDIR)/SSDT-DigitalAudio.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
+	cp $(BUILDDIR)/SSDT-DisableDA.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
 
 .PHONY: install_nuc6sc
 install_nuc6sc: $(ALL)
@@ -85,7 +85,7 @@ install_nuc6sc: $(ALL)
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-*.aml
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT.aml
 	cp $(BUILDDIR)/SSDT-NUC6-SC.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
-	cp $(BUILDDIR)/SSDT-DigitalAudio.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
+	cp $(BUILDDIR)/SSDT-DisableDA.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
 
 .PHONY: install_nuc7
 install_nuc7: $(ALL)
@@ -93,7 +93,7 @@ install_nuc7: $(ALL)
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-*.aml
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT.aml
 	cp $(BUILDDIR)/SSDT-NUC7.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
-	cp $(BUILDDIR)/SSDT-DigitalAudio.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
+	cp $(BUILDDIR)/SSDT-DisableDA.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
 
 .PHONY: install_nuc7spoof
 install_nuc7spoof: $(ALL)
@@ -101,7 +101,7 @@ install_nuc7spoof: $(ALL)
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-*.aml
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT.aml
 	cp $(BUILDDIR)/SSDT-NUC7.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
-	cp $(BUILDDIR)/SSDT-DigitalAudio.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
+	cp $(BUILDDIR)/SSDT-DisableDA.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
 	cp $(BUILDDIR)/SSDT-SkylakeSpoof.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
 
 .PHONY: install_stick6
@@ -110,7 +110,7 @@ install_stick6: $(ALL)
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-*.aml
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT.aml
 	cp $(BUILDDIR)/SSDT-STCK6.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
-	cp $(BUILDDIR)/SSDT-DigitalAudio.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
+	cp $(BUILDDIR)/SSDT-DisableDA.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
 
 #$(HDAINJECT) $(HDAHCDINJECT) $(HDAZML_ALL): $(RESOURCES)/*.plist ./patch_hda.sh
 $(HDAZML_ALL): $(RESOURCES)/*.plist ./patch_hda.sh
