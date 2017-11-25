@@ -22,7 +22,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "RM-NUC7", 0)
     #include "SSDT-PluginType1.dsl"
     #include "SSDT-XOSI.dsl"
     #include "SSDT-IGPU.dsl"
-    #include "SSDT-USB.dsl"
+    #include "SSDT-USB-NUC7.dsl"
     #include "SSDT-XHC.dsl"
     #include "SSDT-SATA.dsl"
     #include "SSDT-NUCHDA.dsl"
