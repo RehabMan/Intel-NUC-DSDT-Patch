@@ -65,7 +65,7 @@ clean:
 # Clover Install
 .PHONY: install_nuc5
 install_nuc5: $(ALL)
-	$(eval EFIDIR:=$(shell sudo ./mount_efi.sh /))
+	$(eval EFIDIR:=$(shell ./mount_efi.sh))
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-*.aml
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT.aml
 	cp $(BUILDDIR)/SSDT-NUC5.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
@@ -73,7 +73,7 @@ install_nuc5: $(ALL)
 
 .PHONY: install_nuc6
 install_nuc6: $(ALL)
-	$(eval EFIDIR:=$(shell sudo ./mount_efi.sh /))
+	$(eval EFIDIR:=$(shell ./mount_efi.sh))
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-*.aml
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT.aml
 	cp $(BUILDDIR)/SSDT-NUC6.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
@@ -81,7 +81,7 @@ install_nuc6: $(ALL)
 
 .PHONY: install_nuc6sc
 install_nuc6sc: $(ALL)
-	$(eval EFIDIR:=$(shell sudo ./mount_efi.sh /))
+	$(eval EFIDIR:=$(shell ./mount_efi.sh))
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-*.aml
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT.aml
 	cp $(BUILDDIR)/SSDT-NUC6-SC.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
@@ -89,7 +89,7 @@ install_nuc6sc: $(ALL)
 
 .PHONY: install_nuc7
 install_nuc7: $(ALL)
-	$(eval EFIDIR:=$(shell sudo ./mount_efi.sh /))
+	$(eval EFIDIR:=$(shell ./mount_efi.sh))
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-*.aml
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT.aml
 	cp $(BUILDDIR)/SSDT-NUC7.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
@@ -97,7 +97,7 @@ install_nuc7: $(ALL)
 
 .PHONY: install_nuc7spoof
 install_nuc7spoof: $(ALL)
-	$(eval EFIDIR:=$(shell sudo ./mount_efi.sh /))
+	$(eval EFIDIR:=$(shell ./mount_efi.sh))
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-*.aml
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT.aml
 	cp $(BUILDDIR)/SSDT-NUC7.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
@@ -106,7 +106,7 @@ install_nuc7spoof: $(ALL)
 
 .PHONY: install_stick6
 install_stick6: $(ALL)
-	$(eval EFIDIR:=$(shell sudo ./mount_efi.sh /))
+	$(eval EFIDIR:=$(shell ./mount_efi.sh))
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT-*.aml
 	rm -f $(EFIDIR)/EFI/CLOVER/ACPI/patched/SSDT.aml
 	cp $(BUILDDIR)/SSDT-STCK6.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched

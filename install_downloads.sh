@@ -208,7 +208,7 @@ fi
 
 # install NVMeGeneric.kext if it is found in Clover/kexts
 # patch it so it is marked OSBundleRequired=Root
-EFI=`sudo ./mount_efi.sh /`
+EFI=`./mount_efi.sh`
 if [[ -e "$EFI/EFI/CLOVER/kexts/Other/NVMeGeneric.kext" ]]; then
     cp -R "$EFI/EFI/CLOVER/kexts/Other/NVMeGeneric.kext" /tmp/NVMeGeneric.kext
     /usr/libexec/PlistBuddy -c "Add :OSBundleRequired string" /tmp/NVMeGeneric.kext/Contents/Info.plist

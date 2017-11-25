@@ -1,4 +1,4 @@
-// USB configuration for NUC5/NUC6/NUC7
+// USB configuration for NUC7
 
 //DefinitionBlock ("", "SSDT", 2, "hack", "usb", 0)
 //{
