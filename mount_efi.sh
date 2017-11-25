@@ -4,12 +4,7 @@
 
 # Note: Based on CloverPackage MountESP script.
 
-if [ "$(id -u)" != "0" ]; then
-    echo "Error: This script requires superuser access, use: 'sudo $0 $@'"
-    exit 1
-fi
-
-if [ "$1" == "" ]; then
+if [[ "$1" == "" ]]; then
     DestVolume=/
 else
     DestVolume="$1"
@@ -17,7 +12,7 @@ fi
 
 # find whole disk for the destination volume
 DiskDevice=$(LC_ALL=C diskutil info "$DestVolume" 2>/dev/null | sed -n 's/.*Part [oO]f Whole: *//p')
-if [ -z "$DiskDevice" ]; then
+if [[ -z "$DiskDevice" ]]; then
     echo "Error: Not able to find volume with the name \"$DestVolume\""
     exit 1
 fi
@@ -49,34 +44,43 @@ fi
 
 PartitionScheme=$(LC_ALL=C diskutil info "$DiskDevice" 2>/dev/null | sed -nE 's/.*(Partition Type|Content \(IOContent\)): *//p')
 # Check if the disk is an MBR disk
-if [ "$PartitionScheme" == "FDisk_partition_scheme" ]; then
+if [[ "$PartitionScheme" == "FDisk_partition_scheme" ]]; then
     echo "Error: Volume \"$DestVolume\" is part of an MBR disk"
     exit 1
 fi
 # Check if not GPT
-if [ "$PartitionScheme" != "GUID_partition_scheme" ]; then
+if [[ "$PartitionScheme" != "GUID_partition_scheme" ]]; then
     echo "Error: Volume \"$DestVolume\" is not on GPT disk or APFS container"
     exit 1
 fi
 
-# Get the index of the EFI partition
-EFIIndex=$(LC_ALL=C /usr/sbin/gpt -r show "/dev/$DiskDevice" 2>/dev/null | awk 'toupper($7) == "C12A7328-F81F-11D2-BA4B-00A0C93EC93B" {print $3; exit}')
-[ -z "$EFIIndex" ] && EFIIndex=$(LC_ALL=C diskutil list "$DiskDevice" 2>/dev/null | awk '$2 == "EFI" {print $1; exit}' | cut -d : -f 1)
-[ -z "$EFIIndex" ] && EFIIndex=$(LC_ALL=C diskutil list "$DiskDevice" 2>/dev/null | grep "EFI"|awk '{print $1}'|cut -d : -f 1)
-[ -z "$EFIIndex" ] && EFIIndex=1 # if not found use the index 1
+# Find the associated EFI partition on DiskDevice
+diskutil list -plist "/dev/$DiskDevice" 2>/dev/null >/tmp/org_rehabman_diskutil.plist
+for ((part=0; 1; part++)); do
+    content=`/usr/libexec/PlistBuddy -c "Print :AllDisksAndPartitions:0:Partitions:$part:Content" /tmp/org_rehabman_diskutil.plist 2>&1`
+    if [[ "$content" == *"Does Not Exist"* ]]; then
+        echo "Error: cannot locate EFI partition for $DestVolume"
+        exit 1
+    fi
+    if [[ "$content" == "EFI" ]]; then
+        EFIDevice=`/usr/libexec/PlistBuddy -c "Print :AllDisksAndPartitions:0:Partitions:$part:DeviceIdentifier" /tmp/org_rehabman_diskutil.plist 2>&1`
+        break
+    fi
+done
 
-# Define the EFIDevice
-EFIDevice="${DiskDevice}s$EFIIndex"
+# should not happen
+if [[ -z "$EFIDevice" ]]; then
+    echo "Error: unable to determine EFIDevice from $DiskDevice"
+    exit 1
+fi
 
 # Get the EFI mount point if the partition is currently mounted
-EFIMountPoint=$(LC_ALL=C diskutil info "$EFIDevice" 2>/dev/null | sed -n 's/.*Mount Point: *//p')
-
 code=0
-if [ ! "$EFIMountPoint" ]; then
+EFIMountPoint=$(LC_ALL=C diskutil info "$EFIDevice" 2>/dev/null | sed -n 's/.*Mount Point: *//p')
+if [[ -z "$EFIMountPoint" ]]; then
     # try to mount the EFI partition
-    EFIMountPoint="/Volumes/EFI"
-    [ ! -d "$EFIMountPoint" ] && mkdir -p "$EFIMountPoint"
-    diskutil mount -mountPoint "$EFIMountPoint" /dev/$EFIDevice >/dev/null 2>&1
+    diskutil mount /dev/$EFIDevice >/dev/null 2>&1
+    EFIMountPoint=$(LC_ALL=C diskutil info "$EFIDevice" 2>/dev/null | sed -n 's/.*Mount Point: *//p')
     code=$?
 fi
 echo $EFIMountPoint
