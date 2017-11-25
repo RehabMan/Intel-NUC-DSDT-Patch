@@ -323,6 +323,42 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>0x59260002 0x59270004 2xDP, #1 of 2</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>AQMDAwAAkAM=</data>
+				<key>Replace</key>
+				<data>AQMCAgAAkAM=</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>0x59260002 0x59270004 2xDP, #2 of 2</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>AAAIAAIAAACYBAAAAQUJAAAEAADHAwAAAgQKAAAEAADHAwAA</data>
+				<key>Replace</key>
+				<data>AQUJAAAEAADHAwAAAgQKAAAEAADHAwAA/wAAAAEAAAAgAAAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
+				<string>HDMI-audio, port 0105, 0x59260007 0x59270004 0x59260002</string>
+				<key>Disabled</key>
+				<false/>
+				<key>Name</key>
+				<string>com.apple.driver.AppleIntelKBLGraphicsFramebuffer</string>
+				<key>Find</key>
+				<data>AQUJAAAEAADHAwAA</data>
+				<key>Replace</key>
+				<data>AQUJAAAIAADHAwAA</data>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>0x19260002 two DP, #1 of 2</string>
 				<key>Disabled</key>
 				<false/>
