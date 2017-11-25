@@ -152,14 +152,14 @@
                 // Kaby Lake/HD640
                 0x5926, 0, Package()
                 {
-                    "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x26, 0x59 },
+                    "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x26, 0x59 },
                     "hda-gfx", Buffer() { "onboard-1" },
                     "model", Buffer() { "Intel Iris Plus Graphics 640" },
                 },
                 // Kaby Lake/HD650
                 0x5927, 0, Package()
                 {
-                    "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x27, 0x59 },
+                    "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x26, 0x59 },
                     "hda-gfx", Buffer() { "onboard-1" },
                     "model", Buffer() { "Intel Iris Plus Graphics 650" },
                 },
