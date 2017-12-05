@@ -3,6 +3,7 @@
 //DefinitionBlock ("", "SSDT", 2, "hack", "igpu", 0)
 //{
     External(_SB.PCI0, DeviceObj)
+    External(RMGO, PkgObj)
     Scope(_SB.PCI0)
     {
         External(IGPU, DeviceObj)
@@ -64,8 +65,8 @@
                 0x191b, 0, Package()
                 {
                     "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x1b, 0x19 },
-                    "model", Buffer() { "Intel HD Graphics 530" },
                     "hda-gfx", Buffer() { "onboard-1" },
+                    "model", Buffer() { "Intel HD Graphics 530" },
                     "RM,device-id", Buffer() { 0x1b, 0x19, 0x00, 0x00 },
                     "AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
                 },
@@ -73,8 +74,8 @@
                 0x191e, 0, Package()
                 {
                     "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x1e, 0x19 },
-                    "model", Buffer() { "Intel HD Graphics 515" },
                     "hda-gfx", Buffer() { "onboard-1" },
+                    "model", Buffer() { "Intel HD Graphics 515" },
                     "RM,device-id", Buffer() { 0x1e, 0x19, 0x00, 0x00 },
                     "AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
                 },
@@ -82,8 +83,8 @@
                 0x1916, 0, Package()
                 {
                     "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x16, 0x19 },
-                    "model", Buffer() { "Intel HD Graphics 520" },
                     "hda-gfx", Buffer() { "onboard-1" },
+                    "model", Buffer() { "Intel HD Graphics 520" },
                     "RM,device-id", Buffer() { 0x16, 0x19, 0x00, 0x00 },
                     "AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
                 },
@@ -91,8 +92,8 @@
                 0x1912, 0, Package()
                 {
                     "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x16, 0x19 },
-                    "model", Buffer() { "Intel HD Graphics 530" },
                     "hda-gfx", Buffer() { "onboard-1" },
+                    "model", Buffer() { "Intel HD Graphics 530" },
                     "RM,device-id", Buffer() { 0x12, 0x19, 0x00, 0x00 },
                     "AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
                 },
@@ -100,8 +101,8 @@
                 0x1926, 0, Package()
                 {
                     "AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x26, 0x19 },
-                    "model", Buffer() { "Intel Iris Graphics 540" },
                     "hda-gfx", Buffer() { "onboard-1" },
+                    "model", Buffer() { "Intel Iris Graphics 540" },
                     "RM,device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
                 },
                 // Skylake/HD550
@@ -132,22 +133,22 @@
                 0x591e, 0, Package()
                 {
                     "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x1e, 0x59 },
-                    "model", Buffer() { "Intel HD Graphics 615" },
                     "hda-gfx", Buffer() { "onboard-1" },
+                    "model", Buffer() { "Intel HD Graphics 615" },
                 },
                 // Kaby Lake/HD620
                 0x5916, 0, Package()
                 {
                     "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x16, 0x59 },
-                    "model", Buffer() { "Intel HD Graphics 620" },
                     "hda-gfx", Buffer() { "onboard-1" },
+                    "model", Buffer() { "Intel HD Graphics 620" },
                 },
                 // Kaby Lake-R/HD620
                 0x5917, 0, Package()
                 {
                     "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x16, 0x59 },
-                    "model", Buffer() { "Intel HD Graphics 620" },
                     "hda-gfx", Buffer() { "onboard-1" },
+                    "model", Buffer() { "Intel HD Graphics 620" },
                     "device-id", Buffer() { 0x16, 0x59, 0x00, 0x00 },
                 },
                 // Kaby Lake/HD630
@@ -187,27 +188,27 @@
                 // search for matching device-id in device-id list
                 // if present, check RMGO override, then check GIDL
                 Local0 = Ones
-                External(\RMGO, PkgObj)
-                If (CondRefOf(\RMGO))
+                For (,,)
                 {
-                    Local1 = RMGO
-                    Local0 = Match(RMGO, MEQ, GDID, MTR, 0, 0)
-                }
-                If (Ones == Local0)
-                {
+                    If (CondRefOf(\RMGO))
+                    {
+                        // try override table in RMGO
+                        Local1 = RMGO
+                        Local0 = Match(RMGO, MEQ, GDID, MTR, 0, 0)
+                        If (Ones != Local0) { Break }
+                    }
+                    // search default table in GIDL
                     Local1 = GIDL
                     Local0 = Match(GIDL, MEQ, GDID, MTR, 0, 0)
+                    Break
                 }
-                If (Ones != Local0)
-                {
-                    // start search for zero-terminator (prefix to injection package)
-                    Local0 = DerefOf(Local1[Match(Local1, MEQ, 0, MTR, 0, Local0+1)+1])
-                    // disable "hda-gfx" injection if \RMDA is present
-                    If (CondRefOf(\RMDA)) { Local0[2] = "#hda-gfx" }
-                    Return (Local0)
-                }
-                // should never happen, but inject nothing in this case
-                Return (Package() { })
+                // unrecognized device... inject nothing in this case
+                If (Ones == Local0) { Return (Package() { }) }
+                // start search for zero-terminator (prefix to injection package)
+                Local0 = DerefOf(Local1[Match(Local1, MEQ, 0, MTR, 0, Local0+1)+1])
+                // disable "hda-gfx" injection if \RMDA is present
+                If (CondRefOf(\RMDA)) { Local0[2] = "#hda-gfx" }
+                Return (Local0)
             }
         }
     }
