@@ -194,12 +194,12 @@
                     {
                         // try override table in RMGO
                         Local1 = RMGO
-                        Local0 = Match(RMGO, MEQ, GDID, MTR, 0, 0)
+                        Local0 = Match(Local1, MEQ, GDID, MTR, 0, 0)
                         If (Ones != Local0) { Break }
                     }
                     // search default table in GIDL
                     Local1 = GIDL
-                    Local0 = Match(GIDL, MEQ, GDID, MTR, 0, 0)
+                    Local0 = Match(Local1, MEQ, GDID, MTR, 0, 0)
                     Break
                 }
                 // unrecognized device... inject nothing in this case
