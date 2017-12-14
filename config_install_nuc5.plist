@@ -70,8 +70,6 @@
 		<false/>
 		<key>Timeout</key>
 		<integer>5</integer>
-		<key>XMPDetection</key>
-		<false/>
 	</dict>
 	<key>Devices</key>
 	<dict>
@@ -139,8 +137,6 @@
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
-		<key>AsusAICPUPM</key>
-		<false/>
 		<key>AppleRTC</key>
 		<true/>
 		<key>KernelLapic</key>
