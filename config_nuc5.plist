@@ -10,6 +10,11 @@
 		</array>
 		<key>DSDT</key>
 		<dict>
+			<key>Fixes</key>
+			<dict>
+				<key>FixShutdown</key>
+				<true/>
+			</dict>
 			<key>Patches</key>
 			<array>
 				<dict>
@@ -87,13 +92,6 @@
 					<data>WlBUUwE=</data>
 				</dict>
 			</array>
-			<key>Fixes</key>
-			<dict>
-				<key>NewWay_80000000</key>
-				<true/>
-				<key>FixShutdown_0004</key>
-				<true/>
-			</dict>
 		</dict>
 		<key>SSDT</key>
 		<dict>

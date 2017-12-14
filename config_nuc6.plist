@@ -69,13 +69,6 @@
 					<data>WlBUUwE=</data>
 				</dict>
 			</array>
-			<key>Fixes</key>
-			<dict>
-				<key>NewWay_80000000</key>
-				<true/>
-				<key>FixShutdown_0004</key>
-				<false/>
-			</dict>
 		</dict>
 		<key>SSDT</key>
 		<dict>
@@ -100,8 +93,6 @@
 	<dict>
 		<key>#FrequencyMHz</key>
 		<integer>1800</integer>
-		<key>UseARTFrequency</key>
-		<false/>
 	</dict>
 	<key>Devices</key>
 	<dict>
