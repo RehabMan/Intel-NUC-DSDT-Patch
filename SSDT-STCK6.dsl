@@ -31,7 +31,6 @@ DefinitionBlock("", "SSDT", 2, "hack", "RM-STCK6", 0)
     // (the rename is done in config.plist)
     Name(_SB.PCI0.XDCI._STA, 0)
 
-    #include "SSDT-PluginType1.dsl"
     #include "SSDT-XOSI.dsl"
     #include "SSDT-IGPU.dsl"
     #include "SSDT-USB-STCK.dsl"

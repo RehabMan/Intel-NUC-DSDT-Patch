@@ -60,12 +60,25 @@
 					<key>Replace</key>
 					<data>WERTTQ==</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change XDCI._STA to XDCI.XSTA</string>
+					<key>Find</key>
+					<data>X1NUQQ==</data>
+					<key>Replace</key>
+					<data>WFNUQQ==</data>
+					<key>TgtBridge</key>
+					<data>WERDSQ==</data>
+				</dict>
 			</array>
 		</dict>
 		<key>SSDT</key>
 		<dict>
 			<key>Generate</key>
-			<false/>
+			<dict>
+				<key>PluginType</key>
+				<true/>
+			</dict>
 		</dict>
 	</dict>
 	<key>Boot</key>

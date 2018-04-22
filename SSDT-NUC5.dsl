@@ -19,7 +19,6 @@ DefinitionBlock("", "SSDT", 2, "hack", "RM-NUC5", 0)
         Name(FAKH, 1)
     }
 
-    #include "SSDT-PluginType1.dsl"
     #include "SSDT-XOSI.dsl"
     #include "SSDT-IGPU.dsl"
     #include "SSDT-USB.dsl"

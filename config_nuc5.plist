@@ -96,7 +96,10 @@
 		<key>SSDT</key>
 		<dict>
 			<key>Generate</key>
-			<false/>
+			<dict>
+				<key>PluginType</key>
+				<true/>
+			</dict>
 		</dict>
 	</dict>
 	<key>Boot</key>

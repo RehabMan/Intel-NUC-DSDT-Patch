@@ -62,18 +62,23 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>rename XDCI._STA to XSTA</string>
+					<string>change XDCI._STA to XDCI.XSTA</string>
 					<key>Find</key>
-					<data>X1MwVwCkCgMUGl9TVEE=</data>
+					<data>X1NUQQ==</data>
 					<key>Replace</key>
-					<data>X1MwVwCkCgMUGlhTVEE=</data>
+					<data>WFNUQQ==</data>
+					<key>TgtBridge</key>
+					<data>WERDSQ==</data>
 				</dict>
 			</array>
 		</dict>
 		<key>SSDT</key>
 		<dict>
 			<key>Generate</key>
-			<false/>
+			<dict>
+				<key>PluginType</key>
+				<true/>
+			</dict>
 		</dict>
 	</dict>
 	<key>Boot</key>
