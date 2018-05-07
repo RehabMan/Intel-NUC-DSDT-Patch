@@ -1,4 +1,4 @@
-// SSDT-SkylakeSpoof.dsl
+// SSDT-SKLSPF.dsl
 //
 // The purpose of this file is to allow KabyLake systems to spoof Skylake graphics.
 // Just include the built version of this file in ACPI/patched.

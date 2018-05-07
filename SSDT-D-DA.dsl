@@ -8,7 +8,7 @@
 // provides an easy way to disable it by simply enabling this SSDT from the Clover menu.
 // By default, this SSDT is not injected due to it being listed in DisabledAML.
 
-DefinitionBlock("", "SSDT", 2, "hack", "_DISDA", 0)
+DefinitionBlock("", "SSDT", 2, "hack", "_D-DA", 0)
 {
     Name(RMDA, 1)
 }

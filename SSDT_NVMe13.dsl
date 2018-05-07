@@ -1,6 +1,6 @@
 // Inject bogus class code for NVMe SSD so that native IONVMeFamily.kext does not load
 
-DefinitionBlock("", "SSDT", 2, "hack", "_NVMe13", 0)
+DefinitionBlock("", "SSDT", 2, "hack", "@NVMe13", 0)
 {
     External(_SB.PCI0.RP13.PXSX, DeviceObj)
     Method(_SB.PCI0.RP13.PXSX._DSM, 4)
