@@ -1,6 +1,6 @@
 // configuration data for other SSDTs in this pack (STCK6)
 
-DefinitionBlock("", "SSDT", 2, "hack", "RM-STCK6", 0)
+DefinitionBlock("", "SSDT", 2, "hack", "_STCK6", 0)
 {
     Device(RMCF)
     {

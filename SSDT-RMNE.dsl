@@ -17,7 +17,7 @@
 
 // Use this SSDT as an alternative to patching your DSDT...
 
-//DefinitionBlock("", "SSDT", 2, "RehabMan", "RMNE", 0x00001000)
+//DefinitionBlock("", "SSDT", 2, "RehabMan", "_RMNE", 0x00001000)
 //{
     Device (RMNE)
     {

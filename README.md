@@ -17,7 +17,7 @@ Kaby Lake NUC7: http://www.tonymacx86.com/threads/guide-intel-kaby-lake-nuc7-usi
 
 2017-08-31
 
-- Allow Skylake spoofing to work with NUC7 (4k@60 reported not working wiht native KBL graphics kexts, and Skylake spoof needed for 10.11.x)
+- Allow Skylake spoofing to work with NUC7 (4k@60 reported not working with native KBL graphics kexts, and Skylake spoof needed for 10.11.x)
 
 
 2017-08-19

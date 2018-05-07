@@ -1,6 +1,6 @@
 // USB configuration for NUC7
 
-//DefinitionBlock ("", "SSDT", 2, "hack", "usb", 0)
+//DefinitionBlock ("", "SSDT", 2, "hack", "_USB-NUC7", 0)
 //{
 
 //

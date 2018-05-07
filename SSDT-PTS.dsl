@@ -1,6 +1,6 @@
 // _PTS override to fix "auto restart after shutdown"
 
-//DefinitionBlock ("", "SSDT", 2, "hack", "hack", 0)
+//DefinitionBlock ("", "SSDT", 2, "hack", "_PTS", 0)
 //{
     // In DSDT, native _PTS is renamed ZPTS
     // As a result, calls to these methods land here.

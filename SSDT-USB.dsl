@@ -1,6 +1,6 @@
 // USB configuration for NUC5/NUC6/NUC6-SkullCanyon
 
-//DefinitionBlock ("", "SSDT", 2, "hack", "usb", 0)
+//DefinitionBlock ("", "SSDT", 2, "hack", "_USB", 0)
 //{
 
 //

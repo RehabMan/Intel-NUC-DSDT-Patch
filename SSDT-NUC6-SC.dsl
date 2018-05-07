@@ -1,6 +1,6 @@
 // configuration data for other SSDTs in this pack (NUC6 Skull Canyon)
 
-DefinitionBlock("", "SSDT", 2, "hack", "RM-NUC6S", 0)
+DefinitionBlock("", "SSDT", 2, "hack", "_NUC6-SC", 0)
 {
     Device(RMCF)
     {

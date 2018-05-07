@@ -1,6 +1,6 @@
 // USB configuration for Intel Compute Stick (Skylake)
 
-//DefinitionBlock ("", "SSDT", 2, "hack", "usb", 0)
+//DefinitionBlock ("", "SSDT", 2, "hack", "_USB_STCK", 0)
 //{
 
 //

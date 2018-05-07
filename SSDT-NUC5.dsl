@@ -1,6 +1,6 @@
 // configuration data for other SSDTs in this pack (NUC5)
 
-DefinitionBlock("", "SSDT", 2, "hack", "RM-NUC5", 0)
+DefinitionBlock("", "SSDT", 2, "hack", "_NUC5", 0)
 {
     Device(RMCF)
     {
