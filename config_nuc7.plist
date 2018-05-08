@@ -6,7 +6,7 @@
 	<dict>
 		<key>DisabledAML</key>
 		<array>
-			<string>SSDT-DisableDA.aml</string>
+			<string>SSDT-DDA.aml</string>
 		</array>
 		<key>DSDT</key>
 		<dict>
