@@ -28,7 +28,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_NUC5", 0)
     #include "SSDT-HDEF.dsl"
     #include "SSDT-HDAU.dsl"
     #include "SSDT-LPC.dsl"
-    #include "SSDT-D-EHCI.dsl"
+    #include "SSDT-DEHCI.dsl"
     #include "SSDT-EC.dsl"
     //#include "SSDT-PTS.dsl"
 }
