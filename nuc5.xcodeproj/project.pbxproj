@@ -15,6 +15,9 @@
 		84178DE71D0DD4AE006A3D30 /* config_nuc6_sc.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_nuc6_sc.plist; sourceTree = "<group>"; };
 		84490D5D1A14945B000E1BFB /* patch_hda.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = patch_hda.sh; sourceTree = "<group>"; };
 		8467C38E1A23A9FC00FCF396 /* mount_efi.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mount_efi.sh; sourceTree = "<group>"; };
+		ED0BD6E920DFF92600223423 /* config_nuc7_dc.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_nuc7_dc.plist; sourceTree = "<group>"; };
+		ED0BD6EA20DFF93400223423 /* SSDT-NUC7-DC.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-NUC7-DC.dsl"; sourceTree = "<group>"; };
+		ED0BD6EB20DFF9E000223423 /* SSDT-USB-NUC7-DC.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-USB-NUC7-DC.dsl"; sourceTree = "<group>"; };
 		ED0EF6761CFBE3EA00243958 /* SSDT-DEHCI.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-DEHCI.dsl"; sourceTree = "<group>"; };
 		ED2089AF1EDAA40E00D46BEA /* SSDT-PTS.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-PTS.dsl"; sourceTree = "<group>"; };
 		ED272D611CCC789300FE569D /* install_tools.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install_tools.sh; sourceTree = "<group>"; };
@@ -67,6 +70,7 @@
 				84178DE71D0DD4AE006A3D30 /* config_nuc6_sc.plist */,
 				ED9653F41E9FCDB300E38E76 /* config_install_nuc7.plist */,
 				ED9653F31E9FCDB300E38E76 /* config_nuc7.plist */,
+				ED0BD6E920DFF92600223423 /* config_nuc7_dc.plist */,
 				ED998A4E1ED3E3E30067757C /* config_install_stick6.plist */,
 				ED998A4F1ED3E3E30067757C /* config_stick6.plist */,
 				ED3AF2321CC40740004F19AC /* makefile */,
@@ -74,12 +78,14 @@
 				ED7BC97A1EBADF2E007AF0D8 /* SSDT-NUC6.dsl */,
 				ED7BC9781EBADF2E007AF0D8 /* SSDT-NUC6-SC.dsl */,
 				ED7BC9791EBADF2E007AF0D8 /* SSDT-NUC7.dsl */,
+				ED0BD6EA20DFF93400223423 /* SSDT-NUC7-DC.dsl */,
 				ED48C0CF1ED3DD7700D66B7A /* SSDT-STCK6.dsl */,
 				ED48DF001B4CCCC800BDDC62 /* SSDT-XOSI.dsl */,
 				ED373E171C0535C1005018E4 /* SSDT-IGPU.dsl */,
 				ED94CBBC1F587026006BD42C /* SSDT-SKLSPF.dsl */,
 				ED373E181C0535C1005018E4 /* SSDT-USB.dsl */,
 				EDC38F2A1FC9DA8100C9E61F /* SSDT-USB-NUC7.dsl */,
+				ED0BD6EB20DFF9E000223423 /* SSDT-USB-NUC7-DC.dsl */,
 				ED48C0CE1ED3DD5100D66B7A /* SSDT-USB-STCK.dsl */,
 				ED5448371CFFD70D007F89F0 /* SSDT-XHC.dsl */,
 				EDA342501CFC99B700E14DE0 /* SSDT-SATA.dsl */,
