@@ -63,7 +63,7 @@
                     Package(){},
                     Package()
                     {
-                        "LayoutID", 1,
+                        "LayoutID", 4,
                         "PinConfigs", Package()
                         {
                             Package(){},

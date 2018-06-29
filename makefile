@@ -12,7 +12,7 @@ RESOURCES=./Resources_$(HDA)
 HDAINJECT=AppleHDA_$(HDA).kext
 HDAHCDINJECT=AppleHDAHCD_$(HDA).kext
 HDAZML=AppleHDA_$(HDA)_Resources
-HDAZML_ALL=$(HDAZML)/Platforms.zml.zlib $(HDAZML)/layout1.zml.zlib $(HDAZML)/layout2.zml.zlib
+HDAZML_ALL=$(HDAZML)/Platforms.zml.zlib $(HDAZML)/layout4.zml.zlib $(HDAZML)/layout2.zml.zlib
 
 VERSION_ERA=$(shell ./print_version.sh)
 ifeq "$(VERSION_ERA)" "10.10-"

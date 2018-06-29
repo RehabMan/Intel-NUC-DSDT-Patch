@@ -10,7 +10,7 @@
 		840463DE1D0DD98C00ED8BA5 /* Platforms.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Platforms.plist; path = Resources_NUCHDA/Platforms.plist; sourceTree = "<group>"; };
 		840463DF1D0DD98C00ED8BA5 /* layout2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = layout2.plist; path = Resources_NUCHDA/layout2.plist; sourceTree = "<group>"; };
 		840463E01D0DD98C00ED8BA5 /* ahhcd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ahhcd.plist; path = Resources_NUCHDA/ahhcd.plist; sourceTree = "<group>"; };
-		840463E11D0DD98C00ED8BA5 /* layout1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = layout1.plist; path = Resources_NUCHDA/layout1.plist; sourceTree = "<group>"; };
+		840463E11D0DD98C00ED8BA5 /* layout4.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = layout4.plist; path = Resources_NUCHDA/layout4.plist; sourceTree = "<group>"; };
 		8406FCD6188627B8006D8DB7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		84178DE71D0DD4AE006A3D30 /* config_nuc6_sc.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_nuc6_sc.plist; sourceTree = "<group>"; };
 		84490D5D1A14945B000E1BFB /* patch_hda.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = patch_hda.sh; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 			children = (
 				84490D5D1A14945B000E1BFB /* patch_hda.sh */,
 				840463E01D0DD98C00ED8BA5 /* ahhcd.plist */,
-				840463E11D0DD98C00ED8BA5 /* layout1.plist */,
+				840463E11D0DD98C00ED8BA5 /* layout4.plist */,
 				840463DF1D0DD98C00ED8BA5 /* layout2.plist */,
 				840463DE1D0DD98C00ED8BA5 /* Platforms.plist */,
 			);

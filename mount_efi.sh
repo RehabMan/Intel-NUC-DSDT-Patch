@@ -10,6 +10,8 @@ else
     DestVolume="$1"
 fi
 
+MINOR_VER=$([[ "$(sw_vers -productVersion)" =~ [0-9]+\.([0-9]+) ]] && echo ${BASH_REMATCH[1]})
+
 # find whole disk for the destination volume
 DiskDevice=$(LC_ALL=C diskutil info "$DestVolume" 2>/dev/null | sed -n 's/.*Part [oO]f Whole: *//p')
 if [[ -z "$DiskDevice" ]]; then
@@ -79,7 +81,11 @@ code=0
 EFIMountPoint=$(LC_ALL=C diskutil info "$EFIDevice" 2>/dev/null | sed -n 's/.*Mount Point: *//p')
 if [[ -z "$EFIMountPoint" ]]; then
     # try to mount the EFI partition
-    diskutil mount /dev/$EFIDevice >/dev/null 2>&1
+    if [[ $MINOR_VER -ge 14 ]]; then
+        sudo diskutil mount /dev/$EFIDevice >/dev/null 2>&1
+    else
+        diskutil mount /dev/$EFIDevice >/dev/null 2>&1
+    fi
     EFIMountPoint=$(LC_ALL=C diskutil info "$EFIDevice" 2>/dev/null | sed -n 's/.*Mount Point: *//p')
     code=$?
 fi

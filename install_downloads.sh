@@ -10,7 +10,7 @@ TAGCMD=`pwd`/tools/tag
 SLE=/System/Library/Extensions
 LE=/Library/Extensions
 EXCEPTIONS="Sensors|FakePCIID|BrcmPatchRAM|BrcmBluetoothInjector|BrcmFirmwareData|USBInjectAll|NullEthernetInjector"
-ESSENTIAL="FakeSMC.kext IntelMausiEthernet.kext USBInjectAll.kext Lilu.kext IntelGraphicsFixup.kext"
+ESSENTIAL="FakeSMC.kext IntelMausiEthernet.kext USBInjectAll.kext Lilu.kext IntelGraphicsFixup.kext FakePCIID.kext FakePCIID_Intel_HD_Graphics.kext"
 
 # extract minor version (eg. 10.9 vs. 10.10 vs. 10.11)
 MINOR_VER=$([[ "$(sw_vers -productVersion)" =~ [0-9]+\.([0-9]+) ]] && echo ${BASH_REMATCH[1]})
