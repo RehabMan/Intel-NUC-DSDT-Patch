@@ -148,7 +148,7 @@
                 {
                     "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x16, 0x59 },
                     "hda-gfx", Buffer() { "onboard-1" },
-                    "model", Buffer() { "Intel HD Graphics 620" },
+                    "model", Buffer() { "Intel UHD Graphics 620" },
                     "device-id", Buffer() { 0x16, 0x59, 0x00, 0x00 },
                 },
                 // Kaby Lake/HD630
