@@ -119,13 +119,14 @@
                 0x193b, 0, Package()
                 {
                     "AAPL,ig-platform-id", Buffer() { 0x05, 0x00, 0x3b, 0x19 },
+                    //"AAPL,ig-platform-id", Buffer() { 0x02, 0x00, 0x26, 0x19 },
                     "hda-gfx", Buffer() { "onboard-1" },
                     "model", Buffer() { "Intel Iris Pro Graphics 580" },
                     //"AAPL,GfxYTile", Buffer() { 1, 0, 0, 0 },
                     "RM,device-id", Buffer() { 0x3b, 0x19, 0x00, 0x00 },
                     //REVIEW: spoof HD540 for full screen QuickTime issue
                     // disabled for now due to it causing problems with popup menus in
-                    // apps like GarageBand.app. QuickTiime problem will need to find
+                    // apps like GarageBand.app. QuickTime problem will need to find
                     // another fix.
                     //"RM,device-id", Buffer() { 0x26, 0x19, 0x00, 0x00 },
                 },

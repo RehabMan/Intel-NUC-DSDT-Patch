@@ -84,7 +84,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>kext-dev-mode=1 nv_disable=1 dart=0 slide=0</string>
+		<string>kext-dev-mode=1 nv_disable=1 dart=0 slide=0 -igfxnohdmi</string>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
@@ -99,6 +99,36 @@
 	</dict>
 	<key>Devices</key>
 	<dict>
+		<key>Arbitrary</key>
+		<array>
+			<dict>
+				<key>Comment</key>
+				<string>Intel HD Graphics</string>
+				<key>PciAddr</key>
+				<string>00:02.00</string>
+				<key>CustomProperties</key>
+				<array>
+					<dict>
+						<key>Key</key>
+						<string>framebuffer-patch-enable</string>
+						<key>Value</key>
+						<data>AQAAAA==</data>
+					</dict>
+					<dict>
+						<key>Key</key>
+						<string>framebuffer-con1-enable</string>
+						<key>Value</key>
+						<data>AQAAAA==</data>
+					</dict>
+					<dict>
+						<key>Key</key>
+						<string>framebuffer-con1-type</string>
+						<key>Value</key>
+						<data>AAgAAA==</data>
+					</dict>
+				</array>
+			</dict>
+		</array>
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
@@ -176,22 +206,7 @@
 		<key>KernelPm</key>
 		<true/>
 		<key>KextsToPatch</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0105, 0x191e0000 (10.11.x 10.12.x)</string>
-				<key>MatchOS</key>
-				<string>10.11.x,10.12.x</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelSKLGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>AQUJAAAEAACHAQAA</data>
-				<key>Replace</key>
-				<data>AQUJAAAIAACHAQAA</data>
-			</dict>
-		</array>
+		<array/>
 		<key>KernelToPatch</key>
 		<array>
 			<dict>

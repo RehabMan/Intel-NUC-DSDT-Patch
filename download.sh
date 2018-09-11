@@ -83,7 +83,9 @@ download_latest_notbitbucket "https://github.com" "https://github.com/vit9696/Li
 #download_github_latest https://github.com/vit9696/Lilu nbb_vit9696-Lilu
 #download intelgraphicsfixup RehabMan-IntelGraphicsFixup
 #download_direct "https://github.com/lvs1974/IntelGraphicsFixup/releases/download/v1.2.6/1.2.6.RELEASE.zip" "nbb_lvs1974-IntelGraphicsFixup-1.2.6.zip"
-download_latest_notbitbucket "https://github.com" "https://github.com/lvs1974/IntelGraphicsFixup/releases" "RELEASE" "nbb_lvs1974-IntelGraphicsFixup.zip"
+# IntelGraphicsFixup.kext replaced by WhateverGreen.kext
+#download_latest_notbitbucket "https://github.com" "https://github.com/lvs1974/IntelGraphicsFixup/releases" "RELEASE" "nbb_lvs1974-IntelGraphicsFixup.zip"
+download_latest_notbitbucket "https://github.com" "https://github.com/acidanthera/WhateverGreen/releases" "RELEASE" "nbb_acidanthera-WhateverGreen.zip"
 #download_github_latest https://github.com/lvs1974/IntelGraphicsFixup nbb_lvs1974-IntelGraphicsFixup
 #download os-x-acpi-debug RehabMan-Debug
 cd ..

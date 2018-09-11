@@ -10,7 +10,7 @@ TAGCMD=`pwd`/tools/tag
 SLE=/System/Library/Extensions
 LE=/Library/Extensions
 EXCEPTIONS="Sensors|FakePCIID|BrcmPatchRAM|BrcmBluetoothInjector|BrcmFirmwareData|USBInjectAll|NullEthernetInjector"
-ESSENTIAL="FakeSMC.kext IntelMausiEthernet.kext USBInjectAll.kext Lilu.kext IntelGraphicsFixup.kext FakePCIID.kext FakePCIID_Intel_HD_Graphics.kext"
+ESSENTIAL="FakeSMC.kext IntelMausiEthernet.kext USBInjectAll.kext Lilu.kext WhateverGreen.kext FakePCIID.kext FakePCIID_Intel_HD_Graphics.kext"
 
 # extract minor version (eg. 10.9 vs. 10.10 vs. 10.11)
 MINOR_VER=$([[ "$(sw_vers -productVersion)" =~ [0-9]+\.([0-9]+) ]] && echo ${BASH_REMATCH[1]})
@@ -221,6 +221,12 @@ kext=`echo "$EFI"/EFI/CLOVER/kexts/Other/HackrNVMeFamily-*.kext`
 if [[ -e "$kext" ]]; then
     install_kext "$kext"
 fi
+
+# install kexts for JMicron card reader and supported Atheros WiFi
+# and unsupported SATA and XHCI
+cd kexts
+install_kext XHCI-300-series-injector.kext
+cd ..
 
 #if [[ $MINOR_VER -ge 11 ]]; then
     #install_kext USBXHC_NUC5.kext

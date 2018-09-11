@@ -105,7 +105,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>kext-dev-mode=1 nv_disable=1 dart=0 slide=0</string>
+		<string>kext-dev-mode=1 nv_disable=1 dart=0 slide=0 -igfxnohdmi</string>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
@@ -120,6 +120,48 @@
 	</dict>
 	<key>Devices</key>
 	<dict>
+		<key>#Arbitrary</key>
+		<array>
+			<dict>
+				<key>Comment</key>
+				<string>Intel HD Graphics</string>
+				<key>PciAddr</key>
+				<string>00:02.00</string>
+				<key>CustomProperties</key>
+				<array>
+					<dict>
+						<key>Key</key>
+						<string>framebuffer-patch-enable</string>
+						<key>Value</key>
+						<data>AQAAAA==</data>
+					</dict>
+					<dict>
+						<key>Key</key>
+						<string>framebuffer-con1-enable</string>
+						<key>Value</key>
+						<data>AQAAAA==</data>
+					</dict>
+					<dict>
+						<key>Key</key>
+						<string>framebuffer-con1-type</string>
+						<key>Value</key>
+						<data>AAgAAA==</data>
+					</dict>
+					<dict>
+						<key>Key</key>
+						<string>framebuffer-con2-enable</string>
+						<key>Value</key>
+						<data>AQAAAA==</data>
+					</dict>
+					<dict>
+						<key>Key</key>
+						<string>framebuffer-con2-type</string>
+						<key>Value</key>
+						<data>AAgAAA==</data>
+					</dict>
+				</array>
+			</dict>
+		</array>
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
@@ -303,30 +345,6 @@
 				<data>AEFQUExFIFNTRAA=</data>
 				<key>Replace</key>
 				<data>AAAAAAAAAAAAAAA=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0105, 0x16060002 0x16060002 0x16160002 0x16260002 0x16220002 0x162b0002 0x162b0004 0x16260004 0x16220007 0x162b0008 0x16260008</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>AQUJAAAEAAAHBQAA</data>
-				<key>Replace</key>
-				<data>AQUJAAAIAACCAAAA</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>HDMI-audio, port 0204, 0x16060002 0x16060002 0x16160002 0x16260002 0x16220002 0x162b0002 0x162b0004 0x16260004 0x16220007 0x162b0008 0x16260008</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleIntelBDWGraphicsFramebuffer</string>
-				<key>Find</key>
-				<data>AgQJAAAEAAAHBQAA</data>
-				<key>Replace</key>
-				<data>AgQJAAAIAACCAAAA</data>
 			</dict>
 		</array>
 	</dict>
