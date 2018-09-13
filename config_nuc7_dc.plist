@@ -115,64 +115,30 @@
 	</dict>
 	<key>Devices</key>
 	<dict>
-		<key>Arbitrary</key>
-		<array>
-			<dict>
-				<key>Comment</key>
-				<string>Intel HD Graphics</string>
-				<key>PciAddr</key>
-				<string>00:02.00</string>
-				<key>CustomProperties</key>
-				<array>
-					<dict>
-						<key>Key</key>
-						<string>framebuffer-patch-enable</string>
-						<key>Value</key>
-						<data>AQAAAA==</data>
-					</dict>
-					<dict>
-						<key>Key</key>
-						<string>framebuffer-portcount</string>
-						<key>Value</key>
-						<data>AgAAAA==</data>
-					</dict>
-					<dict>
-						<key>Key</key>
-						<string>framebuffer-memorycount</string>
-						<key>Value</key>
-						<data>AgAAAA==</data>
-					</dict>
-					<dict>
-						<key>Key</key>
-						<string>framebuffer-con0-enable</string>
-						<key>Value</key>
-						<data>AQAAAA==</data>
-					</dict>
-					<dict>
-						<key>Key</key>
-						<string>framebuffer-con0-alldata</string>
-						<key>Value</key>
-						<data>AQUJAAAIAACHAQAAAgQKAAAEAACHAQAA/wAAAAEAAAAgAAAA</data>
-					</dict>
-					<dict>
-						<key>Key</key>
-						<string>framebuffer-con0-59260002-alldata</string>
-						<key>Value</key>
-						<data>AQUJAAAIAADHAwAAAgQKAAAEAADHAwAA/wAAAAEAAAAgAAAA</data>
-					</dict>
-					<dict>
-						<key>Key</key>
-						<string>framebuffer-con0-19260002-alldata</string>
-						<key>Value</key>
-						<data>AQUJAAAIAADHAwAAAgQKAAAEAADHAwAA/wAAAAEAAAAgAAAA</data>
-					</dict>
-				</array>
-			</dict>
-		</array>
 		<key>Audio</key>
 		<dict>
 			<key>Inject</key>
 			<integer>0</integer>
+		</dict>
+		<key>Properties</key>
+		<dict>
+			<key>PciRoot(0)/Pci(0x02,0)</key>
+			<dict>
+				<key>framebuffer-patch-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-portcount</key>
+				<data>AgAAAA==</data>
+				<key>framebuffer-memorycount</key>
+				<data>AgAAAA==</data>
+				<key>framebuffer-con0-enable</key>
+				<data>AQAAAA==</data>
+				<key>framebuffer-con0-alldata</key>
+				<data>AQUJAAAIAACHAQAAAgQKAAAEAACHAQAA/wAAAAEAAAAgAAAA</data>
+				<key>framebuffer-con0-59260002-alldata</key>
+				<data>AQUJAAAIAADHAwAAAgQKAAAEAADHAwAA/wAAAAEAAAAgAAAA</data>
+				<key>framebuffer-con0-19260002-alldata</key>
+				<data>AQUJAAAIAADHAwAAAgQKAAAEAADHAwAA/wAAAAEAAAAgAAAA</data>
+			</dict>
 		</dict>
 		<key>FakeID</key>
 		<dict>

@@ -10,8 +10,6 @@ else
     DestVolume="$1"
 fi
 
-MINOR_VER=$([[ "$(sw_vers -productVersion)" =~ [0-9]+\.([0-9]+) ]] && echo ${BASH_REMATCH[1]})
-
 # find whole disk for the destination volume
 DiskDevice=$(LC_ALL=C diskutil info "$DestVolume" 2>/dev/null | sed -n 's/.*Part [oO]f Whole: *//p')
 if [[ -z "$DiskDevice" ]]; then
