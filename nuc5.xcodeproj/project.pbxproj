@@ -21,6 +21,11 @@
 		ED0EF6761CFBE3EA00243958 /* SSDT-DEHCI.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-DEHCI.dsl"; sourceTree = "<group>"; };
 		ED2089AF1EDAA40E00D46BEA /* SSDT-PTS.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-PTS.dsl"; sourceTree = "<group>"; };
 		ED272D611CCC789300FE569D /* install_tools.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install_tools.sh; sourceTree = "<group>"; };
+		ED351761212B96C700682D82 /* SSDT-USB-NUC8-BC.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-USB-NUC8-BC.dsl"; sourceTree = "<group>"; };
+		ED351762212B96CF00682D82 /* SSDT-NUC8-BC.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-NUC8-BC.dsl"; sourceTree = "<group>"; };
+		ED351763212B96DA00682D82 /* SSDT-KBLSPF.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-KBLSPF.dsl"; sourceTree = "<group>"; };
+		ED351764212B971300682D82 /* config_nuc8_bc.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_nuc8_bc.plist; sourceTree = "<group>"; };
+		ED351765212B971300682D82 /* config_install_nuc8_bc.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_install_nuc8_bc.plist; sourceTree = "<group>"; };
 		ED373E171C0535C1005018E4 /* SSDT-IGPU.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-IGPU.dsl"; sourceTree = "<group>"; };
 		ED373E181C0535C1005018E4 /* SSDT-USB.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-USB.dsl"; sourceTree = "<group>"; };
 		ED3AF2321CC40740004F19AC /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; path = makefile; sourceTree = "<group>"; usesTabs = 1; };
@@ -71,6 +76,8 @@
 				ED9653F41E9FCDB300E38E76 /* config_install_nuc7.plist */,
 				ED9653F31E9FCDB300E38E76 /* config_nuc7.plist */,
 				ED0BD6E920DFF92600223423 /* config_nuc7_dc.plist */,
+				ED351765212B971300682D82 /* config_install_nuc8_bc.plist */,
+				ED351764212B971300682D82 /* config_nuc8_bc.plist */,
 				ED998A4E1ED3E3E30067757C /* config_install_stick6.plist */,
 				ED998A4F1ED3E3E30067757C /* config_stick6.plist */,
 				ED3AF2321CC40740004F19AC /* makefile */,
@@ -79,13 +86,16 @@
 				ED7BC9781EBADF2E007AF0D8 /* SSDT-NUC6-SC.dsl */,
 				ED7BC9791EBADF2E007AF0D8 /* SSDT-NUC7.dsl */,
 				ED0BD6EA20DFF93400223423 /* SSDT-NUC7-DC.dsl */,
+				ED351762212B96CF00682D82 /* SSDT-NUC8-BC.dsl */,
 				ED48C0CF1ED3DD7700D66B7A /* SSDT-STCK6.dsl */,
 				ED48DF001B4CCCC800BDDC62 /* SSDT-XOSI.dsl */,
 				ED373E171C0535C1005018E4 /* SSDT-IGPU.dsl */,
 				ED94CBBC1F587026006BD42C /* SSDT-SKLSPF.dsl */,
+				ED351763212B96DA00682D82 /* SSDT-KBLSPF.dsl */,
 				ED373E181C0535C1005018E4 /* SSDT-USB.dsl */,
 				EDC38F2A1FC9DA8100C9E61F /* SSDT-USB-NUC7.dsl */,
 				ED0BD6EB20DFF9E000223423 /* SSDT-USB-NUC7-DC.dsl */,
+				ED351761212B96C700682D82 /* SSDT-USB-NUC8-BC.dsl */,
 				ED48C0CE1ED3DD5100D66B7A /* SSDT-USB-STCK.dsl */,
 				ED5448371CFFD70D007F89F0 /* SSDT-XHC.dsl */,
 				EDA342501CFC99B700E14DE0 /* SSDT-SATA.dsl */,

@@ -228,43 +228,15 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>10.10.2+ 5Ghz US FCC, the-darkvoid</string>
-				<key>MatchOS</key>
-				<string>10.10.x,10.11.x</string>
+				<string>Enable TRIM for SSD</string>
 				<key>Disabled</key>
-				<false/>
+				<true/>
 				<key>Name</key>
-				<string>com.apple.driver.AirPort.Brcm4360</string>
+				<string>com.apple.iokit.IOAHCIBlockStorage</string>
 				<key>Find</key>
-				<data>QYP8/3QsSA==</data>
+				<data>AEFQUExFIFNTRAA=</data>
 				<key>Replace</key>
-				<data>ZscGVVPrKw==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>AirPortBrcm4360 - fcvo, 10.12.x (credit the-darkvoid)</string>
-				<key>MatchOS</key>
-				<string>10.12.x</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>com.apple.driver.AirPort.Brcm4360</string>
-				<key>Find</key>
-				<data>gflSqgAAdSk=</data>
-				<key>Replace</key>
-				<data>gflSqgAAZpA=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>10.11.dp BT4LE-Handoff-Hotspot, credit RehabMan based on Dokterdok patch</string>
-				<key>MatchOS</key>
-				<string>10.11.x,10.12.x</string>
-				<key>Name</key>
-				<string>com.apple.iokit.IOBluetoothFamily</string>
-				<key>Find</key>
-				<data>SIX/dEdIiwc=</data>
-				<key>Replace</key>
-				<data>Qb4PAAAA60Q=</data>
+				<data>AAAAAAAAAAAAAAA=</data>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -309,18 +281,6 @@
 				<data>QcaGQwEAAAA=</data>
 				<key>Replace</key>
 				<data>QcaGQwEAAAE=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>Enable TRIM for SSD</string>
-				<key>Disabled</key>
-				<true/>
-				<key>Name</key>
-				<string>com.apple.iokit.IOAHCIBlockStorage</string>
-				<key>Find</key>
-				<data>AEFQUExFIFNTRAA=</data>
-				<key>Replace</key>
-				<data>AAAAAAAAAAAAAAA=</data>
 			</dict>
 		</array>
 		<key>KernelToPatch</key>
