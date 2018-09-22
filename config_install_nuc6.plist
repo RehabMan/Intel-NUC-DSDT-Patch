@@ -6,6 +6,8 @@
 	<dict>
 		<key>DSDT</key>
 		<dict>
+			<key>DropOEM_DSM</key>
+			<false/>
 			<key>Patches</key>
 			<array>
 				<dict>
@@ -75,7 +77,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>kext-dev-mode=1 dart=0 nv_disable=1 slide=0</string>
+		<string>dart=0</string>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
