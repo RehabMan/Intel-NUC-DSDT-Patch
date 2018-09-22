@@ -10,7 +10,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_SKLSPF", 0)
         // Kaby Lake/HD615
         0x591e, 0, Package()
         {
-            "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x1e, 0x59 },
+            "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x1e, 0x19 },
             "hda-gfx", Buffer() { "onboard-1" },
             "model", Buffer() { "Intel HD Graphics 615" },
             "device-id", Buffer() { 0x1e, 0x19, 0x00, 0x00 },
