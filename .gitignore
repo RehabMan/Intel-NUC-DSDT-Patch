@@ -5,8 +5,8 @@ tools/
 !build/readme.txt
 _hdainject_marker.txt
 _hdazml_marker.txt
-nuc5.xcodeproj/project.xcworkspace
-nuc5.xcodeproj/xcuserdata
+Patches.xcodeproj/project.xcworkspace
+Patches.xcodeproj/xcuserdata
 AppleHDAHCD_NUCHDA.kext
 AppleHDA_NUCHDA.kext
 AppleHDA_NUCHDA_Resources
