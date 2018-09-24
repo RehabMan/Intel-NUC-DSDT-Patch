@@ -13,14 +13,11 @@
 		840463E11D0DD98C00ED8BA5 /* layout4.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = layout4.plist; path = Resources_NUCHDA/layout4.plist; sourceTree = "<group>"; };
 		8406FCD6188627B8006D8DB7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		84178DE71D0DD4AE006A3D30 /* config_nuc6_sc.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_nuc6_sc.plist; sourceTree = "<group>"; };
-		84490D5D1A14945B000E1BFB /* patch_hda.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = patch_hda.sh; sourceTree = "<group>"; };
-		8467C38E1A23A9FC00FCF396 /* mount_efi.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mount_efi.sh; sourceTree = "<group>"; };
 		ED0BD6E920DFF92600223423 /* config_nuc7_dc.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_nuc7_dc.plist; sourceTree = "<group>"; };
 		ED0BD6EA20DFF93400223423 /* SSDT-NUC7-DC.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-NUC7-DC.dsl"; sourceTree = "<group>"; };
 		ED0BD6EB20DFF9E000223423 /* SSDT-USB-NUC7-DC.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-USB-NUC7-DC.dsl"; sourceTree = "<group>"; };
 		ED0EF6761CFBE3EA00243958 /* SSDT-DEHCI.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-DEHCI.dsl"; sourceTree = "<group>"; };
 		ED2089AF1EDAA40E00D46BEA /* SSDT-PTS.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-PTS.dsl"; sourceTree = "<group>"; };
-		ED272D611CCC789300FE569D /* install_tools.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = install_tools.sh; sourceTree = "<group>"; };
 		ED351761212B96C700682D82 /* SSDT-USB-NUC8-BC.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-USB-NUC8-BC.dsl"; sourceTree = "<group>"; };
 		ED351762212B96CF00682D82 /* SSDT-NUC8-BC.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-NUC8-BC.dsl"; sourceTree = "<group>"; };
 		ED351763212B96DA00682D82 /* SSDT-KBLSPF.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-KBLSPF.dsl"; sourceTree = "<group>"; };
@@ -67,6 +64,9 @@
 			isa = PBXGroup;
 			children = (
 				8406FCD6188627B8006D8DB7 /* README.md */,
+				ED3AF2321CC40740004F19AC /* makefile */,
+				ED3F518B1A2029DE0060691A /* download.sh */,
+				ED3F518A1A2029DE0060691A /* install_downloads.sh */,
 				ED71D7551B98D1F80006C457 /* config_install_nuc5.plist */,
 				EDFE7D6F1CFBD22F00380DFC /* config_nuc5.plist */,
 				EDD762461CFC968400A2D6BA /* config_install_nuc6.plist */,
@@ -80,7 +80,6 @@
 				ED351764212B971300682D82 /* config_nuc8_bc.plist */,
 				ED998A4E1ED3E3E30067757C /* config_install_stick6.plist */,
 				ED998A4F1ED3E3E30067757C /* config_stick6.plist */,
-				ED3AF2321CC40740004F19AC /* makefile */,
 				ED7BC9771EBADEE5007AF0D8 /* SSDT-NUC5.dsl */,
 				ED7BC97A1EBADF2E007AF0D8 /* SSDT-NUC6.dsl */,
 				ED7BC9781EBADF2E007AF0D8 /* SSDT-NUC6-SC.dsl */,
@@ -110,10 +109,6 @@
 				ED2089AF1EDAA40E00D46BEA /* SSDT-PTS.dsl */,
 				ED69BD9C1F49E40000F480D0 /* SSDT_NVMe09.dsl */,
 				ED69BD9D1F49E40500F480D0 /* SSDT_NVMe13.dsl */,
-				8467C38E1A23A9FC00FCF396 /* mount_efi.sh */,
-				ED3F518B1A2029DE0060691A /* download.sh */,
-				ED272D611CCC789300FE569D /* install_tools.sh */,
-				ED3F518A1A2029DE0060691A /* install_downloads.sh */,
 				84B540381ACB34B600D8ABAE /* audio */,
 			);
 			sourceTree = "<group>";
@@ -121,7 +116,6 @@
 		84B540381ACB34B600D8ABAE /* audio */ = {
 			isa = PBXGroup;
 			children = (
-				84490D5D1A14945B000E1BFB /* patch_hda.sh */,
 				840463E01D0DD98C00ED8BA5 /* ahhcd.plist */,
 				840463E11D0DD98C00ED8BA5 /* layout4.plist */,
 				840463DF1D0DD98C00ED8BA5 /* layout2.plist */,

@@ -1,12 +1,10 @@
 .DS_Store
-downloads/*
-patched/ssdt*.dsl
-patched/dsdt.dsl
-unpatched/ssdt*.dsl
-unpatched/dsdt.dsl
-patched/dsdt.dsl
+_downloads/*
 build/*
+tools/
 !build/readme.txt
+_hdainject_marker.txt
+_hdazml_marker.txt
 nuc5.xcodeproj/project.xcworkspace
 nuc5.xcodeproj/xcuserdata
 AppleHDAHCD_NUCHDA.kext
