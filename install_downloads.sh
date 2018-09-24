@@ -14,16 +14,16 @@ warn_about_superuser
 # install tools
 install_tools
 
-# install required kexts
-install_download_kexts
-install_brcmpatchram_kexts
-install_fakepciid_intel_hdmi_audio
-
 # remove old/not used kexts
 remove_deprecated_kexts
 
 # EHCI is disabled, so no need for FakePCIID_XHCIMux.kext
 remove_kext FakePCIID_XHCIMux.kext
+
+# install required kexts
+install_download_kexts
+install_brcmpatchram_kexts
+install_fakepciid_intel_hdmi_audio
 
 # create/install patched AppleHDA files
 install_hda
