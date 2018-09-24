@@ -226,50 +226,6 @@
 				<key>Replace</key>
 				<data>AAAAAAAAAAAAAAA=</data>
 			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>AppleHDA .xml.zlib to .zml.zlib</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleHDA</string>
-				<key>Find</key>
-				<data>LnhtbC56bA==</data>
-				<key>Replace</key>
-				<data>LnptbC56bA==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>AppleHDA ALC262 to ALC283</string>
-				<key>Disabled</key>
-				<false/>
-				<key>Name</key>
-				<string>com.apple.driver.AppleHDA</string>
-				<key>Find</key>
-				<data>YgLsEA==</data>
-				<key>Replace</key>
-				<data>gwLsEA==</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>AppleHDA anti-pop patch #1 (credit AppleALC)</string>
-				<key>Name</key>
-				<string>com.apple.driver.AppleHDA</string>
-				<key>Find</key>
-				<data>QcYGAEiLu2g=</data>
-				<key>Replace</key>
-				<data>QcYGAUiLu2g=</data>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>AppleHDA anti-pop patch #2 (credit AppleALC)</string>
-				<key>Name</key>
-				<string>com.apple.driver.AppleHDA</string>
-				<key>Find</key>
-				<data>QcaGQwEAAAA=</data>
-				<key>Replace</key>
-				<data>QcaGQwEAAAE=</data>
-			</dict>
 		</array>
 	</dict>
 	<key>RtVariables</key>

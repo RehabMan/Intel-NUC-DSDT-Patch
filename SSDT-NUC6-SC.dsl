@@ -10,7 +10,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_NUC6-SC", 0)
         //
         // The value here will be used to inject layout-id for HDEF and HDAU
         // If set to Ones, no audio injection will be done.
-        Name(AUDL, 2)
+        Name(AUDL, 3)
 
         // FAKH: Fake HDMI Aduio
         //
@@ -35,7 +35,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_NUC6-SC", 0)
     #include "SSDT-USB.dsl"
     #include "SSDT-XHC.dsl"
     #include "SSDT-SATA.dsl"
-    #include "SSDT-NUCHDA.dsl"
+    //#include "SSDT-NUCHDA.dsl"
     #include "SSDT-HDEF.dsl"
     #include "SSDT-EC.dsl"
 }

@@ -20,13 +20,14 @@ remove_deprecated_kexts
 # EHCI is disabled, so no need for FakePCIID_XHCIMux.kext
 remove_kext FakePCIID_XHCIMux.kext
 
+# using AppleALC.kext, remove CodecCommander.kext and patched zml.zlib files
+remove_kext CodecCommander.kext
+sudo rm -f /System/Library/Extensions/AppleHDA.kext/Contents/Resources/*.zml.zlib
+
 # install required kexts
 install_download_kexts
 install_brcmpatchram_kexts
 install_fakepciid_intel_hdmi_audio
-
-# create/install patched AppleHDA files
-install_hda
 
 # install NVMeGeneric.kext if it is found in Clover/kexts
 # patch it so it is marked OSBundleRequired=Root

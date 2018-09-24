@@ -10,13 +10,13 @@ DefinitionBlock("", "SSDT", 2, "hack", "_STCK6", 0)
         //
         // The value here will be used to inject layout-id for HDEF and HDAU
         // If set to Ones, no audio injection will be done.
-        Name(AUDL, 4)
+        Name(AUDL, 2)
 
         // FAKH: Fake HDMI Aduio
         //
         // 0: Disable spoofing of HDEF for FakePCIID_Intel_HDMI_Audio.kext
         // 1: Allow spoofing of HDEF for FakePCIID_Intel_HDMI_Audio.kext
-        Name(FAKH, 1)
+        Name(FAKH, 0)
     }
 
     // The Stick has no GLAN nor XDCI, yet these objects return "present" for _STA
