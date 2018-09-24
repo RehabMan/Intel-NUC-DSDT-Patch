@@ -27,6 +27,7 @@ install_fakepciid_intel_hdmi_audio
 
 # create/install patched AppleHDA files
 install_hda
+remove_kext AppleALC.kext
 
 # install NVMeGeneric.kext if it is found in Clover/kexts
 # patch it so it is marked OSBundleRequired=Root
