@@ -2,7 +2,7 @@
 #set -x
 
 EXCEPTIONS=NullEthernetInjector
-ESSENTIAL=FakePCIID_Intel_HDMI_Audio.kext
+ESSENTIAL=FakePCIID_Intel_HDMI_Audio.kext XHCI-300-series-injector.kext AppleALC.kext
 HDA=NUCHDA
 
 # include subroutines
