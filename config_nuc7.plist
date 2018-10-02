@@ -102,7 +102,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 -disablegfxfirmware -igfxnohdmi</string>
+		<string>dart=0 -disablegfxfirmware</string>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>

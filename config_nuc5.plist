@@ -107,7 +107,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>kext-dev-mode=1 dart=0 -igfxnohdmi</string>
+		<string>kext-dev-mode=1 dart=0</string>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>

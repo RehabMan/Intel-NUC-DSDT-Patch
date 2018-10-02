@@ -94,7 +94,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 -igfxnohdmi</string>
+		<string>dart=0</string>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
