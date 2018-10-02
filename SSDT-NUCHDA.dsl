@@ -52,62 +52,6 @@
                 "Update Nodes", ">n",
             },
         },
-        "CodecCommanderProbeInit", Package()
-        {
-            "Version", 0x020600,
-            // ALC283 for NUC6/NUC5
-            "10ec_0283", Package()
-            {
-                "PinConfigDefault", Package()
-                {
-                    Package(){},
-                    Package()
-                    {
-                        "LayoutID", 4,
-                        "PinConfigs", Package()
-                        {
-                            Package(){},
-                            0x12, 0x400000f0,
-                            0x14, 0x400000f0,
-                            0x17, 0x400000f0,
-                            0x18, 0x400000f0,
-                            0x19, 0x01813020,
-                            0x1a, 0x400000f0,
-                            0x1b, 0x400000f0,
-                            0x1d, 0x400000f0,
-                            0x1e, 0x400000f0,
-                            0x21, 0x01214010,
-                        },
-                    },
-                },
-            },
-            // ALC233 for NUC6 Skull Canyon
-            "10ec_0233", Package()
-            {
-                "PinConfigDefault", Package()
-                {
-                    Package(){},
-                    Package()
-                    {
-                        "LayoutID", 2,
-                        "PinConfigs", Package()
-                        {
-                            Package(){},
-                            0x12, 0x400000f0,
-                            0x14, 0x400000f0,
-                            0x17, 0x400000f0,
-                            0x18, 0x400000f0,
-                            0x19, 0x01813020,
-                            0x1a, 0x400000f0,
-                            0x1b, 0x01014030,
-                            0x1d, 0x400000f0,
-                            0x1e, 0x400000f0,
-                            0x21, 0x01214010,
-                        },
-                    },
-                },
-            },
-        },
     })
 //}
 //EOF

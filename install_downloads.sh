@@ -1,9 +1,8 @@
 #!/bin/bash
 #set -x
 
-EXCEPTIONS=NullEthernetInjector
-ESSENTIAL=FakePCIID_Intel_HDMI_Audio.kext XHCI-300-series-injector.kext AppleALC.kext
-HDA=NUCHDA
+EXCEPTIONS="NullEthernetInjector"
+ESSENTIAL="FakePCIID_Intel_HDMI_Audio.kext XHCI-300-series-injector.kext AppleALC.kext"
 
 # include subroutines
 DIR=$(dirname ${BASH_SOURCE[0]})
@@ -20,8 +19,7 @@ remove_deprecated_kexts
 # EHCI is disabled, so no need for FakePCIID_XHCIMux.kext
 remove_kext FakePCIID_XHCIMux.kext
 
-# using AppleALC.kext, remove CodecCommander.kext and patched zml.zlib files
-remove_kext CodecCommander.kext
+# using AppleALC.kext, remove patched zml.zlib files
 sudo rm -f /System/Library/Extensions/AppleHDA.kext/Contents/Resources/*.zml.zlib
 
 # install required kexts

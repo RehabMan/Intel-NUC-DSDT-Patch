@@ -7,10 +7,6 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		840463DE1D0DD98C00ED8BA5 /* Platforms.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Platforms.plist; path = Resources_NUCHDA/Platforms.plist; sourceTree = "<group>"; };
-		840463DF1D0DD98C00ED8BA5 /* layout2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = layout2.plist; path = Resources_NUCHDA/layout2.plist; sourceTree = "<group>"; };
-		840463E01D0DD98C00ED8BA5 /* ahhcd.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = ahhcd.plist; path = Resources_NUCHDA/ahhcd.plist; sourceTree = "<group>"; };
-		840463E11D0DD98C00ED8BA5 /* layout4.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = layout4.plist; path = Resources_NUCHDA/layout4.plist; sourceTree = "<group>"; };
 		8406FCD6188627B8006D8DB7 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		84178DE71D0DD4AE006A3D30 /* config_nuc6_sc.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_nuc6_sc.plist; sourceTree = "<group>"; };
 		ED0BD6E920DFF92600223423 /* config_nuc7_dc.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_nuc7_dc.plist; sourceTree = "<group>"; };
@@ -109,19 +105,7 @@
 				ED2089AF1EDAA40E00D46BEA /* SSDT-PTS.dsl */,
 				ED69BD9C1F49E40000F480D0 /* SSDT_NVMe09.dsl */,
 				ED69BD9D1F49E40500F480D0 /* SSDT_NVMe13.dsl */,
-				84B540381ACB34B600D8ABAE /* audio */,
 			);
-			sourceTree = "<group>";
-		};
-		84B540381ACB34B600D8ABAE /* audio */ = {
-			isa = PBXGroup;
-			children = (
-				840463E01D0DD98C00ED8BA5 /* ahhcd.plist */,
-				840463E11D0DD98C00ED8BA5 /* layout4.plist */,
-				840463DF1D0DD98C00ED8BA5 /* layout2.plist */,
-				840463DE1D0DD98C00ED8BA5 /* Platforms.plist */,
-			);
-			name = audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

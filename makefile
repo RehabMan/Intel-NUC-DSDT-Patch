@@ -6,13 +6,6 @@
 # Created by RehabMan 
 #
 
-HDA=NUCHDA
-RESOURCES=./Resources_$(HDA)
-HDAINJECT=AppleHDA_$(HDA).kext
-HDAINJECT_MARK=_hdainject_marker.txt
-HDAZML=AppleHDA_$(HDA)_Resources
-HDAZML_MARK=_hdazml_marker.txt
-
 # set build products
 BUILDDIR=./build
 HDA_PRODUCTS=$(HDAZML_MARK) $(HDAINJECT_MARK)
@@ -57,7 +50,6 @@ $(BUILDDIR)/SSDT-STCK6.aml: SSDT-XOSI.dsl SSDT-IGPU.dsl SSDT-USB-STCK.dsl SSDT-X
 .PHONY: clean
 clean:
 	rm -f $(BUILDDIR)/*.dsl $(BUILDDIR)/*.aml
-	make clean_hda
 
 .PHONY: install_nuc5
 install_nuc5: $(ALL)
@@ -116,35 +108,3 @@ install_stick6: $(ALL)
 	cp $(BUILDDIR)/SSDT-STCK6.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
 	cp $(BUILDDIR)/SSDT-DDA.aml $(EFIDIR)/EFI/CLOVER/ACPI/patched
 
-$(HDAZML_MARK): $(RESOURCES)/*.plist tools/patch_hdazml.sh tools/_hda_subs.sh
-	./tools/patch_hdazml.sh $(HDA)
-	touch $(HDAZML_MARK)
-
-$(HDAINJECT_MARK): $(RESOURCES)/*.plist tools/patch_hdazml.sh tools/_hda_subs.sh
-	./tools/patch_hdainject.sh $(HDA)
-	touch $(HDAINJECT_MARK)
-
-.PHONY: clean_hda
-clean_hda:
-	rm -rf $(HDAZML) $(HDAINJECT)
-	rm -f $(HDAZML_MARK) $(HDAINJECT_MARK)
-
-.PHONY: update_kernelcache
-update_kernelcache:
-	sudo touch $(SLE) && sudo kextcache -update-volume /
-
-.PHONY: install_hda
-install_hda:
-	sudo rm -Rf $(INSTDIR)/$(HDAINJECT)
-	sudo rm -f $(SLE)/AppleHDA.kext/Contents/Resources/*.zml*
-	sudo cp $(HDAZML)/* $(SLE)/AppleHDA.kext/Contents/Resources
-	if [ "`which tag`" != "" ]; then sudo tag -a Blue $(SLE)/AppleHDA.kext/Contents/Resources/*.zml*; fi
-	make update_kernelcache
-
-.PHONY: install_hdadummy
-install_hdadummy:
-	sudo rm -Rf $(INSTDIR)/$(HDAINJECT)
-	sudo cp -R ./$(HDAINJECT) $(INSTDIR)
-	sudo rm -f $(SLE)/AppleHDA.kext/Contents/Resources/*.zml*
-	if [ "`which tag`" != "" ]; then sudo tag -a Blue $(INSTDIR)/$(HDAINJECT); fi
-	make update_kernelcache

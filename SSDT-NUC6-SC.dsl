@@ -35,7 +35,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_NUC6-SC", 0)
     #include "SSDT-USB.dsl"
     #include "SSDT-XHC.dsl"
     #include "SSDT-SATA.dsl"
-    //#include "SSDT-NUCHDA.dsl"
+    #include "SSDT-NUCHDA.dsl"
     #include "SSDT-HDEF.dsl"
     #include "SSDT-EC.dsl"
 }
