@@ -1,1 +1,1 @@
-tools/mount_efi.sh
+_tools/mount_efi.sh

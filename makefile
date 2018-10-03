@@ -17,15 +17,6 @@ AML_PRODUCTS=$(BUILDDIR)/SSDT-NUC5.aml \
 	$(BUILDDIR)/SSDT-DDA.aml $(BUILDDIR)/SSDT-SKLSPF.aml
 PRODUCTS=$(AML_PRODUCTS) $(HDA_PRODUCTS)
 
-LE=/Library/Extensions
-SLE=/System/Library/Extensions
-VERSION_ERA=$(shell ./tools/print_version.sh)
-ifeq "$(VERSION_ERA)" "10.10-"
-	INSTDIR=$SLE
-else
-	INSTDIR=$LE
-endif
-
 IASLOPTS=-vw 2095 -vw 2008
 IASL=iasl
 
