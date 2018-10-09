@@ -29,7 +29,7 @@ install_fakepciid_intel_hdmi_audio
 # install NVMeGeneric.kext if it is found in Clover/kexts
 # patch it so it is marked OSBundleRequired=Root
 # Note: NVMeGeneric.kext is NOT recommended
-EFI=`./mount_efi.sh`
+EFI="$(./mount_efi.sh)"
 if [[ -e "$EFI/EFI/CLOVER/kexts/Other/NVMeGeneric.kext" ]]; then
     cp -Rf "$EFI/EFI/CLOVER/kexts/Other/NVMeGeneric.kext" /tmp/NVMeGeneric.kext
     /usr/libexec/PlistBuddy -c "Add :OSBundleRequired string" /tmp/NVMeGeneric.kext/Contents/Info.plist
@@ -38,7 +38,7 @@ if [[ -e "$EFI/EFI/CLOVER/kexts/Other/NVMeGeneric.kext" ]]; then
 fi
 
 # install HackrNVMEFamily-.* if it is found in Clover/kexts
-kext=`echo "$EFI"/EFI/CLOVER/kexts/Other/HackrNVMeFamily-*.kext`
+kext="$(echo "$EFI"/EFI/CLOVER/kexts/Other/HackrNVMeFamily-*.kext)"
 if [[ -e "$kext" ]]; then
     install_kext "$kext"
 fi
