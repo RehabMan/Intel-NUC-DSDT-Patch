@@ -135,11 +135,11 @@
 				<key>framebuffer-con0-enable</key>
 				<integer>1</integer>
 				<key>framebuffer-con0-alldata</key>
-				<data>AQUJAAAIAACHAQAAAgQKAAAEAACHAQAA/wAAAAEAAAAgAAAA</data>
+				<data>AQUJAAAIAACHAQAAAgQKAAAIAACHAQAA/wAAAAEAAAAgAAAA</data>
 				<key>framebuffer-con0-59260002-alldata</key>
-				<data>AQUJAAAIAADHAwAAAgQKAAAEAADHAwAA/wAAAAEAAAAgAAAA</data>
+				<data>AQUJAAAIAADHAwAAAgQKAAAIAADHAwAA/wAAAAEAAAAgAAAA</data>
 				<key>framebuffer-con0-19260002-alldata</key>
-				<data>AQUJAAAIAADHAwAAAgQKAAAEAADHAwAA/wAAAAEAAAAgAAAA</data>
+				<data>AQUJAAAIAADHAwAAAgQKAAAIAADHAwAA/wAAAAEAAAAgAAAA</data>
 			</dict>
 		</dict>
 		<key>FakeID</key>
