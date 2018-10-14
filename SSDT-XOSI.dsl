@@ -1,9 +1,4 @@
-// Instead of providing patched DSDT/SSDT, just include a single SSDT
-// and do the rest of the work in config.plist
-
-// A bit experimental, but possible as desktops are much simpler vs. laptops
-// Becuase of the minimal patches required, we can do most of the work in
-// config.plist and small SSDTs such as this one.
+// XOSI is _OSI replacement
 
 //DefinitionBlock ("", "SSDT", 2, "hack", "_XOSI", 0)
 //{

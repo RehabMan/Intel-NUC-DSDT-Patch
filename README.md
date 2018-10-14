@@ -1,8 +1,8 @@
-## Intel "NUC5"/"NUC6"/"NUC7" DSDT patches by RehabMan
+## Intel "NUC5"/"NUC6"/"NUC7"/"NUC8" DSDT patches by RehabMan
 
 This set of patches/makefile can be used to patch your Intel NUC5/NUC6/NUC7 ACPI.
 
-The current repository actually uses only on-the-fly patches via config.plist and an additional SSDTs, SSDT-XOSI.aml, etc.  The files here should work for all the Broadwell NUC, Skylake NUC, and Kaby Lake NUC.
+The current repository actually uses only on-the-fly patches via config.plist and an additional SSDTs, SSDT-XOSI.aml, etc.  The files here should work for all the Broadwell NUC, Skylake NUC, Kaby Lake, and Coffee Lake NUC.
 
 Please refer to this guide thread on tonymacx86.com for a step-by-step process, feedback, and questions:
 
@@ -12,8 +12,20 @@ Skylake NUC6: http://www.tonymacx86.com/threads/guide-intel-skylake-nuc6-using-c
 
 Kaby Lake NUC7: http://www.tonymacx86.com/threads/guide-intel-kaby-lake-nuc7-using-clover-uefi-nuc7i7bnh-nuc7i5bnk-nuc7i3bnh-etc.221123/
 
+Coffee Lake NUC8: //REVIEW: URL TBD
+
 
 ### Change Log:
+
+2018-10-14
+
+- Add preliminary NUC8 "Bean Canyon" support
+
+
+2018-10-10
+
+- Completed many changes for WhateverGreen, AppleALC, and Mojave
+
 
 2017-08-31
 

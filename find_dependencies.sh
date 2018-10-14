@@ -23,7 +23,7 @@ for f in $(ls SSDT-NUC*.dsl SSDT-STCK*.dsl); do
     if [[ ! -z "$deps" ]]; then
         build_target=$(basename "$f")
         build_target=${build_target/.dsl/.aml}
-        echo build/$build_target : $f $deps
+        echo '$(BUILDDIR)/'$build_target : $f $deps
         echo
     fi
 done

@@ -1,4 +1,3 @@
-// generated from: ../codec.git/gen_ahhcd.sh NUCHDA
 //DefinitionBlock ("", "SSDT", 2, "hack", "_NUCHDA", 0)
 //{
     External(_SB.PCI0.HDEF, DeviceObj)
@@ -29,6 +28,27 @@
             },
             // ALC233 for NUC6 Skull Canyon
             "10ec_0233", Package()
+            {
+                //"Disable", ">n",
+                "Custom Commands", Package()
+                {
+                    Package(){},
+                    Package()
+                    {
+                        // 0x19 SET_PIN_WIDGET_CONTROL 0x25
+                        "Command", Buffer() { 0x01, 0x97, 0x07, 0x25 },
+                        "On Init", ">y",
+                        "On Sleep", ">n",
+                        "On Wake", ">y",
+                    },
+                },
+                "Send Delay", 10,
+                "Sleep Nodes", ">n",
+                "Update Nodes", ">n",
+            },
+            // ALC235 for NUC8
+            //REVIEW: not tested
+            "10ec_0235", Package()
             {
                 //"Disable", ">n",
                 "Custom Commands", Package()

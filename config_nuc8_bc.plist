@@ -4,6 +4,10 @@
 <dict>
 	<key>ACPI</key>
 	<dict>
+		<key>DisabledAML</key>
+		<array>
+			<string>SSDT-DDA.aml</string>
+		</array>
 		<key>DSDT</key>
 		<dict>
 			<key>DropOEM_DSM</key>
@@ -13,8 +17,6 @@
 				<dict>
 					<key>Comment</key>
 					<string>change _OSI to XOSI</string>
-					<key>Disabled</key>
-					<true/>
 					<key>Find</key>
 					<data>X09TSQ==</data>
 					<key>Replace</key>
@@ -22,11 +24,19 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change HDAS to HDEF</string>
+					<string>change H_EC to EC</string>
 					<key>Find</key>
-					<data>SERBUw==</data>
+					<data>SF9FQw==</data>
 					<key>Replace</key>
-					<data>SERFRg==</data>
+					<data>RUNfXw==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change GFX0 to IGPU</string>
+					<key>Find</key>
+					<data>R0ZYMA==</data>
+					<key>Replace</key>
+					<data>SUdQVQ==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -38,11 +48,19 @@
 				</dict>
 				<dict>
 					<key>Comment</key>
-					<string>change MEI to IMEI</string>
+					<string>change SAT0 to SATA</string>
 					<key>Find</key>
-					<data>TUVJXw==</data>
+					<data>U0FUMA==</data>
 					<key>Replace</key>
-					<data>SU1FSQ==</data>
+					<data>U0FUQQ==</data>
+				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change HDAS to HDEF</string>
+					<key>Find</key>
+					<data>SERBUw==</data>
+					<key>Replace</key>
+					<data>SERFRg==</data>
 				</dict>
 				<dict>
 					<key>Comment</key>
@@ -52,15 +70,18 @@
 					<key>Replace</key>
 					<data>WERTTQ==</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>change XDCI._STA to XDCI.XSTA</string>
+					<key>Find</key>
+					<data>X1NUQQ==</data>
+					<key>Replace</key>
+					<data>WFNUQQ==</data>
+					<key>TgtBridge</key>
+					<data>WERDSQ==</data>
+				</dict>
 			</array>
 		</dict>
-		<key>DropTables</key>
-		<array>
-			<dict>
-				<key>Signature</key>
-				<string>DMAR</string>
-			</dict>
-		</array>
 		<key>SSDT</key>
 		<dict>
 			<key>Generate</key>
@@ -81,6 +102,11 @@
 		<key>Timeout</key>
 		<integer>5</integer>
 	</dict>
+	<key>CPU</key>
+	<dict>
+		<key>#FrequencyMHz</key>
+		<integer>1800</integer>
+	</dict>
 	<key>Devices</key>
 	<dict>
 		<key>Audio</key>
@@ -88,12 +114,39 @@
 			<key>Inject</key>
 			<integer>0</integer>
 		</dict>
+		<key>Properties</key>
+		<dict>
+			<key>PciRoot(0)/Pci(0x02,0)</key>
+			<dict>
+				<key>framebuffer-patch-enable</key>
+				<integer>1</integer>
+				<key>#framebuffer-portcount</key>
+				<integer>2</integer>
+				<key>#framebuffer-memorycount</key>
+				<integer>2</integer>
+				<key>#framebuffer-con0-enable</key>
+				<integer>1</integer>
+				<key>#framebuffer-con0-alldata</key>
+				<data>AQUJAAAIAACHAQAAAgQKAAAEAACHAQAA/wAAAAEAAAAgAAAA</data>
+				<key>#framebuffer-con0-59260002-alldata</key>
+				<data>AQUJAAAIAADHAwAAAgQKAAAEAADHAwAA/wAAAAEAAAAgAAAA</data>
+				<key>#framebuffer-con0-19260002-alldata</key>
+				<data>AQUJAAAIAADHAwAAAgQKAAAEAADHAwAA/wAAAAEAAAAgAAAA</data>
+			</dict>
+		</dict>
+		<key>FakeID</key>
+		<dict>
+			<key>#IntelGFX</key>
+			<string>0x19168086</string>
+		</dict>
 		<key>USB</key>
 		<dict>
+			<key>AddClockID</key>
+			<false/>
 			<key>FixOwnership</key>
-			<true/>
+			<false/>
 			<key>Inject</key>
-			<true/>
+			<false/>
 		</dict>
 	</dict>
 	<key>DisableDrivers</key>
@@ -102,20 +155,30 @@
 	</array>
 	<key>GUI</key>
 	<dict>
+		<key>#ScreenResolution</key>
+		<string>1920x1080</string>
 		<key>Custom</key>
 		<dict>
 			<key>Entries</key>
 			<array>
 				<dict>
-					<key>FullTitle</key>
-					<string>UEFI internal</string>
 					<key>Hidden</key>
-					<string>Always</string>
+					<true/>
 					<key>Type</key>
-					<string>Other</string>
+					<string>OSXRecovery</string>
+				</dict>
+				<dict>
+					<key>Type</key>
+					<string>Windows</string>
+					<key>Title</key>
+					<string>Windows</string>
 				</dict>
 			</array>
 		</dict>
+		<key>Hide</key>
+		<array>
+			<string>Preboot</string>
+		</array>
 		<key>Mouse</key>
 		<dict>
 			<key>Enabled</key>
@@ -125,40 +188,51 @@
 		<dict>
 			<key>Entries</key>
 			<true/>
+			<key>Kernel</key>
+			<string>All</string>
 			<key>Legacy</key>
 			<false/>
 			<key>Tool</key>
 			<true/>
 		</dict>
-		<key>#ScreenResolution</key>
-		<string>1920x1080</string>
 		<key>Theme</key>
 		<string>BGM</string>
 	</dict>
 	<key>Graphics</key>
 	<dict>
-		<key>ig-platform-id</key>
+		<key>#ig-platform-id</key>
 		<string>0x19160000</string>
 		<key>Inject</key>
 		<dict>
 			<key>Intel</key>
-			<true/>
+			<false/>
 		</dict>
 	</dict>
 	<key>KernelAndKextPatches</key>
 	<dict>
 		<key>AppleRTC</key>
 		<true/>
-		<key>KernelLapic</key>
-		<true/>
+		<key>#Kaby Lake-Comment</key>
+		<string>Kaby Lake CPU supportable by using CPUID from Skylake</string>
+		<key>#FakeCPUID</key>
+		<string>0x0506e3</string>
 		<key>KernelPm</key>
 		<true/>
-		<key>ForceKextsToLoad</key>
-		<array>
-			<string>\System\Library\Extensions\IONetworkingFamily.kext</string>
-		</array>
 		<key>KextsToPatch</key>
-		<array/>
+		<array>
+			<dict>
+				<key>Comment</key>
+				<string>Enable TRIM for SSD</string>
+				<key>Disabled</key>
+				<true/>
+				<key>Name</key>
+				<string>com.apple.iokit.IOAHCIBlockStorage</string>
+				<key>Find</key>
+				<data>AEFQUExFIFNTRAA=</data>
+				<key>Replace</key>
+				<data>AAAAAAAAAAAAAAA=</data>
+			</dict>
+		</array>
 		<key>KernelToPatch</key>
 		<array>
 			<dict>
@@ -211,6 +285,8 @@
 	<dict>
 		<key>InjectKexts</key>
 		<string>Detect</string>
+		<key>InjectSystemID</key>
+		<true/>
 	</dict>
 </dict>
 </plist>

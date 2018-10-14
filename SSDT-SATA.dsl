@@ -1,4 +1,5 @@
 // Fix certain unsupported SATA devices
+//REVIEW: remove this file and use SATA-unsupported.kext
 
 //DefinitionBlock("", "SSDT", 2, "hack", "_SATA", 0)
 //{

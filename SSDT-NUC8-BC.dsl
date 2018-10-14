@@ -1,6 +1,6 @@
-// NUC7 model specific SSDT
+// NUC8 Bean Canyon model specific SSDT
 
-DefinitionBlock("", "SSDT", 2, "hack", "_NUC7", 0)
+DefinitionBlock("", "SSDT", 2, "hack", "_NUC8-BC", 0)
 {
     Device(RMCF)
     {
@@ -10,7 +10,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_NUC7", 0)
         //
         // The value here will be used to inject layout-id for HDEF and HDAU
         // If set to Ones, no audio injection will be done.
-        Name(AUDL, 1)
+        Name(AUDL, 3)
 
         // FAKH: Fake HDMI Aduio
         //
@@ -22,12 +22,11 @@ DefinitionBlock("", "SSDT", 2, "hack", "_NUC7", 0)
     #include "SSDT-XOSI.dsl"
     #include "SSDT-IGPU.dsl"
     #include "SSDT-USBX.dsl"
-    #include "SSDT-USB-NUC7.dsl"
+    #include "SSDT-USB-NUC8-BC.dsl"
     #include "SSDT-XHC.dsl"
     #include "SSDT-XDCI.dsl"
     #include "SSDT-SATA.dsl"
-    #include "SSDT-NUCHDA.dsl"
+    //#include "SSDT-NUCHDA.dsl"
     #include "SSDT-HDEF.dsl"
-    #include "SSDT-PTS.dsl"
 }
 //EOF

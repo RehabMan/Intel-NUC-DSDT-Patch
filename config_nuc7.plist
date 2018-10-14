@@ -127,13 +127,13 @@
 			<key>PciRoot(0)/Pci(0x02,0)</key>
 			<dict>
 				<key>framebuffer-patch-enable</key>
-				<data>AQAAAA==</data>
+				<integer>1</integer>
 				<key>framebuffer-portcount</key>
-				<data>AgAAAA==</data>
+				<integer>2</integer>
 				<key>framebuffer-memorycount</key>
-				<data>AgAAAA==</data>
+				<integer>2</integer>
 				<key>framebuffer-con0-enable</key>
-				<data>AQAAAA==</data>
+				<integer>1</integer>
 				<key>framebuffer-con0-alldata</key>
 				<data>AQUJAAAIAACHAQAAAgQKAAAEAACHAQAA/wAAAAEAAAAgAAAA</data>
 				<key>framebuffer-con0-59260002-alldata</key>
@@ -144,7 +144,7 @@
 		</dict>
 		<key>FakeID</key>
 		<dict>
-			<key>IntelGFX</key>
+			<key>#IntelGFX</key>
 			<string>0x19168086</string>
 		</dict>
 		<key>USB</key>
@@ -208,7 +208,7 @@
 	</dict>
 	<key>Graphics</key>
 	<dict>
-		<key>ig-platform-id</key>
+		<key>#ig-platform-id</key>
 		<string>0x19160000</string>
 		<key>Inject</key>
 		<dict>
@@ -285,7 +285,7 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>ProductName</key>
-		<string>iMac14,2</string>
+		<string>iMac16,2</string>
 		<key>Trust</key>
 		<true/>
 	</dict>

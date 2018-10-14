@@ -1,4 +1,4 @@
-// configuration data for other SSDTs in this pack (NUC7 Dawson Canyon)
+// NUC7 Dawson Canyon model specific SSDT
 
 DefinitionBlock("", "SSDT", 2, "hack", "_NUC7-DC", 0)
 {
@@ -19,21 +19,12 @@ DefinitionBlock("", "SSDT", 2, "hack", "_NUC7-DC", 0)
         Name(FAKH, 0)
     }
 
-    // No XDCI, yet it returns "present" for _STA
-    // XDCI also has a _PRW. This can cause "instant wake"
-    // Returning not-present for _STA is the fix
-    // The original implementation of _STA is renamed to XSTA via config.plist
-    //Name(_SB.PCI0.XDCI._STA, 0)
-    External(_SB.PCI0.XDCI.DVID, FieldUnitObj)
-    Method(_SB.PCI0.XDCI._STA)
-    {
-        If (DVID != 0xFFFF) { Return (0xf) } Else { Return (0) }
-    }
-
     #include "SSDT-XOSI.dsl"
     #include "SSDT-IGPU.dsl"
+    #include "SSDT-USBX.dsl"
     #include "SSDT-USB-NUC7-DC.dsl"
     #include "SSDT-XHC.dsl"
+    #include "SSDT-XDCI.dsl"
     #include "SSDT-SATA.dsl"
     #include "SSDT-HDEF.dsl"
     #include "SSDT-PTS.dsl"

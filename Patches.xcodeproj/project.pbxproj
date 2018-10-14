@@ -50,6 +50,8 @@
 		EDB6A7311F58666600780158 /* SSDT-DDA.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-DDA.dsl"; sourceTree = "<group>"; };
 		EDC38F2A1FC9DA8100C9E61F /* SSDT-USB-NUC7.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-USB-NUC7.dsl"; sourceTree = "<group>"; };
 		EDCF685A1CFBBD03009D6CCD /* SSDT-LPC.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-LPC.dsl"; sourceTree = "<group>"; };
+		EDD674D22173606100F1248F /* SSDT-XDCI.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-XDCI.dsl"; sourceTree = "<group>"; };
+		EDD674D32173620700F1248F /* SSDT-USBX.dsl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SSDT-USBX.dsl"; sourceTree = "<group>"; };
 		EDD762461CFC968400A2D6BA /* config_install_nuc6.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_install_nuc6.plist; sourceTree = "<group>"; };
 		EDD762471CFC973E00A2D6BA /* config_nuc6.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_nuc6.plist; sourceTree = "<group>"; };
 		EDFE7D6F1CFBD22F00380DFC /* config_nuc5.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config_nuc5.plist; sourceTree = "<group>"; };
@@ -92,7 +94,9 @@
 				ED0BD6EB20DFF9E000223423 /* SSDT-USB-NUC7-DC.dsl */,
 				ED351761212B96C700682D82 /* SSDT-USB-NUC8-BC.dsl */,
 				ED48C0CE1ED3DD5100D66B7A /* SSDT-USB-STCK.dsl */,
+				EDD674D32173620700F1248F /* SSDT-USBX.dsl */,
 				ED5448371CFFD70D007F89F0 /* SSDT-XHC.dsl */,
+				EDD674D22173606100F1248F /* SSDT-XDCI.dsl */,
 				EDA342501CFC99B700E14DE0 /* SSDT-SATA.dsl */,
 				EDAA88F11CFB6A6D008BA1EE /* SSDT-NUCHDA.dsl */,
 				ED5448361CFFD70D007F89F0 /* SSDT-HDEF.dsl */,

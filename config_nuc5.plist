@@ -83,16 +83,6 @@
 					<key>Replace</key>
 					<data>WERTTQ==</data>
 				</dict>
-				<dict>
-					<key>Comment</key>
-					<string>change Method(_PTS,1,N) to ZPTS</string>
-					<key>Disabled</key>
-					<true/>
-					<key>Find</key>
-					<data>X1BUUwE=</data>
-					<key>Replace</key>
-					<data>WlBUUwE=</data>
-				</dict>
 			</array>
 		</dict>
 		<key>SSDT</key>
@@ -132,13 +122,13 @@
 			<key>PciRoot(0)/Pci(0x02,0)</key>
 			<dict>
 				<key>framebuffer-patch-enable</key>
-				<data>AQAAAA==</data>
+				<integer>1</integer>
 				<key>framebuffer-con1-enable</key>
-				<data>AQAAAA==</data>
+				<integer>1</integer>
 				<key>framebuffer-con1-type</key>
 				<data>AAgAAA==</data>
 				<key>framebuffer-con2-enable</key>
-				<data>AQAAAA==</data>
+				<integer>1</integer>
 				<key>framebuffer-con2-type</key>
 				<data>AAgAAA==</data>
 			</dict>
@@ -200,7 +190,7 @@
 	</dict>
 	<key>Graphics</key>
 	<dict>
-		<key>ig-platform-id</key>
+		<key>#ig-platform-id</key>
 		<string>0x16160002</string>
 		<key>Inject</key>
 		<dict>

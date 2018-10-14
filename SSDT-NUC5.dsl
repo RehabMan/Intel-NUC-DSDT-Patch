@@ -1,4 +1,4 @@
-// configuration data for other SSDTs in this pack (NUC5)
+// NUC5 model specific SSDT
 
 DefinitionBlock("", "SSDT", 2, "hack", "_NUC5", 0)
 {
@@ -21,6 +21,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_NUC5", 0)
 
     #include "SSDT-XOSI.dsl"
     #include "SSDT-IGPU.dsl"
+    #include "SSDT-USBX.dsl"
     #include "SSDT-USB.dsl"
     #include "SSDT-XHC.dsl"
     #include "SSDT-SATA.dsl"
@@ -30,6 +31,5 @@ DefinitionBlock("", "SSDT", 2, "hack", "_NUC5", 0)
     #include "SSDT-LPC.dsl"
     #include "SSDT-DEHCI.dsl"
     #include "SSDT-EC.dsl"
-    //#include "SSDT-PTS.dsl"
 }
 //EOF

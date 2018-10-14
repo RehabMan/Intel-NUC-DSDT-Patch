@@ -111,9 +111,9 @@
 			<key>PciRoot(0)/Pci(0x02,0)</key>
 			<dict>
 				<key>framebuffer-patch-enable</key>
-				<data>AQAAAA==</data>
+				<integer>1</integer>
 				<key>framebuffer-con1-enable</key>
-				<data>AQAAAA==</data>
+				<integer>1</integer>
 				<key>framebuffer-con1-type</key>
 				<data>AAgAAA==</data>
 			</dict>
@@ -175,7 +175,7 @@
 	</dict>
 	<key>Graphics</key>
 	<dict>
-		<key>ig-platform-id</key>
+		<key>#ig-platform-id</key>
 		<string>0x191e0000</string>
 		<key>Inject</key>
 		<dict>
@@ -235,7 +235,7 @@
 	<key>SMBIOS</key>
 	<dict>
 		<key>ProductName</key>
-		<string>iMac14,2</string>
+		<string>iMac16,2</string>
 		<key>Trust</key>
 		<true/>
 	</dict>

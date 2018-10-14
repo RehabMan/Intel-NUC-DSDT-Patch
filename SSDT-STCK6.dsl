@@ -1,4 +1,4 @@
-// configuration data for other SSDTs in this pack (STCK6)
+// STICK6 model specific SSDT
 
 DefinitionBlock("", "SSDT", 2, "hack", "_STCK6", 0)
 {
@@ -24,15 +24,13 @@ DefinitionBlock("", "SSDT", 2, "hack", "_STCK6", 0)
     // To avoid it, _PRW could be patched, but that is difficult with hotpatch because
     // of other _PRW methods that are not affected.
     // So, instead patch/replace _STA, which is probably a better fix anyway
-
     // GLAN is easy as DSDT does not define GLAN._STA
     Name(_SB.PCI0.GLAN._STA, 0)
-    // XDCI is a little trickier, as it depends on XDCI._STA being renamed to XSTA
-    // (the rename is done in config.plist)
-    Name(_SB.PCI0.XDCI._STA, 0)
+    #include "SSDT-XDCI.dsl"
 
     #include "SSDT-XOSI.dsl"
     #include "SSDT-IGPU.dsl"
+    #include "SSDT-USBX.dsl"
     #include "SSDT-USB-STCK.dsl"
     #include "SSDT-XHC.dsl"
     #include "SSDT-HDEF.dsl"
