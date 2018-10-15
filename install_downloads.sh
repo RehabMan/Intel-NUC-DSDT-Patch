@@ -25,6 +25,9 @@ sudo rm -f /System/Library/Extensions/AppleHDA.kext/Contents/Resources/*.zml.zli
 install_download_kexts
 install_brcmpatchram_kexts
 install_fakepciid_intel_hdmi_audio
+# install other common kexts
+install_kext _tools/kexts/XHCI-unsupported.kext
+install_kext _tools/kexts/SATA-unsupported.kext
 
 # install NVMeGeneric.kext if it is found in Clover/kexts
 # patch it so it is marked OSBundleRequired=Root
@@ -43,11 +46,14 @@ if [[ -e "$kext" ]]; then
     install_kext "$kext"
 fi
 
-# install kexts for JMicron card reader and supported Atheros WiFi
-# and unsupported SATA and XHCI
-install_kext kexts/XHCI-300-series-injector.kext
+# rebuild cache before making LiluFriend
+remove_kext LiluFriend.kext
+rebuild_kernel_cache
 
-# all kexts are now installed, so rebuild cache
+# create LiluFriendLite and install
+create_and_install_lilufriendlite
+
+# all kexts are now installed, so rebuild cache again
 rebuild_kernel_cache
 
 # update kexts on EFI/CLOVER/kexts/Other
