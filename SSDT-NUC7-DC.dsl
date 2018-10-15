@@ -16,7 +16,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_NUC7-DC", 0)
         //
         // 0: Disable spoofing of HDEF for FakePCIID_Intel_HDMI_Audio.kext
         // 1: Allow spoofing of HDEF for FakePCIID_Intel_HDMI_Audio.kext
-        Name(FAKH, 0)
+        Name(FAKH, 1)
     }
 
     #include "SSDT-XOSI.dsl"
