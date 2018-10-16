@@ -46,15 +46,8 @@ if [[ -e "$kext" ]]; then
     install_kext "$kext"
 fi
 
-# rebuild cache before making LiluFriend
-remove_kext LiluFriend.kext
-rebuild_kernel_cache
-
-# create LiluFriendLite and install
-create_and_install_lilufriendlite
-
-# all kexts are now installed, so rebuild cache again
-rebuild_kernel_cache
+# LiluFriend and kernel cache rebuild
+finish_kexts
 
 # update kexts on EFI/CLOVER/kexts/Other
 update_efi_kexts
