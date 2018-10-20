@@ -16,7 +16,7 @@
                     #if 0
                     "HS01", Package() // might be used by internal headers
                     {
-                        "UsbConnector", 255,
+                        "UsbConnector", 255, // use 0 if connected to port on non-Intel case
                         "port", Buffer() { 0x01, 0, 0, 0 },
                     },
                     #endif
@@ -37,14 +37,16 @@
                     },
                     "HS05", Package()   // HS USB3 rear top
                     {
-                        "UsbConnector", 255, // use 0 if connected to port on non-Intel case
+                        "UsbConnector", 3,
                         "port", Buffer() { 0x05, 0, 0, 0 },
                     },
+                    #if 0
                     "HS06", Package()   // internal header 2
                     {
                         "UsbConnector", 255, // use 0 if connected to port on non-Intel case
                         "port", Buffer() { 0x06, 0, 0, 0 },
                     },
+                    #endif
                     //HS07 not used
                     "HS08", Package() // bluetooth
                     {
