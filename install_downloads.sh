@@ -2,7 +2,7 @@
 #set -x
 
 EXCEPTIONS="NullEthernetInjector"
-ESSENTIAL="FakePCIID_Intel_HDMI_Audio.kext XHCI-300-series-injector.kext AppleALC.kext"
+ESSENTIAL="AppleALC.kext CodecCommander.kext"
 
 # include subroutines
 source "$(dirname ${BASH_SOURCE[0]})"/_tools/_install_subs.sh
