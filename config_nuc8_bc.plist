@@ -129,6 +129,11 @@
 				<key>framebuffer-con0-alldata</key>
 				<data>AQUJAAAIAACHAQAAAgQKAAAEAACHAQAA/wAAAAEAAAAgAAAA</data>
 			</dict>
+			<key>PciRoot(0)/Pci(0x1f,3)</key>
+			<dict>
+				<key>#device-id</key>
+				<data>dJ0AAA==</data>
+			</dict>
 		</dict>
 		<key>FakeID</key>
 		<dict>

@@ -73,7 +73,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 -disablegfxfirmware</string>
+		<string>dart=0 -disablegfxfirmware lilucpu=10</string>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>

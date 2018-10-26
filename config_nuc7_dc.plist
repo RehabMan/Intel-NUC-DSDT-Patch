@@ -102,7 +102,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0</string>
+		<string>dart=0 lilucpu=9</string>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
@@ -140,6 +140,11 @@
 				<data>AQUJAAAIAADHAwAAAgQKAAAIAADHAwAA/wAAAAEAAAAgAAAA</data>
 				<key>framebuffer-con0-19260002-alldata</key>
 				<data>AQUJAAAIAADHAwAAAgQKAAAIAADHAwAA/wAAAAEAAAAgAAAA</data>
+			</dict>
+			<key>PciRoot(0)/Pci(0x1f,3)</key>
+			<dict>
+				<key>#device-id</key>
+				<data>dJ0AAA==</data>
 			</dict>
 		</dict>
 		<key>FakeID</key>

@@ -124,11 +124,11 @@
 				<key>framebuffer-patch-enable</key>
 				<integer>1</integer>
 				<key>framebuffer-con1-enable</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>framebuffer-con1-type</key>
 				<data>AAgAAA==</data>
 				<key>framebuffer-con2-enable</key>
-				<integer>1</integer>
+				<integer>0</integer>
 				<key>framebuffer-con2-type</key>
 				<data>AAgAAA==</data>
 			</dict>
