@@ -102,7 +102,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 lilucpu=9</string>
+		<string>dart=0 -igfxnohdmi lilucpu=9</string>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
