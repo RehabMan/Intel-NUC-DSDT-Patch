@@ -128,18 +128,20 @@
 			<dict>
 				<key>framebuffer-patch-enable</key>
 				<integer>1</integer>
-				<key>framebuffer-portcount</key>
-				<integer>2</integer>
-				<key>framebuffer-memorycount</key>
-				<integer>2</integer>
 				<key>framebuffer-con0-enable</key>
 				<integer>1</integer>
 				<key>framebuffer-con0-alldata</key>
+				<data>AAAIAAIAAACYAAAAAQUJAAAEAACHAQAAAgQKAAAEAACHAQAA</data>
+				<key>framebuffer-con0-59120000-alldata</key>
 				<data>AQUJAAAIAACHAQAAAgQKAAAIAACHAQAA/wAAAAEAAAAgAAAA</data>
 				<key>framebuffer-con0-59260002-alldata</key>
-				<data>AQUJAAAIAADHAwAAAgQKAAAIAADHAwAA/wAAAAEAAAAgAAAA</data>
+				<data>AAAIAAIAAACYAAAAAQUJAAAIAADHAwAAAgQKAAAIAADHAwAA</data>
+				<key>framebuffer-con0-19160002-alldata</key>
+				<data>AAAIAAIAAACYBAAAAQUJAAAIAADHAwAAAgQKAAAIAADHAwAA</data>
 				<key>framebuffer-con0-19260002-alldata</key>
-				<data>AQUJAAAIAADHAwAAAgQKAAAIAADHAwAA/wAAAAEAAAAgAAAA</data>
+				<data>AAAIAAIAAACYBAAAAQUJAAAIAADHAwAAAgQKAAAIAADHAwAA</data>
+				<key>framebuffer-con0-193b0005-alldata</key>
+				<data>AAAIAAIAAACYBAAAAQUJAAAIAADHAQAAAgQKAAAIAADHAQAA/wAAAAEAAAAgAAAA</data>
 			</dict>
 			<key>PciRoot(0)/Pci(0x1f,3)</key>
 			<dict>
