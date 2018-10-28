@@ -10,7 +10,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_KBLSPF", 0)
         // Coffee Lake/UHD630 (not tested)
         0x3e9b, 0x3e92, 0x3e91, 0, Package()
         {
-            "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x1b, 0x59 },
+            "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x16, 0x59 },
             "hda-gfx", Buffer() { "onboard-1" },
             "model", Buffer() { "Intel UHD Graphics 630" },
             "device-id", Buffer() { 0x1b, 0x59, 0x00, 0x00 },

@@ -120,14 +120,10 @@
 			<dict>
 				<key>framebuffer-patch-enable</key>
 				<integer>1</integer>
-				<key>framebuffer-portcount</key>
-				<integer>2</integer>
-				<key>framebuffer-memorycount</key>
-				<integer>2</integer>
-				<key>framebuffer-con0-enable</key>
+				<key>framebuffer-con1-enable</key>
 				<integer>1</integer>
-				<key>framebuffer-con0-alldata</key>
-				<data>AQUJAAAIAACHAQAAAgQKAAAEAACHAQAA/wAAAAEAAAAgAAAA</data>
+				<key>framebuffer-con1-type</key>
+				<data>AAgAAA==</data>
 			</dict>
 			<key>PciRoot(0)/Pci(0x1f,3)</key>
 			<dict>
