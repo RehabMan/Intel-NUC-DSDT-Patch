@@ -102,7 +102,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 -igfxnohdmi lilucpu=9</string>
+		<string>dart=0 lilucpu=9</string>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
@@ -127,21 +127,7 @@
 			<key>PciRoot(0)/Pci(0x02,0)</key>
 			<dict>
 				<key>framebuffer-patch-enable</key>
-				<integer>1</integer>
-				<key>framebuffer-con0-enable</key>
-				<integer>1</integer>
-				<key>framebuffer-con0-alldata</key>
-				<data>AAAIAAIAAACYAAAAAQUJAAAEAACHAQAAAgQKAAAEAACHAQAA</data>
-				<key>framebuffer-con0-59120000-alldata</key>
-				<data>AQUJAAAIAACHAQAAAgQKAAAIAACHAQAA/wAAAAEAAAAgAAAA</data>
-				<key>framebuffer-con0-59260002-alldata</key>
-				<data>AAAIAAIAAACYAAAAAQUJAAAIAADHAwAAAgQKAAAIAADHAwAA</data>
-				<key>framebuffer-con0-19160002-alldata</key>
-				<data>AAAIAAIAAACYBAAAAQUJAAAIAADHAwAAAgQKAAAIAADHAwAA</data>
-				<key>framebuffer-con0-19260002-alldata</key>
-				<data>AAAIAAIAAACYBAAAAQUJAAAIAADHAwAAAgQKAAAIAADHAwAA</data>
-				<key>framebuffer-con0-193b0005-alldata</key>
-				<data>AAAIAAIAAACYBAAAAQUJAAAIAADHAQAAAgQKAAAIAADHAQAA/wAAAAEAAAAgAAAA</data>
+				<integer>0</integer>
 			</dict>
 			<key>PciRoot(0)/Pci(0x1f,3)</key>
 			<dict>

@@ -112,16 +112,10 @@
 			<dict>
 				<key>framebuffer-patch-enable</key>
 				<integer>1</integer>
-				<key>framebuffer-portcount</key>
-				<integer>3</integer>
-				<key>framebuffer-memorycount</key>
-				<integer>3</integer>
-				<key>framebuffer-con0-enable</key>
+				<key>framebuffer-con1-enable</key>
 				<integer>1</integer>
-				<key>framebuffer-con0-alldata</key>
-				<data>AQUJAAAIAADHAQAAAgQKAAAEAADHAQAAAwYKAAAEAADHAQAAAAAIAAIAAACYAAAA</data>
-				<key>framebuffer-con0-19260002-alldata</key>
-				<data>AQUJAAAIAADHAwAAAgQKAAAEAADHAwAAAwYKAAAEAADHAwAAAAAIAAIAAACYBAAA</data>
+				<key>framebuffer-con1-type</key>
+				<data>AAgAAA==</data>
 			</dict>
 		</dict>
 		<key>USB</key>
