@@ -23,9 +23,11 @@
         If (!Arg2) { Return (Buffer() { 0x03 } ) }
         Local0 = Package()
         {
-            "layout-id", Buffer(4) { },
+            "alc-layout-id", Buffer(4) { },
+            "layout-id", Buffer(4) { 7, 0, 0, 0 },
             "hda-gfx", Buffer() { "onboard-1" },
             "RM,disable_FakePCIID", Ones,
+            "no-controller-patch", Buffer() { },
             "PinConfigurations", Buffer() { },
         }
         // set layout-id value based on \RMCF.AUDL
@@ -34,7 +36,7 @@
         // disable "hda-gfx" injection if \RMDA is present
         If (CondRefOf(\RMDA)) { Local0[2] = "#hda-gfx" }
         // set RM,disableFakePCIID value based on \RMCF.FAKH
-        Local0[5] = 1-\RMCF.FAKH
+        Local0[7] = 1-\RMCF.FAKH
         Return(Local0)
     }
 //}
