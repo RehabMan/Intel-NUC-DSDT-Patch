@@ -94,7 +94,7 @@
 	<key>Boot</key>
 	<dict>
 		<key>Arguments</key>
-		<string>dart=0 -igfxnohdmi lilucpu=10</string>
+		<string>dart=0 -igfxnohdmi -cdfon lilucpu=10</string>
 		<key>NeverHibernate</key>
 		<true/>
 		<key>Secure</key>
