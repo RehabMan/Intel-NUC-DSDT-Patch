@@ -118,11 +118,13 @@
 		<dict>
 			<key>PciRoot(0)/Pci(0x02,0)</key>
 			<dict>
+				<key>#AAPL,ig-platform-id</key>
+				<data>AAAAAA==</data>
 				<key>framebuffer-patch-enable</key>
 				<integer>1</integer>
-				<key>framebuffer-con1-enable</key>
+				<key>framebuffer-con0-enable</key>
 				<integer>1</integer>
-				<key>framebuffer-con1-type</key>
+				<key>framebuffer-con0-type</key>
 				<data>AAgAAA==</data>
 			</dict>
 			<key>PciRoot(0)/Pci(0x1f,3)</key>
@@ -130,11 +132,6 @@
 				<key>#device-id</key>
 				<data>dJ0AAA==</data>
 			</dict>
-		</dict>
-		<key>FakeID</key>
-		<dict>
-			<key>#IntelGFX</key>
-			<string>0x19168086</string>
 		</dict>
 		<key>USB</key>
 		<dict>
@@ -198,7 +195,7 @@
 	<key>Graphics</key>
 	<dict>
 		<key>#ig-platform-id</key>
-		<string>0x19160000</string>
+		<string>0x3e9b0007</string>
 		<key>Inject</key>
 		<dict>
 			<key>Intel</key>
