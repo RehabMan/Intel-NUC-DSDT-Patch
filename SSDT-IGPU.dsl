@@ -190,7 +190,7 @@
                 // Coffee Lake/UHD655
                 0x3ea5, 0, Package()
                 {
-                    "AAPL,ig-platform-id", Buffer() { 0x07, 0x00, 0x9b, 0x3e },
+                    "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0xa5, 0x3e },
                     "hda-gfx", Buffer() { "onboard-1" },
                     "model", Buffer() { "Intel Iris Plus Graphics 655" },
                 },

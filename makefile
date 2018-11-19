@@ -14,7 +14,8 @@ AML_PRODUCTS=$(BUILDDIR)/SSDT-NUC5.aml \
 	$(BUILDDIR)/SSDT-NUC8-BC.aml \
 	$(BUILDDIR)/SSDT-STCK6.aml \
 	$(BUILDDIR)/SSDT_NVMe09.aml $(BUILDDIR)/SSDT_NVMe13.aml \
-	$(BUILDDIR)/SSDT-DDA.aml $(BUILDDIR)/SSDT-SKLSPF.aml $(BUILDDIR)/SSDT-KBLSPF.aml
+	$(BUILDDIR)/SSDT-DDA.aml $(BUILDDIR)/SSDT_SKLSPF.aml $(BUILDDIR)/SSDT_KBLSPF.aml \
+	$(BUILDDIR)/SSDT_CFLALT.aml
 PRODUCTS=$(AML_PRODUCTS)
 
 IASLOPTS=-vw 2095 -vw 2008
@@ -53,6 +54,7 @@ clean:
 install_nuc5: $(AML_PRODUCTS)
 	$(eval EFIDIR:=$(shell ./mount_efi.sh))
 	rm -f "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT-*.aml
+	rm -f "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT_*SPF.aml "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT_CFLALT.aml
 	rm -f "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT.aml
 	cp $(BUILDDIR)/SSDT-NUC5.aml "$(EFIDIR)"/EFI/CLOVER/ACPI/patched
 	cp $(BUILDDIR)/SSDT-DDA.aml "$(EFIDIR)"/EFI/CLOVER/ACPI/patched
@@ -62,6 +64,7 @@ install_nuc5: $(AML_PRODUCTS)
 install_nuc6: $(AML_PRODUCTS)
 	$(eval EFIDIR:=$(shell ./mount_efi.sh))
 	rm -f "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT-*.aml
+	rm -f "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT_*SPF.aml "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT_CFLALT.aml
 	rm -f "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT.aml
 	cp $(BUILDDIR)/SSDT-NUC6.aml "$(EFIDIR)"/EFI/CLOVER/ACPI/patched
 	cp $(BUILDDIR)/SSDT-DDA.aml "$(EFIDIR)"/EFI/CLOVER/ACPI/patched
@@ -71,6 +74,7 @@ install_nuc6: $(AML_PRODUCTS)
 install_nuc6sc: $(AML_PRODUCTS)
 	$(eval EFIDIR:=$(shell ./mount_efi.sh))
 	rm -f "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT-*.aml
+	rm -f "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT_*SPF.aml "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT_CFLALT.aml
 	rm -f "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT.aml
 	cp $(BUILDDIR)/SSDT-NUC6-SC.aml "$(EFIDIR)"/EFI/CLOVER/ACPI/patched
 	cp $(BUILDDIR)/SSDT-DDA.aml "$(EFIDIR)"/EFI/CLOVER/ACPI/patched
@@ -80,39 +84,58 @@ install_nuc6sc: $(AML_PRODUCTS)
 install_nuc7: $(AML_PRODUCTS)
 	$(eval EFIDIR:=$(shell ./mount_efi.sh))
 	rm -f "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT-*.aml
+	rm -f "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT_KBLSPF.aml "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT_CFLALT.aml
 	rm -f "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT.aml
 	cp $(BUILDDIR)/SSDT-NUC7.aml "$(EFIDIR)"/EFI/CLOVER/ACPI/patched
 	cp $(BUILDDIR)/SSDT-DDA.aml "$(EFIDIR)"/EFI/CLOVER/ACPI/patched
+	if [[ -e "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT_SKLSPF.aml ]]; then make install_sklspoof; fi
 
 # NUC7 Dawson Canyon
 .PHONY: install_nuc7dc
 install_nuc7dc: $(AML_PRODUCTS)
 	$(eval EFIDIR:=$(shell ./mount_efi.sh))
 	rm -f "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT-*.aml
+	rm -f "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT_KBLSPF.aml "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT_CFLALT.aml
 	rm -f "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT.aml
 	cp $(BUILDDIR)/SSDT-NUC7-DC.aml "$(EFIDIR)"/EFI/CLOVER/ACPI/patched
 	cp $(BUILDDIR)/SSDT-DDA.aml "$(EFIDIR)"/EFI/CLOVER/ACPI/patched
+	if [[ -e "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT_SKLSPF.aml ]]; then make install_sklspoof; fi
 
 # NUC8 Bean Canyon
 .PHONY: install_nuc8bc
 install_nuc8bc: $(AML_PRODUCTS)
 	$(eval EFIDIR:=$(shell ./mount_efi.sh))
 	rm -f "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT-*.aml
+	rm -f "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT_SKLSPF.aml
 	rm -f "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT.aml
 	cp $(BUILDDIR)/SSDT-NUC8-BC.aml "$(EFIDIR)"/EFI/CLOVER/ACPI/patched
 	cp $(BUILDDIR)/SSDT-DDA.aml "$(EFIDIR)"/EFI/CLOVER/ACPI/patched
+	if [[ -e "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT_CFLALT.aml ]]; then make install_cflalt; fi
+	if [[ -e "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT_KBLSPF.aml ]]; then make install_kblspoof; fi
 
 # optional Skylake spoof (for KabyLake and CoffeeLake)
 .PHONY: install_sklspoof
 install_sklspoof: $(AML_PRODUCTS)
 	$(eval EFIDIR:=$(shell ./mount_efi.sh))
-	cp $(BUILDDIR)/SSDT-SKLSPF.aml "$(EFIDIR)"/EFI/CLOVER/ACPI/patched
+	rm -f "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT_KBLSPF.aml
+	rm -f "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT_CFLALT.aml
+	cp $(BUILDDIR)/SSDT_SKLSPF.aml "$(EFIDIR)"/EFI/CLOVER/ACPI/patched
 
 # optional KabyLake spoof (for CoffeeLake)
 .PHONY: install_kblspoof
 install_kblspoof: $(AML_PRODUCTS)
 	$(eval EFIDIR:=$(shell ./mount_efi.sh))
-	cp $(BUILDDIR)/SSDT-KBLSPF.aml "$(EFIDIR)"/EFI/CLOVER/ACPI/patched
+	rm -f "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT_SKLSPF.aml
+	rm -f "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT_CFLALT.aml
+	cp $(BUILDDIR)/SSDT_KBLSPF.aml "$(EFIDIR)"/EFI/CLOVER/ACPI/patched
+
+# optional CoffeeLake alternate
+.PHONY: install_cflalt
+install_cflalt: $(AML_PRODUCTS)
+	$(eval EFIDIR:=$(shell ./mount_efi.sh))
+	rm -f "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT_SKLSPF.aml
+	rm -f "$(EFIDIR)"/EFI/CLOVER/ACPI/patched/SSDT_KBLSPF.aml
+	cp $(BUILDDIR)/SSDT_CFLALT.aml "$(EFIDIR)"/EFI/CLOVER/ACPI/patched
 
 # STICK6
 .PHONY: install_stick6

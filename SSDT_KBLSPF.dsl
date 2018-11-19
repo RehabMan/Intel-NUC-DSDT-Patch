@@ -18,7 +18,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_KBLSPF", 0)
         // Coffee Lake/UHD655
         0x3ea5, 0, Package()
         {
-            "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x12, 0x59 },
+            "AAPL,ig-platform-id", Buffer() { 0x00, 0x00, 0x27, 0x59 },
             "hda-gfx", Buffer() { "onboard-1" },
             "model", Buffer() { "Intel Iris Plus Graphics 655" },
             "device-id", Buffer() { 0x27, 0x59, 0x00, 0x00 },
