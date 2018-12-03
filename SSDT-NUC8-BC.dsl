@@ -23,6 +23,7 @@ DefinitionBlock("", "SSDT", 2, "hack", "_NUC8-BC", 0)
     #include "SSDT-IGPU.dsl"
     #include "SSDT-USBX.dsl"
     #include "SSDT-USB-NUC8-BC.dsl"
+    #include "SSDT-TYPC-NUC8-BC.dsl"
     #include "SSDT-XHC.dsl"
     #include "SSDT-XDCI.dsl"
     //#include "SSDT-NUCHDA.dsl"
