@@ -12,7 +12,7 @@ Skylake NUC6: http://www.tonymacx86.com/threads/guide-intel-skylake-nuc6-using-c
 
 Kaby Lake NUC7: http://www.tonymacx86.com/threads/guide-intel-kaby-lake-nuc7-using-clover-uefi-nuc7i7bnh-nuc7i5bnk-nuc7i3bnh-etc.221123/
 
-Coffee Lake NUC8: //REVIEW: URL TBD
+Coffee Lake NUC8: https://www.tonymacx86.com/threads/guide-intel-nuc7-nuc8-using-clover-uefi-nuc7i7bxx-nuc8i7bxx-etc.261711/
 
 
 ### Change Log:
