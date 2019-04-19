@@ -80,6 +80,16 @@
 					<key>TgtBridge</key>
 					<data>WERDSQ==</data>
 				</dict>
+				<dict>
+					<key>Comment</key>
+					<string>rename _RMV to XRMV</string>
+					<key>Disabled</key>
+					<false/>
+					<key>Find</key>
+					<data>X1JNVg==</data>
+					<key>Replace</key>
+					<data>WFJNVg==</data>
+				</dict>
 			</array>
 		</dict>
 		<key>SSDT</key>
